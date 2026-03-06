@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, initial-scale=1.0">
+<title>SimpliHuman — Investor Pitch Deck</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --green: #0EAB8C;
+  --green-light: #BFEBE2;
+  --green-dark: #089672;
+  --blue: #1DA1F2;
+  --dark: #222927;
+  --gray: #6B7280;
+  --light-bg: #F0F9F6;
+  --white: #FFFFFF;
+  --orange: #F59E0B;
+  --red: #EF4444;
+  --purple: #8B5CF6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+.slide {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.slide-number {
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
+  font-size: 14px;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.logo-small {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  height: 32px;
+  opacity: 0.7;
+}
+
+h1 { font-size: 64px; font-weight: 800; line-height: 1.1; letter-spacing: -2px; }
+h2 { font-size: 48px; font-weight: 700; line-height: 1.2; letter-spacing: -1.5px; }
+h3 { font-size: 32px; font-weight: 700; line-height: 1.3; }
+h4 { font-size: 24px; font-weight: 600; line-height: 1.4; }
+p { font-size: 20px; line-height: 1.6; color: var(--gray); }
+.subtitle { font-size: 24px; line-height: 1.5; color: var(--gray); max-width: 700px; }
+
+.accent { color: var(--green); }
+.accent-blue { color: var(--blue); }
+.accent-orange { color: var(--orange); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 30px; }
+
+.card {
+  background: var(--light-bg);
+  border-radius: 20px;
+  padding: 40px;
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-4px); }
+
+.stat-card {
+  background: var(--white);
+  border: 2px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 36px;
+  text-align: center;
+}
+.stat-card .number {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-card .label {
+  font-size: 16px;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: var(--green);
+  border-radius: 2px;
+  margin: 20px 0;
+}
+
+/* ---- SLIDE SPECIFIC STYLES ---- */
+
+/* Slide 1: Cover */
+.slide-cover {
+  background: linear-gradient(135deg, #F0F9F6 0%, #E0F2ED 50%, #D0EBE3 100%);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.slide-cover h1 { font-size: 72px; margin-bottom: 20px; }
+.slide-cover .tagline { font-size: 28px; color: var(--gray); margin-bottom: 40px; }
+.cover-logo { width: 280px; margin-bottom: 40px; }
+.cover-badge {
+  display: inline-block;
+  background: var(--dark);
+  color: white;
+  padding: 12px 32px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* Decorative circles */
+.circle-deco {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  background: var(--green);
+}
+
+/* Bar chart */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  height: 240px;
+  padding-top: 20px;
+}
+.bar-chart .bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.bar-chart .bar {
+  width: 100%;
+  max-width: 60px;
+  background: var(--green);
+  border-radius: 8px 8px 0 0;
+  transition: height 0.5s;
+  position: relative;
+}
+.bar-chart .bar-label {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+.bar-chart .bar-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+/* Donut chart */
+.donut-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.donut-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.donut-legend-item .dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Competitor table */
+.comp-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+}
+.comp-table th {
+  background: var(--dark);
+  color: white;
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 600;
+}
+.comp-table th:first-child { border-radius: 12px 0 0 0; }
+.comp-table th:last-child { border-radius: 0 12px 0 0; }
+.comp-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #E5E7EB;
+}
+.comp-table tr:nth-child(even) td { background: #F9FAFB; }
+.comp-table tr.highlight td {
+  background: var(--light-bg);
+  font-weight: 600;
+  color: var(--green);
+}
+.comp-table .check { color: var(--green); font-weight: 700; }
+.comp-table .cross { color: #D1D5DB; }
+
+/* Timeline */
+.timeline {
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--green), var(--blue));
+  border-radius: 2px;
+}
+.timeline-item {
+  flex: 1;
+  padding-top: 50px;
+  position: relative;
+  padding-right: 20px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--green);
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px var(--green);
+}
+.timeline-item h4 { font-size: 18px; margin-bottom: 8px; color: var(--green); }
+.timeline-item p { font-size: 14px; line-height: 1.5; }
+
+/* Funnel */
+.funnel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.funnel-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+}
+.funnel-step .funnel-label {
+  position: absolute;
+  right: -220px;
+  color: var(--dark);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Feature icons */
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--green);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: white;
+}
+
+/* Pill tags */
+.pill {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+.pill-green { background: #D1FAE5; color: #065F46; }
+.pill-blue { background: #DBEAFE; color: #1E40AF; }
+.pill-orange { background: #FEF3C7; color: #92400E; }
+.pill-purple { background: #EDE9FE; color: #5B21B6; }
+
+/* Progress bar */
+.progress-bar {
+  height: 12px;
+  background: #E5E7EB;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+.progress-bar .fill {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(to right, var(--green), var(--blue));
+}
+
+.footnote {
+  font-size: 12px;
+  color: #9CA3AF;
+  margin-top: 20px;
+}
+
+.big-quote {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.4;
+  border-left: 4px solid var(--green);
+  padding-left: 30px;
+  margin: 30px 0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: white;
+  border-radius: 24px;
+  padding: 60px;
+  text-align: center;
+}
+.cta-box h2 { color: white; margin-bottom: 16px; }
+.cta-box p { color: rgba(255,255,255,0.85); }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- SLIDE 1: COVER -->
+<!-- ============================================================ -->
+<section class="slide slide-cover">
+  <div class="circle-deco" style="width:600px;height:600px;top:-200px;right:-200px;"></div>
+  <div class="circle-deco" style="width:400px;height:400px;bottom:-100px;left:-100px;"></div>
+
+  <svg width="280" height="68" viewBox="0 0 191 46" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:40px;">
+    <path d="M36.2 32.24C35.08 32.24 34.072 32.104 33.176 31.832C32.28 31.544 31.424 31.048 30.608 30.344C30.4 30.168 30.24 29.968 30.128 29.744C30.016 29.52 29.96 29.296 29.96 29.072C29.96 28.704 30.088 28.384 30.344 28.112C30.616 27.824 30.952 27.68 31.352 27.68C31.656 27.68 31.928 27.776 32.168 27.968C32.776 28.464 33.376 28.84 33.968 29.096C34.576 29.352 35.32 29.48 36.2 29.48C36.792 29.48 37.336 29.392 37.832 29.216C38.328 29.024 38.728 28.776 39.032 28.472C39.336 28.152 39.488 27.792 39.488 27.392C39.488 26.912 39.344 26.504 39.056 26.168C38.768 25.832 38.328 25.552 37.736 25.328C37.144 25.088 36.392 24.904 35.48 24.776C34.616 24.648 33.856 24.456 33.2 24.2C32.544 23.928 31.992 23.592 31.544 23.192C31.112 22.776 30.784 22.296 30.56 21.752C30.336 21.192 30.224 20.568 30.224 19.88C30.224 18.84 30.488 17.952 31.016 17.216C31.56 16.48 32.288 15.92 33.2 15.536C34.112 15.152 35.12 14.96 36.224 14.96C37.264 14.96 38.224 15.12 39.104 15.44C40 15.744 40.728 16.136 41.288 16.616C41.752 16.984 41.984 17.408 41.984 17.888C41.984 18.24 41.848 18.56 41.576 18.848C41.304 19.136 40.984 19.28 40.616 19.28C40.376 19.28 40.16 19.208 39.968 19.064C39.712 18.84 39.368 18.632 38.936 18.44C38.504 18.232 38.048 18.064 37.568 17.936C37.088 17.792 36.64 17.72 36.224 17.72C35.536 17.72 34.952 17.808 34.472 17.984C34.008 18.16 33.656 18.4 33.416 18.704C33.176 19.008 33.056 19.36 33.056 19.76C33.056 20.24 33.192 20.64 33.464 20.96C33.752 21.264 34.16 21.512 34.688 21.704C35.216 21.88 35.848 22.04 36.584 22.184C37.544 22.36 38.384 22.568 39.104 22.808C39.84 23.048 40.448 23.36 40.928 23.744C41.408 24.112 41.768 24.584 42.008 25.16C42.248 25.72 42.368 26.408 42.368 27.224C42.368 28.264 42.08 29.16 41.504 29.912C40.928 30.664 40.168 31.24 39.224 31.64C38.296 32.04 37.288 32.24 36.2 32.24ZM47.59 30.536C47.59 30.952 47.456 31.304 47.184 31.592C46.912 31.864 46.568 32 46.152 32C45.736 32 45.392 31.864 45.12 31.592C44.848 31.304 44.712 30.952 44.712 30.536V20.624C44.712 20.208 44.848 19.864 45.12 19.592C45.392 19.304 45.736 19.16 46.152 19.16C46.568 19.16 46.912 19.304 47.184 19.592C47.456 19.864 47.592 20.208 47.592 20.624V30.536ZM46.128 17.6C45.584 17.6 45.2 17.512 44.976 17.336C44.752 17.16 44.64 16.848 44.64 16.4V15.944C44.64 15.48 44.76 15.168 45 15.008C45.256 14.832 45.64 14.744 46.152 14.744C46.712 14.744 47.104 14.832 47.328 15.008C47.552 15.184 47.664 15.496 47.664 15.944V16.4C47.664 16.864 47.544 17.184 47.304 17.36C47.064 17.52 46.672 17.6 46.128 17.6ZM57.296 18.92C58.576 18.92 59.52 19.232 60.128 19.856C60.736 20.464 61.136 21.256 61.328 22.232L60.92 22.016L61.112 21.632C61.304 21.264 61.6 20.872 62 20.456C62.4 20.024 62.88 19.664 63.44 19.376C64.016 19.072 64.656 18.92 65.36 18.92C66.512 18.92 67.384 19.168 67.976 19.664C68.584 20.16 69 20.824 69.224 21.656C69.448 22.472 69.56 23.384 69.56 24.392V30.536C69.56 30.952 69.424 31.304 69.152 31.592C68.88 31.864 68.536 32 68.12 32C67.704 32 67.36 31.864 67.088 31.592C66.816 31.304 66.68 30.952 66.68 30.536V24.392C66.68 23.864 66.616 23.392 66.488 22.976C66.36 22.544 66.128 22.2 65.792 21.944C65.456 21.688 64.976 21.56 64.352 21.56C63.744 21.56 63.224 21.688 62.792 21.944C62.36 22.2 62.032 22.544 61.808 22.976C61.6 23.392 61.496 23.864 61.496 24.392V30.536C61.496 30.952 61.36 31.304 61.088 31.592C60.816 31.864 60.472 32 60.056 32C59.64 32 59.296 31.864 59.024 31.592C58.752 31.304 58.616 30.952 58.616 30.536V24.392C58.616 23.864 58.552 23.392 58.424 22.976C58.296 22.544 58.064 22.2 57.728 21.944C57.392 21.688 56.912 21.56 56.288 21.56C55.68 21.56 55.16 21.688 54.728 21.944C54.296 22.2 53.968 22.544 53.744 22.976C53.536 23.392 53.432 23.864 53.432 24.392V30.536C53.432 30.952 53.296 31.304 53.024 31.592C52.752 31.864 52.408 32 51.992 32C51.576 32 51.232 31.864 50.96 31.592C50.688 31.304 50.552 30.952 50.552 30.536V20.624C50.552 20.208 50.688 19.864 50.96 19.592C51.232 19.304 51.576 19.16 51.992 19.16C52.408 19.16 52.752 19.304 53.024 19.592C53.296 19.864 53.432 20.208 53.432 20.624V21.656L53.072 21.584C53.216 21.312 53.416 21.024 53.672 20.72C53.928 20.4 54.24 20.104 54.608 19.832C54.976 19.56 55.384 19.344 55.832 19.184C56.28 19.008 56.768 18.92 57.296 18.92ZM79.325 18.92C80.445 18.92 81.445 19.208 82.325 19.784C83.221 20.344 83.925 21.12 84.437 22.112C84.965 23.104 85.229 24.256 85.229 25.568C85.229 26.88 84.965 28.04 84.437 29.048C83.925 30.04 83.229 30.824 82.349 31.4C81.485 31.96 80.509 32.24 79.421 32.24C78.781 32.24 78.181 32.136 77.621 31.928C77.061 31.72 76.565 31.456 76.133 31.136C75.717 30.816 75.389 30.496 75.149 30.176C74.925 29.84 74.813 29.56 74.813 29.336L75.557 29.024V35.336C75.557 35.752 75.421 36.096 75.149 36.368C74.877 36.656 74.533 36.8 74.117 36.8C73.701 36.8 73.357 36.664 73.085 36.392C72.813 36.12 72.677 35.768 72.677 35.336V20.624C72.677 20.208 72.813 19.864 73.085 19.592C73.357 19.304 73.701 19.16 74.117 19.16C74.533 19.16 74.877 19.304 75.149 19.592C75.421 19.864 75.557 20.208 75.557 20.624V21.8L75.149 21.584C75.149 21.376 75.261 21.128 75.485 20.84C75.709 20.536 76.013 20.24 76.397 19.952C76.781 19.648 77.221 19.4 77.717 19.208C78.229 19.016 78.765 18.92 79.325 18.92ZM78.965 21.56C78.261 21.56 77.645 21.736 77.117 22.088C76.589 22.44 76.173 22.92 75.869 23.528C75.581 24.12 75.437 24.8 75.437 25.568C75.437 26.32 75.581 27.008 75.869 27.632C76.173 28.24 76.589 28.72 77.117 29.072C77.645 29.424 78.261 29.6 78.965 29.6C79.669 29.6 80.277 29.424 80.789 29.072C81.317 28.72 81.725 28.24 82.013 27.632C82.317 27.008 82.469 26.32 82.469 25.568C82.469 24.8 82.317 24.12 82.013 23.528C81.725 22.92 81.317 22.44 80.789 22.088C80.277 21.736 79.669 21.56 78.965 21.56ZM90.867 30.536C90.867 30.952 90.723 31.304 90.435 31.592C90.163 31.864 89.819 32 89.403 32C89.003 32 88.667 31.864 88.395 31.592C88.123 31.304 87.987 30.952 87.987 30.536V15.704C87.987 15.288 88.123 14.944 88.395 14.672C88.683 14.384 89.035 14.24 89.451 14.24C89.867 14.24 90.203 14.384 90.459 14.672C90.731 14.944 90.867 15.288 90.867 15.704V30.536ZM96.928 30.536C96.928 30.952 96.792 31.304 96.52 31.592C96.248 31.864 95.904 32 95.488 32C95.072 32 94.728 31.864 94.456 31.592C94.184 31.304 94.048 30.952 94.048 30.536V20.624C94.048 20.208 94.184 19.864 94.456 19.592C94.728 19.304 95.072 19.16 95.488 19.16C95.904 19.16 96.248 19.304 96.52 19.592C96.792 19.864 96.928 20.208 96.928 20.624V30.536ZM95.464 17.6C94.92 17.6 94.536 17.512 94.312 17.336C94.088 17.16 93.976 16.848 93.976 16.4V15.944C93.976 15.48 94.096 15.168 94.336 15.008C94.592 14.832 94.976 14.744 95.488 14.744C96.048 14.744 96.44 14.832 96.664 15.008C96.888 15.184 97 15.496 97 15.944V16.4C97 16.864 96.88 17.184 96.64 17.36C96.4 17.52 96.008 17.6 95.464 17.6Z" fill="#222927"/>
+    <path d="M108.391 15.2C108.775 15.2 109.111 15.344 109.399 15.632C109.703 15.904 109.855 16.248 109.855 16.664V30.536C109.855 30.952 109.703 31.304 109.399 31.592C109.095 31.864 108.743 32 108.343 32C107.895 32 107.535 31.864 107.263 31.592C106.991 31.304 106.855 30.952 106.855 30.536V16.664C106.855 16.248 106.999 15.904 107.287 15.632C107.575 15.344 107.943 15.2 108.391 15.2ZM119.023 15.2C119.471 15.2 119.831 15.344 120.103 15.632C120.375 15.904 120.511 16.248 120.511 16.664V30.536C120.511 30.952 120.367 31.304 120.079 31.592C119.807 31.864 119.439 32 118.975 32C118.591 32 118.247 31.864 117.943 31.592C117.655 31.304 117.511 30.952 117.511 30.536V16.664C117.511 16.248 117.663 15.904 117.967 15.632C118.271 15.344 118.623 15.2 119.023 15.2ZM108.319 22.184H119.023V24.944H108.319V22.184ZM133.393 19.16C133.809 19.16 134.153 19.304 134.425 19.592C134.697 19.864 134.833 20.208 134.833 20.624V26.72C134.833 28.416 134.361 29.76 133.417 30.752C132.473 31.744 131.113 32.24 129.337 32.24C127.561 32.24 126.201 31.744 125.257 30.752C124.329 29.76 123.865 28.416 123.865 26.72V20.624C123.865 20.208 124.001 19.864 124.273 19.592C124.545 19.304 124.889 19.16 125.305 19.16C125.721 19.16 126.065 19.304 126.337 19.592C126.609 19.864 126.745 20.208 126.745 20.624V26.72C126.745 27.696 126.961 28.424 127.393 28.904C127.825 29.368 128.473 29.6 129.337 29.6C130.217 29.6 130.873 29.368 131.305 28.904C131.737 28.424 131.953 27.696 131.953 26.72V20.624C131.953 20.208 132.089 19.864 132.361 19.592C132.633 19.304 132.977 19.16 133.393 19.16ZM144.695 18.92C145.975 18.92 146.919 19.232 147.527 19.856C148.135 20.464 148.535 21.256 148.727 22.232L148.319 22.016L148.511 21.632C148.703 21.264 148.999 20.872 149.399 20.456C149.799 20.024 150.279 19.664 150.839 19.376C151.415 19.072 152.055 18.92 152.759 18.92C153.911 18.92 154.783 19.168 155.375 19.664C155.983 20.16 156.399 20.824 156.623 21.656C156.847 22.472 156.959 23.384 156.959 24.392V30.536C156.959 30.952 156.823 31.304 156.551 31.592C156.279 31.864 155.935 32 155.519 32C155.103 32 154.759 31.864 154.487 31.592C154.215 31.304 154.079 30.952 154.079 30.536V24.392C154.079 23.864 154.015 23.392 153.887 22.976C153.759 22.544 153.527 22.2 153.191 21.944C152.855 21.688 152.375 21.56 151.751 21.56C151.143 21.56 150.623 21.688 150.191 21.944C149.759 22.2 149.431 22.544 149.207 22.976C148.999 23.392 148.895 23.864 148.895 24.392V30.536C148.895 30.952 148.759 31.304 148.487 31.592C148.215 31.864 147.871 32 147.455 32C147.039 32 146.695 31.864 146.423 31.592C146.151 31.304 146.015 30.952 146.015 30.536V24.392C146.015 23.864 145.951 23.392 145.823 22.976C145.695 22.544 145.463 22.2 145.127 21.944C144.791 21.688 144.311 21.56 143.687 21.56C143.079 21.56 142.559 21.688 142.127 21.944C141.695 22.2 141.367 22.544 141.143 22.976C140.935 23.392 140.831 23.864 140.831 24.392V30.536C140.831 30.952 140.695 31.304 140.423 31.592C140.151 31.864 139.807 32 139.391 32C138.975 32 138.631 31.864 138.359 31.592C138.087 31.304 137.951 30.952 137.951 30.536V20.624C137.951 20.208 138.087 19.864 138.359 19.592C138.631 19.304 138.975 19.16 139.391 19.16C139.807 19.16 140.151 19.304 140.423 19.592C140.695 19.864 140.831 20.208 140.831 20.624V21.656L140.471 21.584C140.615 21.312 140.815 21.024 141.071 20.72C141.327 20.4 141.639 20.104 142.007 19.832C142.375 19.56 142.783 19.344 143.231 19.184C143.679 19.008 144.167 18.92 144.695 18.92ZM170.588 18.92C171.004 18.92 171.348 19.056 171.62 19.328C171.892 19.6 172.028 19.952 172.028 20.384V30.536C172.028 30.952 171.892 31.304 171.62 31.592C171.348 31.864 171.004 32 170.588 32C170.172 32 169.828 31.864 169.556 31.592C169.284 31.304 169.148 30.952 169.148 30.536V29.36L169.676 29.576C169.676 29.784 169.564 30.04 169.34 30.344C169.116 30.632 168.812 30.92 168.428 31.208C168.044 31.496 167.588 31.744 167.06 31.952C166.548 32.144 165.988 32.24 165.38 32.24C164.276 32.24 163.276 31.96 162.38 31.4C161.484 30.824 160.772 30.04 160.244 29.048C159.732 28.04 159.476 26.888 159.476 25.592C159.476 24.28 159.732 23.128 160.244 22.136C160.772 21.128 161.476 20.344 162.356 19.784C163.236 19.208 164.212 18.92 165.284 18.92C165.972 18.92 166.604 19.024 167.18 19.232C167.756 19.44 168.252 19.704 168.668 20.024C169.1 20.344 169.428 20.672 169.652 21.008C169.892 21.328 170.012 21.6 170.012 21.824L169.148 22.136V20.384C169.148 19.968 169.284 19.624 169.556 19.352C169.828 19.064 170.172 18.92 170.588 18.92ZM165.74 29.6C166.444 29.6 167.06 29.424 167.588 29.072C168.116 28.72 168.524 28.24 168.812 27.632C169.116 27.024 169.268 26.344 169.268 25.592C169.268 24.824 169.116 24.136 168.812 23.528C168.524 22.92 168.116 22.44 167.588 22.088C167.06 21.736 166.444 21.56 165.74 21.56C165.052 21.56 164.444 21.736 163.916 22.088C163.388 22.44 162.972 22.92 162.668 23.528C162.38 24.136 162.236 24.824 162.236 25.592C162.236 26.344 162.38 27.024 162.668 27.632C162.972 28.24 163.388 28.72 163.916 29.072C164.444 29.424 165.052 29.6 165.74 29.6ZM182.01 18.92C183.194 18.92 184.09 19.168 184.698 19.664C185.322 20.16 185.746 20.824 185.97 21.656C186.21 22.472 186.33 23.384 186.33 24.392V30.536C186.33 30.952 186.194 31.304 185.922 31.592C185.65 31.864 185.306 32 184.89 32C184.474 32 184.13 31.864 183.858 31.592C183.586 31.304 183.45 30.952 183.45 30.536V24.392C183.45 23.864 183.378 23.392 183.234 22.976C183.106 22.544 182.866 22.2 182.514 21.944C182.162 21.688 181.658 21.56 181.002 21.56C180.362 21.56 179.818 21.688 179.37 21.944C178.938 22.2 178.602 22.544 178.362 22.976C178.138 23.392 178.026 23.864 178.026 24.392V30.536C178.026 30.952 177.89 31.304 177.618 31.592C177.346 31.864 177.002 32 176.586 32C176.17 32 175.826 31.864 175.554 31.592C175.282 31.304 175.146 30.952 175.146 30.536V20.624C175.146 20.208 175.282 19.864 175.554 19.592C175.826 19.304 176.17 19.16 176.586 19.16C177.002 19.16 177.346 19.304 177.618 19.592C177.89 19.864 178.026 20.208 178.026 20.624V21.656L177.666 21.584C177.81 21.312 178.018 21.024 178.29 20.72C178.562 20.4 178.882 20.104 179.25 19.832C179.618 19.56 180.034 19.344 180.498 19.184C180.962 19.008 181.466 18.92 182.01 18.92Z" fill="#222927"/>
+    <g filter="url(#filter0_i_cover)">
+      <path d="M18.05 28.126C14.282 31.071 8.862 31.003 5.131 28.011C3.562 26.785 2.314 25.482 1.388 24.102C0.463 22.722 0 21.246 0 19.675C0 18.18 0.584 16.896 1.751 15.823C2.878 14.711 4.226 14.155 5.795 14.155C7.365 14.155 8.733 14.711 9.9 15.823C11.027 16.896 11.591 18.18 11.591 19.675C11.591 18.18 12.174 16.896 13.342 15.823C14.468 14.711 15.817 14.155 17.386 14.155C18.956 14.155 20.324 14.711 21.491 15.823C22.618 16.896 23.182 18.18 23.182 19.675C23.182 21.284 22.719 22.798 21.793 24.217C20.827 25.596 19.58 26.9 18.05 28.126Z" fill="url(#paint0_cover)"/>
+    </g>
+    <rect x="6.68" y="19.274" width="9.342" height="25.726" rx="4.671" stroke="#222927" stroke-width="2"/>
+    <circle cx="11.523" cy="6.661" r="5.661" fill="#0EAB8C" stroke="#222927" stroke-width="2"/>
+    <defs>
+      <filter id="filter0_i_cover" x="0" y="14.155" width="23.182" height="16.45" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="0.31"/>
+        <feGaussianBlur stdDeviation="0.207"/>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.31 0"/>
+        <feBlend mode="normal" in2="shape"/>
+      </filter>
+      <linearGradient id="paint0_cover" x1="11.591" y1="14.155" x2="11.591" y2="32.668" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#BFEBE2"/>
+        <stop offset="0.128" stop-color="#84D2C3"/>
+        <stop offset="1" stop-color="#0EAB8C"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <h1>Your Journey To<br><span class="accent">Emotional Wellbeing</span><br>Starts Here.</h1>
+  <p class="tagline">The community-led emotional wellbeing platform built for the youth, by the youth.</p>
+  <div style="display:flex; gap:20px; margin-top:10px;">
+    <span class="pill pill-green">iOS & Android</span>
+    <span class="pill pill-blue">AI-Powered</span>
+    <span class="pill pill-purple">Community-Led</span>
+    <span class="pill pill-orange">9,200+ Users</span>
+  </div>
+  <div class="cover-badge">Seed Round — March 2026</div>
+  <div class="slide-number">01 / 16</div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 2: THE CRISIS -->
+<!-- ============================================================ -->
+<section class="slide" style="background: var(--dark); color: white;">
+  <div class="circle-deco" style="width:500px;height:500px;top:-150px;right:-150px;background:var(--green);opacity:0.05;"></div>
+  <span class="tag" style="background:var(--red);">The Crisis</span>
+  <h1 style="color:white;margin-bottom:40px;">A Generation In<br><span style="color:var(--red);">Silent Struggle</span></h1>
+
+  <div class="grid-4" style="margin-top:20px;">
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number" style="color:var(--red);">46%</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">of Gen Z diagnosed with an emotional wellbeing condition</div>
+    </div>
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number" style="color:var(--orange);">61%</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">of teens with depression receive zero professional support</div>
+    </div>
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number" style="color:var(--orange);">11 yrs</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">average delay between symptom onset and first treatment</div>
+    </div>
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number" style="color:var(--red);">250K+</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">projected behavioral health practitioner deficit</div>
+    </div>
+  </div>
+
+  <div style="margin-top:50px; display:flex; gap:40px;">
+    <div style="flex:1;">
+      <h4 style="color:var(--green);margin-bottom:12px;">The Access Gap</h4>
+      <p style="color:rgba(255,255,255,0.7);font-size:17px;">122 million+ people live in professional shortage areas. 6 in 10 psychologists don't accept new patients. Average wait: 48 days to 3+ months. The system is broken.</p>
+    </div>
+    <div style="flex:1;">
+      <h4 style="color:var(--green);margin-bottom:12px;">The Screen Paradox</h4>
+      <p style="color:rgba(255,255,255,0.7);font-size:17px;">93% of teens use social media averaging 4+ hours daily. Those spending 3+ hours have double the risk of anxiety and depression. The device causing harm must become the device that heals.</p>
+    </div>
+    <div style="flex:1;">
+      <h4 style="color:var(--green);margin-bottom:12px;">The Stigma Wall</h4>
+      <p style="color:rgba(255,255,255,0.7);font-size:17px;">Young people don't want clinical therapy labels. They want safe, private, peer-understood spaces where expressing emotions is normalized — not medicalized.</p>
+    </div>
+  </div>
+
+  <p class="footnote" style="color:rgba(255,255,255,0.3);">Sources: CDC 2023, NAMI 2024, HRSA 2025, Pew Research 2025, WHO 2024</p>
+  <div class="slide-number" style="color:rgba(255,255,255,0.4);">02 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3: WHY NOW -->
+<!-- ============================================================ -->
+<section class="slide" style="background:linear-gradient(180deg, #FEF3C7 0%, var(--white) 100%);">
+  <span class="tag" style="background:var(--orange);">Why Now</span>
+  <h2 style="margin-bottom:40px;">The Perfect Storm for<br><span class="accent">Emotional Wellbeing Tech</span></h2>
+
+  <div class="grid-3">
+    <div class="card" style="background:white;border:2px solid #FDE68A;">
+      <div style="font-size:48px;margin-bottom:16px;">&#x1F4C8;</div>
+      <h4 style="margin-bottom:12px;">Post-Pandemic Awakening</h4>
+      <p style="font-size:16px;">Emotional wellbeing concerns among youth have <strong>quadrupled since 2019</strong>. 42% of Gen Z is now actively in therapy — a 22% jump since 2022. Awareness has never been higher.</p>
+    </div>
+    <div class="card" style="background:white;border:2px solid #FDE68A;">
+      <div style="font-size:48px;margin-bottom:16px;">&#x1F916;</div>
+      <h4 style="margin-bottom:12px;">AI Breakthrough Moment</h4>
+      <p style="font-size:16px;">24% of adults already use AI for emotional support. AI-powered emotional wellbeing solutions are the <strong>fastest-growing healthcare AI segment at 34% CAGR</strong>. The technology is finally ready.</p>
+    </div>
+    <div class="card" style="background:white;border:2px solid #FDE68A;">
+      <div style="font-size:48px;margin-bottom:16px;">&#x1F3AF;</div>
+      <h4 style="margin-bottom:12px;">Competitors Retreating</h4>
+      <p style="font-size:16px;">Woebot shut down its consumer app (2025). BetterHelp declining 10%+ YoY. Talkspace pivoting to B2B. <strong>The D2C youth market is wide open.</strong></p>
+    </div>
+  </div>
+
+  <div style="margin-top:50px;background:white;border-radius:20px;padding:40px;border:2px solid #E5E7EB;">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <h4>Global Emotional Wellbeing App Market</h4>
+        <p style="font-size:16px;">Growing at 14.6-18% CAGR</p>
+      </div>
+      <div style="display:flex;gap:60px;align-items:baseline;">
+        <div style="text-align:center;">
+          <div style="font-size:42px;font-weight:800;color:var(--green);">$7.5B</div>
+          <div style="font-size:14px;color:var(--gray);">2024</div>
+        </div>
+        <div style="font-size:32px;color:var(--gray);">&#8594;</div>
+        <div style="text-align:center;">
+          <div style="font-size:42px;font-weight:800;color:var(--green);">$22.7B</div>
+          <div style="font-size:14px;color:var(--gray);">2030</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">03 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4: THE SOLUTION -->
+<!-- ============================================================ -->
+<section class="slide" style="background:var(--light-bg);">
+  <span class="tag">The Solution</span>
+  <div class="grid-2">
+    <div>
+      <h2 style="margin-bottom:20px;">SimpliHuman:<br>Emotional Wellbeing,<br><span class="accent">Simplified.</span></h2>
+      <div class="divider"></div>
+      <p class="subtitle" style="font-size:20px;margin-bottom:30px;">We're building the first community-led emotional wellbeing ecosystem designed specifically for young people aged 17-28 — where expressing, reflecting, interacting, and connecting come together in one safe space.</p>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="width:48px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;flex-shrink:0;">&#x1F3AF;</div>
+          <div><strong>Not clinical.</strong> We normalize emotional expression, not diagnose.</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="width:48px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;flex-shrink:0;">&#x1F91D;</div>
+          <div><strong>Community-first.</strong> Built by the youth, shaped by user voices.</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="width:48px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;flex-shrink:0;">&#x1F9E0;</div>
+          <div><strong>AI-powered.</strong> Personalized support with 4 distinct AI personalities.</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="width:48px;height:48px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;flex-shrink:0;">&#x1F30D;</div>
+          <div><strong>Global reach.</strong> Active users across 30+ countries, growing organically.</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <div style="background:white;border-radius:32px;padding:50px;box-shadow:0 20px 60px rgba(14,171,140,0.15);">
+        <h3 style="margin-bottom:30px;">Four Pillars of Wellbeing</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div style="background:var(--light-bg);border-radius:16px;padding:24px;">
+            <div style="font-size:32px;margin-bottom:8px;">&#x1F4AC;</div>
+            <h4 style="font-size:18px;">Expressing</h4>
+            <p style="font-size:13px;">Mood tracking & journaling</p>
+          </div>
+          <div style="background:var(--light-bg);border-radius:16px;padding:24px;">
+            <div style="font-size:32px;margin-bottom:8px;">&#x1F9D8;</div>
+            <h4 style="font-size:18px;">Reflecting</h4>
+            <p style="font-size:13px;">Mindfulness & exercises</p>
+          </div>
+          <div style="background:var(--light-bg);border-radius:16px;padding:24px;">
+            <div style="font-size:32px;margin-bottom:8px;">&#x1F465;</div>
+            <h4 style="font-size:18px;">Interacting</h4>
+            <p style="font-size:13px;">Echo: anonymous community</p>
+          </div>
+          <div style="background:var(--light-bg);border-radius:16px;padding:24px;">
+            <div style="font-size:32px;margin-bottom:8px;">&#x1F4A1;</div>
+            <h4 style="font-size:18px;">Connecting</h4>
+            <p style="font-size:13px;">AI chat & professional support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">04 / 16</div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 5: PRODUCT DEEP DIVE -->
+<!-- ============================================================ -->
+<section class="slide">
+  <span class="tag">Product</span>
+  <h2 style="margin-bottom:40px;">Features That <span class="accent">Resonate</span></h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+    <!-- Feature 1: Mood Tracking -->
+    <div class="card" style="border-left:4px solid var(--green);">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+        <div class="feature-icon" style="width:48px;height:48px;border-radius:12px;font-size:22px;">&#x1F60A;</div>
+        <div>
+          <h4 style="margin-bottom:2px;">Mood Tracking</h4>
+          <span class="pill pill-green" style="font-size:11px;">Highest Engagement — 33%</span>
+        </div>
+      </div>
+      <p style="font-size:15px;">Our anchor feature. Users log emotions with context tags (Work, Social, Sleep, Partner, Exercise), creating rich longitudinal data. Mood Tracker 2.0 adds mini-journals and micro-reflection prompts for deeper self-awareness.</p>
+    </div>
+
+    <!-- Feature 2: Release -->
+    <div class="card" style="border-left:4px solid var(--purple);">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+        <div class="feature-icon" style="width:48px;height:48px;border-radius:12px;font-size:22px;background:var(--purple);">&#x1F525;</div>
+        <div>
+          <h4 style="margin-bottom:2px;">Release</h4>
+          <span class="pill pill-purple" style="font-size:11px;">Unique — No Competitor Has This</span>
+        </div>
+      </div>
+      <p style="font-size:15px;">A breakthrough therapeutic mechanic. Write your thought, then choose to <strong>Burn it, Bury it, or Drown it</strong>. The thought is permanently deleted — a powerful cathartic ritual that transforms emotional processing into a tangible action.</p>
+    </div>
+
+    <!-- Feature 3: AI Chat -->
+    <div class="card" style="border-left:4px solid var(--blue);">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+        <div class="feature-icon" style="width:48px;height:48px;border-radius:12px;font-size:22px;background:var(--blue);">&#x1F916;</div>
+        <div>
+          <h4 style="margin-bottom:2px;">AI Companion Chat</h4>
+          <span class="pill pill-blue" style="font-size:11px;">4 AI Personalities</span>
+        </div>
+      </div>
+      <p style="font-size:15px;">Four distinct AI companions — <strong>Sage</strong> (calm & reflective), <strong>Blaze</strong> (energetic & motivating), <strong>Leo</strong> (directive coach), <strong>Grace</strong> (warm & comforting) — matched to user mood and preference for personalized support.</p>
+    </div>
+
+    <!-- Feature 4: Echo -->
+    <div class="card" style="border-left:4px solid var(--orange);">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+        <div class="feature-icon" style="width:48px;height:48px;border-radius:12px;font-size:22px;background:var(--orange);">&#x1F4E2;</div>
+        <div>
+          <h4 style="margin-bottom:2px;">Echo</h4>
+          <span class="pill pill-orange" style="font-size:11px;">Anonymous Community</span>
+        </div>
+      </div>
+      <p style="font-size:15px;">Share thoughts anonymously. Your Echo reaches other users who can respond with support. It's the emotional equivalent of PostSecret meets Reddit's r/offmychest — creating genuine peer connection without identity exposure.</p>
+    </div>
+
+    <!-- Feature 5: Journaling -->
+    <div class="card" style="border-left:4px solid #10B981;">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+        <div class="feature-icon" style="width:48px;height:48px;border-radius:12px;font-size:22px;background:#10B981;">&#x1F4DD;</div>
+        <div>
+          <h4 style="margin-bottom:2px;">Journaling</h4>
+          <span class="pill pill-green" style="font-size:11px;">Guided & Free-form</span>
+        </div>
+      </div>
+      <p style="font-size:15px;">Structured and free-form journaling with AI-powered prompts that adapt to the user's current emotional state. Premium features include photo attachments, voice journals with transcription, and exportable emotional insights.</p>
+    </div>
+
+    <!-- Feature 6: Exercises -->
+    <div class="card" style="border-left:4px solid #EC4899;">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+        <div class="feature-icon" style="width:48px;height:48px;border-radius:12px;font-size:22px;background:#EC4899;">&#x1F9D8;</div>
+        <div>
+          <h4 style="margin-bottom:2px;">Exercises & Mindfulness</h4>
+          <span class="pill" style="background:#FCE7F3;color:#9D174D;font-size:11px;">Structured Interventions</span>
+        </div>
+      </div>
+      <p style="font-size:15px;">Breathing exercises, guided meditations, and cognitive reframing tools. One-tap actions after AI conversations (e.g., "Try 1-minute breathing") turn emotional insights into immediate action.</p>
+    </div>
+  </div>
+
+  <div class="slide-number">05 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6: MARKET OPPORTUNITY — TAM SAM SOM -->
+<!-- ============================================================ -->
+<section class="slide" style="background:linear-gradient(180deg, var(--light-bg) 0%, white 100%);">
+  <span class="tag">Market Opportunity</span>
+  <h2 style="margin-bottom:16px;">A <span class="accent">$50B+</span> Market Opportunity</h2>
+  <p style="margin-bottom:50px;max-width:700px;">The emotional wellbeing space sits at the intersection of three mega-trends: youth wellness crisis, AI transformation, and digital-first care delivery.</p>
+
+  <!-- TAM SAM SOM Visual -->
+  <div style="display:flex;align-items:center;gap:80px;">
+    <div style="position:relative;width:500px;height:500px;flex-shrink:0;">
+      <!-- TAM circle -->
+      <div style="position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(14,171,140,0.08);border:2px solid rgba(14,171,140,0.2);display:flex;align-items:flex-start;justify-content:center;padding-top:30px;">
+        <span style="font-size:14px;font-weight:600;color:var(--green);opacity:0.6;">TAM</span>
+      </div>
+      <!-- SAM circle -->
+      <div style="position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(14,171,140,0.15);border:2px solid rgba(14,171,140,0.3);top:100px;left:80px;display:flex;align-items:flex-start;justify-content:center;padding-top:24px;">
+        <span style="font-size:14px;font-weight:600;color:var(--green);opacity:0.7;">SAM</span>
+      </div>
+      <!-- SOM circle -->
+      <div style="position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(14,171,140,0.3);border:2px solid var(--green);top:180px;left:160px;display:flex;align-items:center;justify-content:center;">
+        <span style="font-size:14px;font-weight:700;color:var(--green);">SOM</span>
+      </div>
+    </div>
+
+    <div style="flex:1;">
+      <div style="margin-bottom:40px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+          <span style="font-size:14px;font-weight:600;color:var(--green);background:rgba(14,171,140,0.1);padding:2px 10px;border-radius:4px;">TAM</span>
+          <span style="font-size:48px;font-weight:800;color:var(--dark);">$49.7B</span>
+        </div>
+        <p style="font-size:16px;margin-left:58px;">Gen Z Emotional Wellbeing Market (2030)</p>
+        <p style="font-size:13px;color:var(--gray);margin-left:58px;">Global youth wellness spending + digital therapeutics + AI wellbeing solutions</p>
+      </div>
+
+      <div style="margin-bottom:40px;">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+          <span style="font-size:14px;font-weight:600;color:var(--green);background:rgba(14,171,140,0.15);padding:2px 10px;border-radius:4px;">SAM</span>
+          <span style="font-size:48px;font-weight:800;color:var(--dark);">$7.5B</span>
+        </div>
+        <p style="font-size:16px;margin-left:58px;">Emotional Wellbeing Apps (English-speaking markets, 17-28 age group)</p>
+        <p style="font-size:13px;color:var(--gray);margin-left:58px;">North America + UK + MENA English-speaking D2C app market</p>
+      </div>
+
+      <div>
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:4px;">
+          <span style="font-size:14px;font-weight:600;color:var(--green);background:rgba(14,171,140,0.25);padding:2px 10px;border-radius:4px;">SOM</span>
+          <span style="font-size:48px;font-weight:800;color:var(--dark);">$120M</span>
+        </div>
+        <p style="font-size:16px;margin-left:58px;">Achievable within 5 years (Year 5 target)</p>
+        <p style="font-size:13px;color:var(--gray);margin-left:58px;">500K paid subscribers at ~$20/month avg. ARPU across Tier-1 markets</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="footnote">Sources: Mordor Intelligence 2025, Grand View Research 2025, MarketsandMarkets 2025</p>
+  <div class="slide-number">06 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7: MARKET GROWTH CHART -->
+<!-- ============================================================ -->
+<section class="slide">
+  <span class="tag">Market Growth</span>
+  <h2 style="margin-bottom:40px;">Emotional Wellbeing Is The <span class="accent">Fastest-Growing</span> Wellness Category</h2>
+
+  <div class="grid-2" style="gap:80px;">
+    <div>
+      <h4 style="margin-bottom:20px;">Global Emotional Wellbeing App Market ($B)</h4>
+      <div class="bar-chart" style="height:280px;">
+        <div class="bar-group">
+          <div class="bar-value">$4.2B</div>
+          <div class="bar" style="height:74px;background:rgba(14,171,140,0.4);"></div>
+          <div class="bar-label">2022</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-value">$5.8B</div>
+          <div class="bar" style="height:102px;background:rgba(14,171,140,0.5);"></div>
+          <div class="bar-label">2023</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-value">$7.5B</div>
+          <div class="bar" style="height:132px;background:rgba(14,171,140,0.6);"></div>
+          <div class="bar-label">2024</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-value">$10.1B</div>
+          <div class="bar" style="height:178px;background:rgba(14,171,140,0.7);"></div>
+          <div class="bar-label">2026E</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-value">$15.2B</div>
+          <div class="bar" style="height:230px;background:rgba(14,171,140,0.85);"></div>
+          <div class="bar-label">2028E</div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-value">$22.7B</div>
+          <div class="bar" style="height:280px;background:var(--green);"></div>
+          <div class="bar-label">2030E</div>
+        </div>
+      </div>
+      <p class="footnote">Source: MarketsandMarkets, Grand View Research 2025</p>
+    </div>
+
+    <div>
+      <h4 style="margin-bottom:24px;">Key Growth Drivers</h4>
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <div style="background:var(--light-bg);border-radius:16px;padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <strong>AI-Powered Solutions</strong>
+            <span style="color:var(--green);font-weight:700;">34% CAGR</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:85%;"></div></div>
+          <p style="font-size:13px;margin-top:4px;">$1.8B (2025) &#8594; $7.8B (2030)</p>
+        </div>
+        <div style="background:var(--light-bg);border-radius:16px;padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <strong>Digital Therapeutics</strong>
+            <span style="color:var(--green);font-weight:700;">24% CAGR</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:70%;"></div></div>
+          <p style="font-size:13px;margin-top:4px;">$7.7B (2024) &#8594; $82B (2035)</p>
+        </div>
+        <div style="background:var(--light-bg);border-radius:16px;padding:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <strong>Gen Z Wellness Spend</strong>
+            <span style="color:var(--green);font-weight:700;">8.3% CAGR</span>
+          </div>
+          <div class="progress-bar"><div class="fill" style="width:55%;"></div></div>
+          <p style="font-size:13px;margin-top:4px;">$30.7B (2024) &#8594; $49.7B (2030)</p>
+        </div>
+        <div style="background:#FEF3C7;border-radius:16px;padding:24px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="font-size:28px;">&#x1F4B0;</div>
+            <div>
+              <strong style="color:var(--dark);">$2.7B invested in emotional wellbeing tech in 2024</strong>
+              <p style="font-size:13px;margin-top:2px;">38% YoY increase. AI ventures received 48% of all funding.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">07 / 16</div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 8: TRACTION -->
+<!-- ============================================================ -->
+<section class="slide" style="background:var(--dark);color:white;">
+  <span class="tag">Traction</span>
+  <h2 style="color:white;margin-bottom:12px;">Real Users, <span style="color:var(--green);">Real Growth</span>, Zero Paid Ads</h2>
+  <p style="color:rgba(255,255,255,0.6);margin-bottom:40px;">Everything below was achieved with $0 marketing spend — 100% organic.</p>
+
+  <div class="grid-4">
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number">9,200+</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">Verified unique users</div>
+    </div>
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number">30+</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">Countries reached</div>
+    </div>
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number" style="color:var(--blue);">70%</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">Rate the app 4-5 stars</div>
+    </div>
+    <div class="stat-card" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);">
+      <div class="number">$0</div>
+      <div class="label" style="color:rgba(255,255,255,0.7);">Customer acquisition cost</div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+    <div style="background:rgba(255,255,255,0.05);border-radius:20px;padding:36px;border:1px solid rgba(255,255,255,0.1);">
+      <h4 style="color:var(--green);margin-bottom:20px;">The Tier-1 Shift &#x1F680;</h4>
+      <p style="color:rgba(255,255,255,0.7);font-size:16px;margin-bottom:20px;">For the first time in Jan-Feb 2026, the <strong style="color:white;">United States overtook Pakistan</strong> as the #1 source of new users (110 vs 96). This signals organic product-market resonance in the highest-value market.</p>
+      <div style="display:flex;gap:20px;">
+        <div style="flex:1;text-align:center;padding:16px;background:rgba(14,171,140,0.15);border-radius:12px;">
+          <div style="font-size:28px;font-weight:800;color:var(--green);">500-700</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;">Active Tier-1 users (USA, UK, Canada, MENA, EU)</div>
+        </div>
+        <div style="flex:1;text-align:center;padding:16px;background:rgba(29,161,242,0.15);border-radius:12px;">
+          <div style="font-size:28px;font-weight:800;color:var(--blue);">851</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;">Users opted in for ongoing communication</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.05);border-radius:20px;padding:36px;border:1px solid rgba(255,255,255,0.1);">
+      <h4 style="color:var(--green);margin-bottom:20px;">Feature Engagement</h4>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <span style="color:rgba(255,255,255,0.8);font-size:15px;">Mood Tracking (Anchor)</span>
+            <span style="color:var(--green);font-weight:700;">33%</span>
+          </div>
+          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:33%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <span style="color:rgba(255,255,255,0.8);font-size:15px;">AI Chat Interest</span>
+            <span style="color:var(--green);font-weight:700;">33%</span>
+          </div>
+          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:33%;background:linear-gradient(to right, var(--blue), var(--green));"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <span style="color:rgba(255,255,255,0.8);font-size:15px;">Journaling</span>
+            <span style="color:var(--green);font-weight:700;">22%</span>
+          </div>
+          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:22%;background:var(--purple);"></div></div>
+        </div>
+      </div>
+      <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-top:16px;">*Engagement limited by early paywall — being resolved with value-first pivot (see Roadmap)</p>
+    </div>
+  </div>
+
+  <div class="slide-number" style="color:rgba(255,255,255,0.3);">08 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9: COMPETITIVE LANDSCAPE -->
+<!-- ============================================================ -->
+<section class="slide">
+  <span class="tag">Competition</span>
+  <h2 style="margin-bottom:30px;">Competitive Landscape: <span class="accent">The Gap We Fill</span></h2>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th style="width:160px;">Feature</th>
+        <th style="text-align:center;">SimpliHuman</th>
+        <th style="text-align:center;">Calm</th>
+        <th style="text-align:center;">Headspace</th>
+        <th style="text-align:center;">Wysa</th>
+        <th style="text-align:center;">Daylio</th>
+        <th style="text-align:center;">BetterHelp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Youth-Focused (17-28)</strong></td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+      <tr>
+        <td><strong>AI Companion Chat</strong></td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+      <tr>
+        <td><strong>Mood Tracking</strong></td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+      <tr>
+        <td><strong>Anonymous Community</strong></td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+      <tr>
+        <td><strong>Cathartic Release</strong></td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+      <tr>
+        <td><strong>Journaling</strong></td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+      <tr>
+        <td><strong>Community-Led Development</strong></td>
+        <td style="text-align:center;" class="check">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+      <tr>
+        <td><strong>Price Point</strong></td>
+        <td style="text-align:center;color:var(--green);font-weight:700;">~$10/mo</td>
+        <td style="text-align:center;">$70/yr</td>
+        <td style="text-align:center;">$70/yr</td>
+        <td style="text-align:center;">Varies</td>
+        <td style="text-align:center;">$36/yr</td>
+        <td style="text-align:center;">$300/mo</td>
+      </tr>
+      <tr class="highlight">
+        <td><strong>All-in-One Ecosystem</strong></td>
+        <td style="text-align:center;font-size:20px;">&#10003;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+        <td style="text-align:center;" class="cross">&#10007;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:30px;background:var(--light-bg);border-radius:16px;padding:24px;display:flex;gap:40px;">
+    <div style="flex:1;">
+      <h4 style="margin-bottom:8px;">Calm & Headspace</h4>
+      <p style="font-size:14px;">Meditation-first, adult-focused. $2-3B valuations but not solving emotional wellbeing for youth. Different category.</p>
+    </div>
+    <div style="flex:1;">
+      <h4 style="margin-bottom:8px;">Wysa & Woebot</h4>
+      <p style="font-size:14px;">AI therapy, pivoting to B2B/clinical. Woebot shut down consumer app in 2025. Not community-led, not youth-specific.</p>
+    </div>
+    <div style="flex:1;">
+      <h4 style="margin-bottom:8px;">BetterHelp / Talkspace</h4>
+      <p style="font-size:14px;">Expensive therapy platforms ($300+/mo). Declining D2C. Pivoting to insurance. Completely different price point and approach.</p>
+    </div>
+  </div>
+
+  <div class="slide-number">09 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10: BUSINESS MODEL -->
+<!-- ============================================================ -->
+<section class="slide" style="background:var(--light-bg);">
+  <span class="tag">Business Model</span>
+  <h2 style="margin-bottom:40px;">Value-First <span class="accent">Monetization</span></h2>
+
+  <div class="grid-2" style="gap:60px;">
+    <div>
+      <h3 style="margin-bottom:24px;">Freemium + Subscription</h3>
+      <p style="font-size:17px;margin-bottom:30px;">Free tier delivers immediate emotional value (mood tracking, basic journaling, limited AI). Premium unlocks the full ecosystem.</p>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:white;border-radius:16px;padding:24px;border:2px solid #E5E7EB;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <h4 style="margin-bottom:4px;">Free Tier</h4>
+              <p style="font-size:14px;">Mood tracking, basic journal, limited AI, community Echo</p>
+            </div>
+            <div style="font-size:28px;font-weight:800;color:var(--gray);">$0</div>
+          </div>
+        </div>
+
+        <div style="background:white;border-radius:16px;padding:24px;border:2px solid var(--green);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <h4 style="margin-bottom:4px;color:var(--green);">Premium Monthly</h4>
+              <p style="font-size:14px;">Unlimited AI, advanced analytics, voice journals, exercises, data export</p>
+            </div>
+            <div style="font-size:28px;font-weight:800;color:var(--green);">~$10/mo</div>
+          </div>
+        </div>
+
+        <div style="background:white;border-radius:16px;padding:24px;border:2px solid var(--blue);">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <h4 style="margin-bottom:4px;color:var(--blue);">Premium Annual</h4>
+              <p style="font-size:14px;">All premium features + custom themes + premium analytics</p>
+            </div>
+            <div style="font-size:28px;font-weight:800;color:var(--blue);">~$72/yr</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:24px;">Revenue Projections</h3>
+      <div style="background:white;border-radius:20px;padding:36px;border:2px solid #E5E7EB;">
+        <div class="bar-chart" style="height:250px;">
+          <div class="bar-group">
+            <div class="bar-value">$50K</div>
+            <div class="bar" style="height:20px;background:rgba(14,171,140,0.3);"></div>
+            <div class="bar-label">Y1</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">$800K</div>
+            <div class="bar" style="height:64px;background:rgba(14,171,140,0.45);"></div>
+            <div class="bar-label">Y2</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">$4.5M</div>
+            <div class="bar" style="height:120px;background:rgba(14,171,140,0.6);"></div>
+            <div class="bar-label">Y3</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">$18M</div>
+            <div class="bar" style="height:190px;background:rgba(14,171,140,0.8);"></div>
+            <div class="bar-label">Y4</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">$52M</div>
+            <div class="bar" style="height:250px;background:var(--green);"></div>
+            <div class="bar-label">Y5</div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--gray);margin-top:16px;">Annual Recurring Revenue (ARR)</p>
+      </div>
+
+      <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="background:white;border-radius:12px;padding:20px;text-align:center;border:2px solid #E5E7EB;">
+          <div style="font-size:32px;font-weight:800;color:var(--green);">60%</div>
+          <div style="font-size:13px;color:var(--gray);">Target Gross Margin</div>
+        </div>
+        <div style="background:white;border-radius:12px;padding:20px;text-align:center;border:2px solid #E5E7EB;">
+          <div style="font-size:32px;font-weight:800;color:var(--green);">18mo</div>
+          <div style="font-size:13px;color:var(--gray);">Target Payback Period</div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;">
+        <h4 style="margin-bottom:8px;font-size:16px;">Additional Revenue Streams</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <span class="pill pill-green">Flow-based Ads</span>
+          <span class="pill pill-blue">B2B University Licensing</span>
+          <span class="pill pill-purple">API & Data Insights</span>
+          <span class="pill pill-orange">Partnerships</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">10 / 16</div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 11: COMMUNITY MOAT -->
+<!-- ============================================================ -->
+<section class="slide">
+  <span class="tag" style="background:var(--purple);">Our Moat</span>
+  <h2 style="margin-bottom:16px;">For The Youth, <span class="accent">By The Youth</span></h2>
+  <p style="margin-bottom:40px;max-width:700px;">SimpliHuman isn't built in a boardroom. Every feature is co-created with our community — making our users co-founders, idea-shapers, and decision-makers.</p>
+
+  <div class="grid-3">
+    <div class="card" style="border:2px solid rgba(14,171,140,0.2);">
+      <div style="font-size:40px;margin-bottom:16px;">&#x1F91D;</div>
+      <h4 style="margin-bottom:8px;">Community-Led R&D</h4>
+      <p style="font-size:15px;">Users vote on features, test prototypes, and shape the product roadmap. Every survey, every feedback loop feeds directly into development. This creates a product that evolves with its users — not ahead of them.</p>
+    </div>
+    <div class="card" style="border:2px solid rgba(14,171,140,0.2);">
+      <div style="font-size:40px;margin-bottom:16px;">&#x1F9E0;</div>
+      <h4 style="margin-bottom:8px;">Longitudinal Emotional Data</h4>
+      <p style="font-size:15px;">Each mood log, context tag, journal entry, and AI interaction builds a rich emotional profile. Over time, this creates a deeply personalized experience no competitor can replicate — switching costs increase with every interaction.</p>
+    </div>
+    <div class="card" style="border:2px solid rgba(14,171,140,0.2);">
+      <div style="font-size:40px;margin-bottom:16px;">&#x1F310;</div>
+      <h4 style="margin-bottom:8px;">Network Effects via Echo</h4>
+      <p style="font-size:15px;">Every user who shares on Echo adds value for every other user who reads and responds. This creates a compounding community effect — the more people use SimpliHuman, the more valuable it becomes for everyone.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;background:linear-gradient(135deg, rgba(14,171,140,0.05), rgba(29,161,242,0.05));border-radius:20px;padding:36px;border:1px solid rgba(14,171,140,0.15);">
+    <h4 style="margin-bottom:16px;">Defensibility Stack</h4>
+    <div style="display:flex;gap:24px;">
+      <div style="flex:1;text-align:center;padding:20px;background:white;border-radius:12px;">
+        <div style="font-size:28px;font-weight:800;color:var(--green);margin-bottom:4px;">Layer 1</div>
+        <div style="font-size:15px;font-weight:600;">Community Trust</div>
+        <p style="font-size:13px;color:var(--gray);margin-top:4px;">Youth-authentic brand built by peers</p>
+      </div>
+      <div style="flex:1;text-align:center;padding:20px;background:white;border-radius:12px;">
+        <div style="font-size:28px;font-weight:800;color:var(--green);margin-bottom:4px;">Layer 2</div>
+        <div style="font-size:15px;font-weight:600;">Data Network Effects</div>
+        <p style="font-size:13px;color:var(--gray);margin-top:4px;">Personalization deepens with each use</p>
+      </div>
+      <div style="flex:1;text-align:center;padding:20px;background:white;border-radius:12px;">
+        <div style="font-size:28px;font-weight:800;color:var(--green);margin-bottom:4px;">Layer 3</div>
+        <div style="font-size:15px;font-weight:600;">Social Graph (Echo)</div>
+        <p style="font-size:13px;color:var(--gray);margin-top:4px;">Community value grows with each user</p>
+      </div>
+      <div style="flex:1;text-align:center;padding:20px;background:white;border-radius:12px;">
+        <div style="font-size:28px;font-weight:800;color:var(--green);margin-bottom:4px;">Layer 4</div>
+        <div style="font-size:15px;font-weight:600;">AI Personalization</div>
+        <p style="font-size:13px;color:var(--gray);margin-top:4px;">4 AI personalities tuned to individual patterns</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">11 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12: GO-TO-MARKET -->
+<!-- ============================================================ -->
+<section class="slide" style="background:var(--light-bg);">
+  <span class="tag">Go-To-Market</span>
+  <h2 style="margin-bottom:40px;">Growth Strategy: <span class="accent">Organic-First,</span> Then Amplify</h2>
+
+  <div class="grid-2" style="gap:60px;">
+    <div>
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <div style="background:white;border-radius:16px;padding:28px;border-left:4px solid var(--green);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <span style="background:var(--green);color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">1</span>
+            <h4>Community Viral Loops</h4>
+          </div>
+          <p style="font-size:15px;">Echo shares, mood streaks, and journal milestones create organic shareable moments. Each anonymous Echo has the potential to resonate and draw new users into the community.</p>
+        </div>
+
+        <div style="background:white;border-radius:16px;padding:28px;border-left:4px solid var(--blue);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <span style="background:var(--blue);color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">2</span>
+            <h4>University & Campus Partnerships</h4>
+          </div>
+          <p style="font-size:15px;">Partner with university wellness centers to offer SimpliHuman as a supplementary emotional wellbeing tool. Proven channel for BetterHelp/Talkspace — but at a fraction of the cost.</p>
+        </div>
+
+        <div style="background:white;border-radius:16px;padding:28px;border-left:4px solid var(--purple);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <span style="background:var(--purple);color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">3</span>
+            <h4>Creator & Influencer Network</h4>
+          </div>
+          <p style="font-size:15px;">Partner with Gen Z mental wellness creators on TikTok, Instagram, and YouTube. Authentic voices sharing their SimpliHuman journey — not ads, but genuine advocacy.</p>
+        </div>
+
+        <div style="background:white;border-radius:16px;padding:28px;border-left:4px solid var(--orange);">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <span style="background:var(--orange);color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">4</span>
+            <h4>Targeted Paid Growth (Post-PMF)</h4>
+          </div>
+          <p style="font-size:15px;">Once product-market fit is validated (>40% PMF score), deploy targeted paid acquisition on platforms where our audience lives: TikTok, Instagram, Snapchat.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:24px;">User Growth Targets</h3>
+      <div style="background:white;border-radius:20px;padding:36px;border:2px solid #E5E7EB;">
+        <div class="bar-chart" style="height:260px;">
+          <div class="bar-group">
+            <div class="bar-value">9.2K</div>
+            <div class="bar" style="height:15px;background:var(--green);"></div>
+            <div class="bar-label">Now</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">50K</div>
+            <div class="bar" style="height:50px;background:rgba(14,171,140,0.5);"></div>
+            <div class="bar-label">Y1</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">250K</div>
+            <div class="bar" style="height:100px;background:rgba(14,171,140,0.6);"></div>
+            <div class="bar-label">Y2</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">1M</div>
+            <div class="bar" style="height:160px;background:rgba(14,171,140,0.75);"></div>
+            <div class="bar-label">Y3</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">3M</div>
+            <div class="bar" style="height:215px;background:rgba(14,171,140,0.85);"></div>
+            <div class="bar-label">Y4</div>
+          </div>
+          <div class="bar-group">
+            <div class="bar-value">8M</div>
+            <div class="bar" style="height:260px;background:var(--green);"></div>
+            <div class="bar-label">Y5</div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--gray);margin-top:12px;">Total registered users (free + paid)</p>
+      </div>
+
+      <div style="margin-top:24px;background:#FEF3C7;border-radius:16px;padding:24px;">
+        <h4 style="margin-bottom:8px;">Key Insight</h4>
+        <p style="font-size:15px;">With <strong>9,200+ users at $0 CAC</strong>, we've proven organic demand exists. Funding will unlock growth channels to accelerate what's already working — not start from zero.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">12 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13: ROADMAP -->
+<!-- ============================================================ -->
+<section class="slide">
+  <span class="tag">Roadmap</span>
+  <h2 style="margin-bottom:50px;">Product <span class="accent">Roadmap</span></h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>Q1-Q2 2026</h4>
+      <h3 style="font-size:20px;margin-bottom:8px;color:var(--dark);">Foundation Fix</h3>
+      <p style="font-size:14px;">
+        &#8226; Single-step sign-in + guest mode<br>
+        &#8226; Resolve analytics discrepancies<br>
+        &#8226; Fix onboarding (target &lt;20% drop)<br>
+        &#8226; Move paywall behind value delivery<br>
+        &#8226; Performance fixes (load times, AI latency)
+      </p>
+      <span class="pill pill-green" style="margin-top:8px;font-size:11px;">In Progress</span>
+    </div>
+
+    <div class="timeline-item">
+      <h4>Q3-Q4 2026</h4>
+      <h3 style="font-size:20px;margin-bottom:8px;color:var(--dark);">Product-Market Fit</h3>
+      <p style="font-size:14px;">
+        &#8226; Mood Tracker 2.0 (context tags + mini-journal)<br>
+        &#8226; AI personality system launch<br>
+        &#8226; Echo feature revamp for engagement<br>
+        &#8226; Home screen simplification<br>
+        &#8226; A/B testing paywall timing
+      </p>
+      <span class="pill pill-blue" style="margin-top:8px;font-size:11px;">Planned</span>
+    </div>
+
+    <div class="timeline-item">
+      <h4>2027 H1</h4>
+      <h3 style="font-size:20px;margin-bottom:8px;color:var(--dark);">Scale & Monetize</h3>
+      <p style="font-size:14px;">
+        &#8226; University partnership program<br>
+        &#8226; Premium analytics & data export<br>
+        &#8226; Voice journals & transcription<br>
+        &#8226; Widget ecosystem (home screen)<br>
+        &#8226; Paid growth activation (post-PMF)
+      </p>
+      <span class="pill pill-purple" style="margin-top:8px;font-size:11px;">Planned</span>
+    </div>
+
+    <div class="timeline-item">
+      <h4>2027 H2+</h4>
+      <h3 style="font-size:20px;margin-bottom:8px;color:var(--dark);">Ecosystem Expansion</h3>
+      <p style="font-size:14px;">
+        &#8226; B2B enterprise wellness offering<br>
+        &#8226; Professional support marketplace<br>
+        &#8226; Multi-language expansion<br>
+        &#8226; Wearable integrations (Apple Watch)<br>
+        &#8226; Research partnerships & clinical validation
+      </p>
+      <span class="pill pill-orange" style="margin-top:8px;font-size:11px;">Vision</span>
+    </div>
+  </div>
+
+  <div style="margin-top:50px;background:var(--light-bg);border-radius:20px;padding:32px;">
+    <h4 style="margin-bottom:16px;">Key Milestones & KPIs We're Tracking</h4>
+    <div style="display:flex;gap:30px;">
+      <div style="flex:1;">
+        <div style="font-size:14px;font-weight:600;color:var(--green);margin-bottom:4px;">Onboarding Drop</div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:20px;font-weight:700;color:var(--red);text-decoration:line-through;">70%</span>
+          <span style="font-size:18px;">&#8594;</span>
+          <span style="font-size:20px;font-weight:700;color:var(--green);">&lt;20%</span>
+        </div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:14px;font-weight:600;color:var(--green);margin-bottom:4px;">D7 Retention</div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:20px;font-weight:700;color:var(--orange);">~2%</span>
+          <span style="font-size:18px;">&#8594;</span>
+          <span style="font-size:20px;font-weight:700;color:var(--green);">5-6%</span>
+        </div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:14px;font-weight:600;color:var(--green);margin-bottom:4px;">First Mood Log Rate</div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:20px;font-weight:700;color:var(--orange);">~30%</span>
+          <span style="font-size:18px;">&#8594;</span>
+          <span style="font-size:20px;font-weight:700;color:var(--green);">50%+</span>
+        </div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:14px;font-weight:600;color:var(--green);margin-bottom:4px;">PMF Score</div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:20px;font-weight:700;color:var(--orange);">25%</span>
+          <span style="font-size:18px;">&#8594;</span>
+          <span style="font-size:20px;font-weight:700;color:var(--green);">40%+</span>
+        </div>
+      </div>
+      <div style="flex:1;">
+        <div style="font-size:14px;font-weight:600;color:var(--green);margin-bottom:4px;">Active Paid Users</div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:20px;font-weight:700;color:var(--orange);">~10</span>
+          <span style="font-size:18px;">&#8594;</span>
+          <span style="font-size:20px;font-weight:700;color:var(--green);">50+</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">13 / 16</div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 14: TEAM -->
+<!-- ============================================================ -->
+<section class="slide" style="background:var(--dark);color:white;">
+  <span class="tag">The Team</span>
+  <h2 style="color:white;margin-bottom:12px;">Built By People Who <span style="color:var(--green);">Understand</span></h2>
+  <p style="color:rgba(255,255,255,0.6);margin-bottom:50px;">A cross-disciplinary founding team combining deep consulting expertise, clinical psychology, technology leadership, and design thinking.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:24px;">
+
+    <!-- Mohammad -->
+    <div style="background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;border:1px solid rgba(255,255,255,0.1);text-align:center;">
+      <div style="width:80px;height:80px;background:linear-gradient(135deg, var(--green), var(--blue));border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;color:white;">MJ</div>
+      <h4 style="color:white;font-size:18px;margin-bottom:4px;">Mohammad J Sear</h4>
+      <div style="color:var(--green);font-size:14px;font-weight:600;margin-bottom:12px;">Co-Founder</div>
+      <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;">30+ years of global experience. Former Partner at EY Digital Consulting MENA. Senior leader in UK Government supporting startups & SMEs. Strategy & governance expert.</p>
+    </div>
+
+    <!-- Saima -->
+    <div style="background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;border:1px solid rgba(255,255,255,0.1);text-align:center;">
+      <div style="width:80px;height:80px;background:linear-gradient(135deg, var(--purple), #EC4899);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;color:white;">SS</div>
+      <h4 style="color:white;font-size:18px;margin-bottom:4px;">Saima Salman</h4>
+      <div style="color:var(--green);font-size:14px;font-weight:600;margin-bottom:12px;">Co-Founder</div>
+      <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;">Integrative Counsellor & Psychotherapist. Multicultural competence in individual & group therapy. Lead Counsellor at NIP, QAU. Member of PPA & APA. Clinical foundation of SimpliHuman.</p>
+    </div>
+
+    <!-- Doruk -->
+    <div style="background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;border:1px solid rgba(255,255,255,0.1);text-align:center;">
+      <div style="width:80px;height:80px;background:linear-gradient(135deg, var(--orange), #EF4444);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;color:white;">DS</div>
+      <h4 style="color:white;font-size:18px;margin-bottom:4px;">Doruk Sardag</h4>
+      <div style="color:var(--green);font-size:14px;font-weight:600;margin-bottom:12px;">Co-Founder</div>
+      <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;">20+ years across ECMEA including Oracle & EY Consulting. Innovation, strategy & digital transformation expert. Marketing & customer experience leader driving growth & brand strategy.</p>
+    </div>
+
+    <!-- Usman -->
+    <div style="background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;border:1px solid rgba(255,255,255,0.1);text-align:center;">
+      <div style="width:80px;height:80px;background:linear-gradient(135deg, var(--blue), #6366F1);border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;color:white;">UF</div>
+      <h4 style="color:white;font-size:18px;margin-bottom:4px;">Usman Fiaz</h4>
+      <div style="color:var(--green);font-size:14px;font-weight:600;margin-bottom:12px;">Co-Founder &mdash; Design Lead</div>
+      <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;">Design & user experience expert. Architect of SimpliHuman's human-centered design language. Translates emotional wellbeing principles into intuitive, accessible digital experiences for youth.</p>
+    </div>
+
+    <!-- Salman -->
+    <div style="background:rgba(255,255,255,0.05);border-radius:20px;padding:30px;border:1px solid rgba(255,255,255,0.1);text-align:center;">
+      <div style="width:80px;height:80px;background:linear-gradient(135deg, #10B981, var(--green));border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;color:white;">SM</div>
+      <h4 style="color:white;font-size:18px;margin-bottom:4px;">Salman Mustafa</h4>
+      <div style="color:var(--green);font-size:14px;font-weight:600;margin-bottom:12px;">Co-Founder &mdash; CTO</div>
+      <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;">Technical architect and engineering leader. Leads SimpliHuman's full-stack development, AI integration, and infrastructure. Drives platform scalability, performance, and technical innovation.</p>
+    </div>
+
+  </div>
+
+  <div style="margin-top:40px;text-align:center;">
+    <p style="color:rgba(255,255,255,0.5);font-size:16px;max-width:700px;margin:0 auto;">Combined 80+ years of experience across consulting, psychology, technology, design, and digital transformation spanning USA, UK, MENA, South Asia, and Europe.</p>
+  </div>
+
+  <div class="slide-number" style="color:rgba(255,255,255,0.3);">14 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 15: THE ASK -->
+<!-- ============================================================ -->
+<section class="slide" style="background:linear-gradient(135deg, #F0F9F6, #E0F2ED);">
+  <span class="tag">The Ask</span>
+  <h2 style="margin-bottom:40px;">Seed Round: <span class="accent">Fuel the Movement</span></h2>
+
+  <div class="grid-2" style="gap:80px;">
+    <div>
+      <div style="background:white;border-radius:24px;padding:48px;box-shadow:0 20px 60px rgba(14,171,140,0.1);border:2px solid rgba(14,171,140,0.15);">
+        <div style="text-align:center;margin-bottom:32px;">
+          <div style="font-size:14px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Raising</div>
+          <div style="font-size:72px;font-weight:800;color:var(--dark);line-height:1;">$1.5M</div>
+          <div style="font-size:18px;color:var(--gray);margin-top:8px;">Seed Round</div>
+        </div>
+
+        <div class="divider" style="margin:24px auto;"></div>
+
+        <h4 style="margin-bottom:20px;text-align:center;">Use of Funds</h4>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-weight:600;">Product & Engineering</span>
+              <span style="font-weight:700;color:var(--green);">45%</span>
+            </div>
+            <div class="progress-bar"><div class="fill" style="width:45%;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-weight:600;">Growth & Marketing</span>
+              <span style="font-weight:700;color:var(--green);">25%</span>
+            </div>
+            <div class="progress-bar"><div class="fill" style="width:25%;background:var(--blue);"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-weight:600;">AI & Data Infrastructure</span>
+              <span style="font-weight:700;color:var(--green);">15%</span>
+            </div>
+            <div class="progress-bar"><div class="fill" style="width:15%;background:var(--purple);"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-weight:600;">Operations & Team</span>
+              <span style="font-weight:700;color:var(--green);">10%</span>
+            </div>
+            <div class="progress-bar"><div class="fill" style="width:10%;background:var(--orange);"></div></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-weight:600;">Reserve</span>
+              <span style="font-weight:700;color:var(--green);">5%</span>
+            </div>
+            <div class="progress-bar"><div class="fill" style="width:5%;background:#9CA3AF;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:24px;">What This Unlocks</h3>
+
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="display:flex;align-items:flex-start;gap:16px;background:white;padding:24px;border-radius:16px;">
+          <div style="width:40px;height:40px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0;">1</div>
+          <div>
+            <h4 style="margin-bottom:4px;">Product-Market Fit Validation</h4>
+            <p style="font-size:15px;">Complete the value-first pivot, fix onboarding, achieve &gt;40% PMF score with 50+ active paid subscribers in Tier-1 markets.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:16px;background:white;padding:24px;border-radius:16px;">
+          <div style="width:40px;height:40px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0;">2</div>
+          <div>
+            <h4 style="margin-bottom:4px;">Scale to 50K Users</h4>
+            <p style="font-size:15px;">Activate organic growth channels, launch university partnerships, and begin targeted paid acquisition in proven channels.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:16px;background:white;padding:24px;border-radius:16px;">
+          <div style="width:40px;height:40px;background:var(--purple);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0;">3</div>
+          <div>
+            <h4 style="margin-bottom:4px;">AI Ecosystem Buildout</h4>
+            <p style="font-size:15px;">Deploy 4 AI personalities, context-aware recommendations, and the emotional intelligence engine that makes SimpliHuman irreplaceable.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:16px;background:white;padding:24px;border-radius:16px;">
+          <div style="width:40px;height:40px;background:var(--orange);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0;">4</div>
+          <div>
+            <h4 style="margin-bottom:4px;">18-Month Runway to Series A</h4>
+            <p style="font-size:15px;">Reach key metrics for Series A fundraise: 50K+ users, $500K+ ARR, validated unit economics, and clear path to profitability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">15 / 16</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 16: CLOSING -->
+<!-- ============================================================ -->
+<section class="slide" style="background:linear-gradient(135deg, var(--green), var(--green-dark));color:white;text-align:center;align-items:center;">
+  <div class="circle-deco" style="width:600px;height:600px;top:-200px;right:-200px;background:white;opacity:0.03;"></div>
+  <div class="circle-deco" style="width:400px;height:400px;bottom:-100px;left:-100px;background:white;opacity:0.03;"></div>
+
+  <svg width="200" height="48" viewBox="0 0 191 46" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:40px;opacity:0.9;">
+    <path d="M36.2 32.24C35.08 32.24 34.072 32.104 33.176 31.832C32.28 31.544 31.424 31.048 30.608 30.344C30.4 30.168 30.24 29.968 30.128 29.744C30.016 29.52 29.96 29.296 29.96 29.072C29.96 28.704 30.088 28.384 30.344 28.112C30.616 27.824 30.952 27.68 31.352 27.68C31.656 27.68 31.928 27.776 32.168 27.968C32.776 28.464 33.376 28.84 33.968 29.096C34.576 29.352 35.32 29.48 36.2 29.48C36.792 29.48 37.336 29.392 37.832 29.216C38.328 29.024 38.728 28.776 39.032 28.472C39.336 28.152 39.488 27.792 39.488 27.392C39.488 26.912 39.344 26.504 39.056 26.168C38.768 25.832 38.328 25.552 37.736 25.328C37.144 25.088 36.392 24.904 35.48 24.776C34.616 24.648 33.856 24.456 33.2 24.2C32.544 23.928 31.992 23.592 31.544 23.192C31.112 22.776 30.784 22.296 30.56 21.752C30.336 21.192 30.224 20.568 30.224 19.88C30.224 18.84 30.488 17.952 31.016 17.216C31.56 16.48 32.288 15.92 33.2 15.536C34.112 15.152 35.12 14.96 36.224 14.96C37.264 14.96 38.224 15.12 39.104 15.44C40 15.744 40.728 16.136 41.288 16.616C41.752 16.984 41.984 17.408 41.984 17.888C41.984 18.24 41.848 18.56 41.576 18.848C41.304 19.136 40.984 19.28 40.616 19.28C40.376 19.28 40.16 19.208 39.968 19.064C39.712 18.84 39.368 18.632 38.936 18.44C38.504 18.232 38.048 18.064 37.568 17.936C37.088 17.792 36.64 17.72 36.224 17.72C35.536 17.72 34.952 17.808 34.472 17.984C34.008 18.16 33.656 18.4 33.416 18.704C33.176 19.008 33.056 19.36 33.056 19.76C33.056 20.24 33.192 20.64 33.464 20.96C33.752 21.264 34.16 21.512 34.688 21.704C35.216 21.88 35.848 22.04 36.584 22.184C37.544 22.36 38.384 22.568 39.104 22.808C39.84 23.048 40.448 23.36 40.928 23.744C41.408 24.112 41.768 24.584 42.008 25.16C42.248 25.72 42.368 26.408 42.368 27.224C42.368 28.264 42.08 29.16 41.504 29.912C40.928 30.664 40.168 31.24 39.224 31.64C38.296 32.04 37.288 32.24 36.2 32.24Z" fill="white"/>
+    <path d="M47.59 30.536V20.624C44.712 20.208 44.848 19.864 45.12 19.592C45.392 19.304 45.736 19.16 46.152 19.16C46.568 19.16 46.912 19.304 47.184 19.592C47.456 19.864 47.592 20.208 47.592 20.624V30.536C47.592 30.952 47.456 31.304 47.184 31.592C46.912 31.864 46.568 32 46.152 32C45.736 32 45.392 31.864 45.12 31.592C44.848 31.304 44.712 30.952 44.712 30.536Z" fill="white" opacity="0"/>
+    <rect x="6.68" y="19.274" width="9.342" height="25.726" rx="4.671" stroke="white" stroke-width="2"/>
+    <circle cx="11.523" cy="6.661" r="5.661" fill="white" stroke="white" stroke-width="2" opacity="0.8"/>
+    <path d="M18.05 28.126C14.282 31.071 8.862 31.003 5.131 28.011C3.562 26.785 2.314 25.482 1.388 24.102C0.463 22.722 0 21.246 0 19.675C0 18.18 0.584 16.896 1.751 15.823C2.878 14.711 4.226 14.155 5.795 14.155C7.365 14.155 8.733 14.711 9.9 15.823C11.027 16.896 11.591 18.18 11.591 19.675C11.591 18.18 12.174 16.896 13.342 15.823C14.468 14.711 15.817 14.155 17.386 14.155C18.956 14.155 20.324 14.711 21.491 15.823C22.618 16.896 23.182 18.18 23.182 19.675C23.182 21.284 22.719 22.798 21.793 24.217C20.827 25.596 19.58 26.9 18.05 28.126Z" fill="rgba(255,255,255,0.3)"/>
+  </svg>
+
+  <h1 style="color:white;font-size:56px;margin-bottom:20px;">The world doesn't need<br>another meditation app.</h1>
+  <h2 style="color:rgba(255,255,255,0.9);font-weight:400;font-size:32px;margin-bottom:16px;">It needs an emotional wellbeing ecosystem<br><strong>built by the generation that needs it most.</strong></h2>
+
+  <div class="divider" style="background:rgba(255,255,255,0.3);margin:30px auto;"></div>
+
+  <div style="display:flex;gap:40px;justify-content:center;margin-top:10px;margin-bottom:40px;">
+    <div style="text-align:center;">
+      <div style="font-size:36px;font-weight:800;">$49.7B</div>
+      <div style="font-size:14px;opacity:0.7;">Market by 2030</div>
+    </div>
+    <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+    <div style="text-align:center;">
+      <div style="font-size:36px;font-weight:800;">9,200+</div>
+      <div style="font-size:14px;opacity:0.7;">Users at $0 CAC</div>
+    </div>
+    <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+    <div style="text-align:center;">
+      <div style="font-size:36px;font-weight:800;">46%</div>
+      <div style="font-size:14px;opacity:0.7;">of Gen Z affected</div>
+    </div>
+    <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+    <div style="text-align:center;">
+      <div style="font-size:36px;font-weight:800;">$1.5M</div>
+      <div style="font-size:14px;opacity:0.7;">Seed Round</div>
+    </div>
+  </div>
+
+  <p style="color:rgba(255,255,255,0.8);font-size:22px;margin-bottom:30px;">Let's build the future of emotional wellbeing together.</p>
+
+  <div style="display:flex;gap:16px;justify-content:center;">
+    <div style="background:white;color:var(--green);padding:14px 40px;border-radius:100px;font-weight:700;font-size:18px;">simplihuman.com</div>
+  </div>
+
+  <div class="slide-number" style="color:rgba(255,255,255,0.3);">16 / 16</div>
+</section>
+
+</body>
+</html>
