@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1920, initial-scale=1.0">
-<title>SimpliHuman — Internal Plan 2026 (Confidential)</title>
+<title>SimpliHuman - 12-Month Pre-Funding Operating Plan (Confidential)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 :root {
@@ -11,7 +11,7 @@
   --green-light: #BFEBE2;
   --green-dark: #089672;
   --blue: #1DA1F2;
-  --dark: #1A1F1E;
+  --dark: #111916;
   --gray: #6B7280;
   --light-bg: #F0F9F6;
   --white: #FFFFFF;
@@ -19,48 +19,54 @@
   --red: #EF4444;
   --purple: #8B5CF6;
   --yellow-bg: #FFFBEB;
+  --teal: #0D9488;
+  --pink: #EC4899;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
-body { font-family: 'Inter', -apple-system, sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
-.slide { width: 100%; min-height: 100vh; padding: 50px 100px; display: flex; flex-direction: column; justify-content: center; position: relative; scroll-snap-align: start; overflow: hidden; }
+body { font-family: "Inter", -apple-system, sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
+.slide { width: 100%; min-height: 100vh; padding: 48px 80px; display: flex; flex-direction: column; justify-content: center; position: relative; scroll-snap-align: start; overflow: hidden; }
 .slide-number { position: absolute; bottom: 24px; right: 50px; font-size: 13px; color: var(--gray); font-weight: 500; }
 .confidential { position: absolute; top: 24px; right: 50px; font-size: 11px; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; }
-h1 { font-size: 56px; font-weight: 800; line-height: 1.1; letter-spacing: -2px; }
-h2 { font-size: 42px; font-weight: 700; line-height: 1.2; letter-spacing: -1px; }
-h3 { font-size: 28px; font-weight: 700; line-height: 1.3; }
-h4 { font-size: 20px; font-weight: 600; line-height: 1.4; }
-p { font-size: 16px; line-height: 1.6; color: var(--gray); }
+h1 { font-size: 52px; font-weight: 800; line-height: 1.1; letter-spacing: -2px; }
+h2 { font-size: 38px; font-weight: 700; line-height: 1.2; letter-spacing: -1px; }
+h3 { font-size: 26px; font-weight: 700; line-height: 1.3; }
+h4 { font-size: 18px; font-weight: 600; line-height: 1.4; }
+p { font-size: 15px; line-height: 1.65; color: var(--gray); }
 .accent { color: var(--green); }
-.tag { display: inline-block; background: var(--green); color: white; padding: 5px 16px; border-radius: 100px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
-.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 24px; }
-.card { background: var(--light-bg); border-radius: 16px; padding: 28px; }
-.stat-card { background: var(--white); border: 2px solid #E5E7EB; border-radius: 16px; padding: 24px; text-align: center; }
-.stat-card .number { font-size: 40px; font-weight: 800; color: var(--green); line-height: 1; margin-bottom: 4px; }
-.stat-card .label { font-size: 13px; color: var(--gray); font-weight: 500; }
-.pill { display: inline-block; padding: 3px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; margin-right: 4px; margin-bottom: 4px; }
+.tag { display: inline-block; background: var(--green); color: white; padding: 5px 16px; border-radius: 100px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+.card { background: var(--light-bg); border-radius: 14px; padding: 24px; }
+.stat-card { background: var(--white); border: 2px solid #E5E7EB; border-radius: 14px; padding: 20px; text-align: center; }
+.stat-card .number { font-size: 36px; font-weight: 800; color: var(--green); line-height: 1; margin-bottom: 4px; }
+.stat-card .label { font-size: 12px; color: var(--gray); font-weight: 500; }
+.pill { display: inline-block; padding: 3px 11px; border-radius: 100px; font-size: 11px; font-weight: 600; margin-right: 4px; margin-bottom: 4px; }
 .pill-green { background: #D1FAE5; color: #065F46; }
 .pill-blue { background: #DBEAFE; color: #1E40AF; }
 .pill-orange { background: #FEF3C7; color: #92400E; }
 .pill-purple { background: #EDE9FE; color: #5B21B6; }
 .pill-red { background: #FEE2E2; color: #991B1B; }
-.progress-bar { height: 10px; background: #E5E7EB; border-radius: 5px; overflow: hidden; margin: 6px 0; }
-.progress-bar .fill { height: 100%; border-radius: 5px; background: linear-gradient(to right, var(--green), var(--blue)); }
-table.data-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; }
-table.data-table th { background: var(--dark); color: white; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 13px; }
+.pill-teal { background: #CCFBF1; color: #134E4A; }
+.progress-bar { height: 8px; background: #E5E7EB; border-radius: 4px; overflow: hidden; margin: 6px 0; }
+.progress-bar .fill { height: 100%; border-radius: 4px; }
+table.data-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+table.data-table th { background: var(--dark); color: white; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
 table.data-table th:first-child { border-radius: 10px 0 0 0; }
 table.data-table th:last-child { border-radius: 0 10px 0 0; }
-table.data-table td { padding: 11px 16px; border-bottom: 1px solid #E5E7EB; font-size: 13px; }
+table.data-table td { padding: 10px 14px; border-bottom: 1px solid #E5E7EB; font-size: 13px; }
 table.data-table tr:nth-child(even) td { background: #F9FAFB; }
 table.data-table tr.total td { background: var(--light-bg); font-weight: 700; border-top: 2px solid var(--green); }
-.callout { background: var(--yellow-bg); border-left: 4px solid var(--orange); border-radius: 0 12px 12px 0; padding: 20px 24px; margin-top: 20px; }
+.callout { background: var(--yellow-bg); border-left: 4px solid var(--orange); border-radius: 0 12px 12px 0; padding: 18px 22px; margin-top: 16px; }
 .callout-blue { background: #EFF6FF; border-left-color: var(--blue); }
 .callout-green { background: var(--light-bg); border-left-color: var(--green); }
 .callout-red { background: #FEF2F2; border-left-color: var(--red); }
-.divider { width: 60px; height: 3px; background: var(--green); border-radius: 2px; margin: 16px 0; }
-.footnote { font-size: 11px; color: #9CA3AF; margin-top: 16px; }
+.callout-purple { background: #F5F3FF; border-left-color: var(--purple); }
+.divider { width: 60px; height: 3px; background: var(--green); border-radius: 2px; margin: 14px 0; }
+.footnote { font-size: 11px; color: #9CA3AF; margin-top: 12px; }
+.glow-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 24px 28px; backdrop-filter: blur(10px); }
+.section-stripe { position: absolute; top: 0; left: 0; width: 6px; height: 100%; border-radius: 0 3px 3px 0; }
 </style>
 </head>
 <body>
@@ -68,31 +74,36 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
 <!-- ============================================================ -->
 <!-- SLIDE 1: COVER -->
 <!-- ============================================================ -->
-<section class="slide" style="background:linear-gradient(135deg, var(--dark) 0%, #2D3835 100%);color:white;text-align:center;align-items:center;">
+<section class="slide" style="background:linear-gradient(145deg, var(--dark) 0%, #1a2e28 50%, #0d2420 100%);color:white;text-align:center;align-items:center;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 30% 20%, rgba(14,171,140,0.08) 0%, transparent 60%),radial-gradient(ellipse at 70% 80%, rgba(29,161,242,0.05) 0%, transparent 60%);pointer-events:none;"></div>
   <div style="position:absolute;top:24px;left:50px;">
-    <span style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;">Confidential — Internal Use Only</span>
+    <span style="font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;">Confidential &mdash; Internal Use Only</span>
   </div>
-  <div style="margin-bottom:30px;">
-    <span style="font-size:14px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:3px;">SimpliHuman</span>
+  <div style="margin-bottom:24px;">
+    <span style="font-size:14px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:4px;">SimpliHuman</span>
   </div>
-  <h1 style="color:white;font-size:64px;margin-bottom:16px;">2026 Operating Plan</h1>
-  <h3 style="color:rgba(255,255,255,0.6);font-weight:400;margin-bottom:40px;">Budget, Team, Marketing, Equity &amp; Product Roadmap</h3>
-  <div style="display:flex;gap:24px;justify-content:center;margin-bottom:40px;">
-    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:20px 32px;">
-      <div style="font-size:32px;font-weight:800;color:var(--green);">$850K</div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.5);">Seed Round Target</div>
+  <h1 style="color:white;font-size:58px;margin-bottom:12px;">12-Month Pre-Funding<br>Operating Plan</h1>
+  <h3 style="color:rgba(255,255,255,0.5);font-weight:400;margin-bottom:36px;font-size:22px;">Bootstrap Budget, Team, Equity, Marketing &amp; Product Roadmap</h3>
+  <div style="display:flex;gap:20px;justify-content:center;margin-bottom:36px;">
+    <div class="glow-card" style="min-width:180px;">
+      <div style="font-size:30px;font-weight:800;color:var(--green);">~$33K</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">Annual Operating Cost (AED 120K)</div>
     </div>
-    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:20px 32px;">
-      <div style="font-size:32px;font-weight:800;color:var(--green);">18 mo</div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.5);">Runway Target</div>
+    <div class="glow-card" style="min-width:180px;">
+      <div style="font-size:30px;font-weight:800;color:var(--green);">12 mo</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">Pre-Funding Runway</div>
     </div>
-    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:20px 32px;">
-      <div style="font-size:32px;font-weight:800;color:var(--green);">50K</div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.5);">User Target (Y1)</div>
+    <div class="glow-card" style="min-width:180px;">
+      <div style="font-size:30px;font-weight:800;color:var(--green);">50K</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">User Target (Y1)</div>
+    </div>
+    <div class="glow-card" style="min-width:180px;">
+      <div style="font-size:30px;font-weight:800;color:var(--orange);">$0</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;">External Funding Raised</div>
     </div>
   </div>
-  <p style="color:rgba(255,255,255,0.4);font-size:14px;">Prepared: March 2026 | For Co-Founders Only</p>
-  <div class="slide-number" style="color:rgba(255,255,255,0.3);">01 / 12</div>
+  <p style="color:rgba(255,255,255,0.35);font-size:13px;">Prepared: March 2026 &nbsp;|&nbsp; For Co-Founders &amp; Partners Only &nbsp;|&nbsp; Pre-Seed / Bootstrap Phase</p>
+  <div class="slide-number" style="color:rgba(255,255,255,0.25);">01 / 14</div>
 </section>
 
 <!-- ============================================================ -->
@@ -102,401 +113,950 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
   <span class="confidential">Confidential</span>
   <span class="tag" style="background:var(--orange);">Current State</span>
   <h2 style="margin-bottom:8px;">Where We Are: <span class="accent">Honest Assessment</span></h2>
-  <p style="margin-bottom:30px;max-width:700px;">High satisfaction but low indispensability. We acquire interest but fail to convert it into habits. This plan addresses every gap.</p>
+  <p style="margin-bottom:28px;max-width:700px;">High satisfaction but low indispensability. We acquire interest but fail to convert it into habits. This plan addresses every gap.</p>
 
   <div class="grid-3">
     <div>
-      <h4 style="color:var(--green);margin-bottom:16px;">What's Working</h4>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="padding:16px;border-left:3px solid var(--green);">
-          <strong>Mood Tracking</strong> — 31-33% stable engagement
+      <h4 style="color:var(--green);margin-bottom:14px;">What's Working</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--green);">
+          <strong>Mood Tracking</strong> &mdash; 31-33% stable engagement
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--green);">
-          <strong>Satisfaction</strong> — 70% rate 4-5 stars
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--green);">
+          <strong>Satisfaction</strong> &mdash; 70% rate 4-5 stars
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--green);">
-          <strong>Tier-1 Shift</strong> — USA now #1 acquisition source
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--green);">
+          <strong>Tier-1 Shift</strong> &mdash; USA now #1 acquisition source
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--green);">
-          <strong>Global Reach</strong> — 30+ countries, 9,206 verified users
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--green);">
+          <strong>Global Reach</strong> &mdash; 30+ countries, 9,206 verified users
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--green);">
-          <strong>851 opt-ins</strong> — Contactable user base for re-engagement
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <h4 style="color:var(--red);margin-bottom:16px;">What's Broken</h4>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="padding:16px;border-left:3px solid var(--red);background:#FEF2F2;">
-          <strong>70% onboarding drop</strong> — 44% lost pre-Home
-        </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--red);background:#FEF2F2;">
-          <strong>PMF only 25%</strong> — Need 40%+ benchmark
-        </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--red);background:#FEF2F2;">
-          <strong>Tier-1 churn</strong> — Paid users cancel immediately
-        </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--red);background:#FEF2F2;">
-          <strong>Echo 0% engagement</strong> — Feature is dead
-        </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--red);background:#FEF2F2;">
-          <strong>AI Chat 1.45% usage</strong> — Paywall kills adoption
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--green);">
+          <strong>851 opt-ins</strong> &mdash; Contactable user base for re-engagement
         </div>
       </div>
     </div>
 
     <div>
-      <h4 style="color:var(--blue);margin-bottom:16px;">2026 Targets</h4>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="padding:16px;border-left:3px solid var(--blue);background:#EFF6FF;">
-          <strong>Onboarding drop</strong> → &lt;20% (from 70%)
+      <h4 style="color:var(--red);margin-bottom:14px;">What's Broken</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--red);background:#FEF2F2;">
+          <strong>70% onboarding drop</strong> &mdash; 44% lost pre-Home
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--blue);background:#EFF6FF;">
-          <strong>D7 retention</strong> → 5-6% (from ~2%)
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--red);background:#FEF2F2;">
+          <strong>PMF only 25%</strong> &mdash; Need 40%+ benchmark
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--blue);background:#EFF6FF;">
-          <strong>First mood log rate</strong> → 50%+ (from ~30%)
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--red);background:#FEF2F2;">
+          <strong>Tier-1 churn</strong> &mdash; Paid users cancel immediately
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--blue);background:#EFF6FF;">
-          <strong>PMF score</strong> → 40%+ (from 25%)
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--red);background:#FEF2F2;">
+          <strong>Echo 0% engagement</strong> &mdash; Feature is dead
         </div>
-        <div class="card" style="padding:16px;border-left:3px solid var(--blue);background:#EFF6FF;">
-          <strong>Active paid users</strong> → 50+ in Tier-1
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--red);background:#FEF2F2;">
+          <strong>AI Chat 1.45% usage</strong> &mdash; Paywall kills adoption
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:var(--blue);margin-bottom:14px;">2026 Targets</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--blue);background:#EFF6FF;">
+          <strong>Onboarding drop</strong> &rarr; &lt;20% (from 70%)
+        </div>
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--blue);background:#EFF6FF;">
+          <strong>D7 retention</strong> &rarr; 5-6% (from ~2%)
+        </div>
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--blue);background:#EFF6FF;">
+          <strong>First mood log rate</strong> &rarr; 50%+ (from ~30%)
+        </div>
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--blue);background:#EFF6FF;">
+          <strong>PMF score</strong> &rarr; 40%+ (from 25%)
+        </div>
+        <div class="card" style="padding:14px 16px;border-left:3px solid var(--blue);background:#EFF6FF;">
+          <strong>Active paid users</strong> &rarr; 50+ in Tier-1
         </div>
       </div>
     </div>
   </div>
 
-  <div class="slide-number">02 / 12</div>
+  <div class="slide-number">02 / 14</div>
 </section>
 
-
 <!-- ============================================================ -->
-<!-- SLIDE 3: BUDGET OVERVIEW — 18-MONTH BURN -->
+<!-- SLIDE 3: FOUNDING TEAM & PARTNER STRUCTURE -->
 <!-- ============================================================ -->
 <section class="slide" style="background:var(--light-bg);">
   <span class="confidential">Confidential</span>
-  <span class="tag">Budget</span>
-  <h2 style="margin-bottom:8px;">18-Month Budget: <span class="accent">$850K Allocation</span></h2>
-  <p style="margin-bottom:30px;">How we deploy capital from seed round + founder contributions to reach Series A readiness.</p>
+  <span class="tag" style="background:var(--purple);">Team Structure</span>
+  <h2 style="margin-bottom:8px;">Founding Team &amp; <span class="accent">Partner Structure</span></h2>
+  <p style="margin-bottom:24px;max-width:800px;">4 co-founders (cash + sweat) formed the company, later onboarding 2 service partners (sweat equity) for design and development.</p>
 
-  <div class="grid-2" style="gap:50px;">
+  <div class="grid-2" style="gap:40px;">
     <div>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th style="text-align:right;">Monthly</th>
-            <th style="text-align:right;">18-Month</th>
-            <th style="text-align:right;">% of Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Engineering Team</strong></td>
-            <td style="text-align:right;">$8,500</td>
-            <td style="text-align:right;">$153,000</td>
-            <td style="text-align:right;">18.0%</td>
-          </tr>
-          <tr>
-            <td><strong>Design (UI/UX)</strong></td>
-            <td style="text-align:right;">$2,500</td>
-            <td style="text-align:right;">$45,000</td>
-            <td style="text-align:right;">5.3%</td>
-          </tr>
-          <tr>
-            <td><strong>AI/ML Infrastructure</strong></td>
-            <td style="text-align:right;">$3,500</td>
-            <td style="text-align:right;">$63,000</td>
-            <td style="text-align:right;">7.4%</td>
-          </tr>
-          <tr>
-            <td><strong>Cloud & DevOps</strong></td>
-            <td style="text-align:right;">$2,000</td>
-            <td style="text-align:right;">$36,000</td>
-            <td style="text-align:right;">4.2%</td>
-          </tr>
-          <tr>
-            <td><strong>Marketing & UA</strong></td>
-            <td style="text-align:right;">$12,000</td>
-            <td style="text-align:right;">$216,000</td>
-            <td style="text-align:right;">25.4%</td>
-          </tr>
-          <tr>
-            <td><strong>Content & Community</strong></td>
-            <td style="text-align:right;">$2,500</td>
-            <td style="text-align:right;">$45,000</td>
-            <td style="text-align:right;">5.3%</td>
-          </tr>
-          <tr>
-            <td><strong>Product & Analytics</strong></td>
-            <td style="text-align:right;">$1,500</td>
-            <td style="text-align:right;">$27,000</td>
-            <td style="text-align:right;">3.2%</td>
-          </tr>
-          <tr>
-            <td><strong>QA & Testing</strong></td>
-            <td style="text-align:right;">$1,200</td>
-            <td style="text-align:right;">$21,600</td>
-            <td style="text-align:right;">2.5%</td>
-          </tr>
-          <tr>
-            <td><strong>Tools & Subscriptions</strong></td>
-            <td style="text-align:right;">$1,500</td>
-            <td style="text-align:right;">$27,000</td>
-            <td style="text-align:right;">3.2%</td>
-          </tr>
-          <tr>
-            <td><strong>Legal & Compliance</strong></td>
-            <td style="text-align:right;">$1,000</td>
-            <td style="text-align:right;">$18,000</td>
-            <td style="text-align:right;">2.1%</td>
-          </tr>
-          <tr>
-            <td><strong>App Store Fees (30%)</strong></td>
-            <td style="text-align:right;">$500</td>
-            <td style="text-align:right;">$9,000</td>
-            <td style="text-align:right;">1.1%</td>
-          </tr>
-          <tr>
-            <td><strong>Contingency Reserve</strong></td>
-            <td style="text-align:right;">—</td>
-            <td style="text-align:right;">$60,000</td>
-            <td style="text-align:right;">7.1%</td>
-          </tr>
-          <tr>
-            <td><strong>Founder Operating Costs</strong></td>
-            <td style="text-align:right;">—</td>
-            <td style="text-align:right;">$130,000</td>
-            <td style="text-align:right;">15.3%</td>
-          </tr>
-          <tr class="total">
-            <td><strong>TOTAL</strong></td>
-            <td style="text-align:right;"><strong>~$37K/mo</strong></td>
-            <td style="text-align:right;"><strong>$850,600</strong></td>
-            <td style="text-align:right;"><strong>100%</strong></td>
-          </tr>
-        </tbody>
-      </table>
+      <h4 style="margin-bottom:14px;color:var(--green);">Co-Founders (Cash + Sweat)</h4>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <div class="card" style="background:white;border:2px solid var(--green);padding:18px 20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <strong style="font-size:15px;">Sear</strong> <span style="font-size:12px;color:var(--gray);">(via Aplomb Consulting-FZCO)</span>
+              <div style="font-size:12px;color:var(--gray);margin-top:2px;">Shareholding: <strong style="color:var(--dark);">46.0%</strong></div>
+            </div>
+            <div><span class="pill pill-green" style="font-size:10px;">Sweat + Cash</span></div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;color:var(--gray);">
+            <strong>Role:</strong> Operations, Partnerships, Investment &amp; Fundraising<br>
+            <strong>Cash Contribution:</strong> AED 55,562 (~$15,130)
+          </div>
+        </div>
+
+        <div class="card" style="background:white;border:2px solid var(--green);padding:18px 20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <strong style="font-size:15px;">Saima Salman</strong>
+              <div style="font-size:12px;color:var(--gray);margin-top:2px;">Shareholding: <strong style="color:var(--dark);">25.3%</strong></div>
+            </div>
+            <div><span class="pill pill-green" style="font-size:10px;">Sweat + Cash</span></div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;color:var(--gray);">
+            <strong>Role:</strong> Product, R&amp;D, Domain Partnerships (Psychologist)<br>
+            <strong>Cash Contribution:</strong> AED 30,599 (~$8,333)
+          </div>
+        </div>
+
+        <div class="card" style="background:white;border:2px solid #E5E7EB;padding:18px 20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <strong style="font-size:15px;">Doruk Sardag</strong>
+              <div style="font-size:12px;color:var(--gray);margin-top:2px;">Shareholding: <strong style="color:var(--dark);">14.0%</strong></div>
+            </div>
+            <div><span class="pill pill-blue" style="font-size:10px;">Cash Only</span></div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;color:var(--gray);">
+            <strong>Role:</strong> Investor / Advisor<br>
+            <strong>Cash Contribution:</strong> AED 16,910 (~$4,607)
+          </div>
+        </div>
+
+        <div class="card" style="background:white;border:2px solid #E5E7EB;padding:18px 20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <strong style="font-size:15px;">Shean</strong> <span style="font-size:12px;color:var(--gray);">(Shahzada Salman E Mustafa)</span>
+              <div style="font-size:12px;color:var(--gray);margin-top:2px;">Shareholding: <strong style="color:var(--dark);">4.7%</strong></div>
+            </div>
+            <div><span class="pill pill-blue" style="font-size:10px;">Cash Only</span></div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;color:var(--gray);">
+            <strong>Role:</strong> Investor / Advisor<br>
+            <strong>Cash Contribution:</strong> AED 5,637 (~$1,536)
+          </div>
+        </div>
+      </div>
     </div>
 
     <div>
-      <h4 style="margin-bottom:16px;">Budget Split (Visual)</h4>
+      <h4 style="margin-bottom:14px;color:var(--purple);">Service Partners (Sweat Equity)</h4>
       <div style="display:flex;flex-direction:column;gap:12px;">
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px;">
-            <span>Marketing & UA</span><span style="color:var(--green);">25.4%</span>
+
+        <div class="card" style="background:white;border:2px solid var(--purple);padding:18px 20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <strong style="font-size:15px;">Design Peeps</strong> <span style="font-size:12px;color:var(--gray);">(Muhammad Usman Fiaz)</span>
+              <div style="font-size:12px;color:var(--gray);margin-top:2px;">Allocated Equity: <strong style="color:var(--dark);">10.0%</strong></div>
+            </div>
+            <div><span class="pill pill-purple" style="font-size:10px;">Sweat Only</span></div>
           </div>
-          <div class="progress-bar"><div class="fill" style="width:25.4%;background:var(--blue);"></div></div>
+          <div style="margin-top:8px;font-size:13px;color:var(--gray);">
+            <strong>Scope:</strong> All UI/UX design work &mdash; in-kind, fully against equity<br>
+            <strong>Model:</strong> 100% work-for-equity (no cash invoicing)
+          </div>
         </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px;">
-            <span>Engineering</span><span style="color:var(--green);">18.0%</span>
+
+        <div class="card" style="background:white;border:2px solid var(--purple);padding:18px 20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <strong style="font-size:15px;">Ambeego</strong>
+              <div style="font-size:12px;color:var(--gray);margin-top:2px;">Allocated Equity: <strong style="color:var(--dark);">5.0%</strong></div>
+            </div>
+            <div><span class="pill pill-purple" style="font-size:10px;">Sweat (Hybrid)</span></div>
           </div>
-          <div class="progress-bar"><div class="fill" style="width:18%;"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px;">
-            <span>Founder Ops</span><span style="color:var(--green);">15.3%</span>
+          <div style="margin-top:8px;font-size:13px;color:var(--gray);">
+            <strong>Scope:</strong> All development work<br>
+            <strong>Model:</strong> 50% cash invoicing + 50% against equity
           </div>
-          <div class="progress-bar"><div class="fill" style="width:15.3%;background:var(--purple);"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px;">
-            <span>AI/ML Infra</span><span style="color:var(--green);">7.4%</span>
-          </div>
-          <div class="progress-bar"><div class="fill" style="width:7.4%;background:var(--orange);"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px;">
-            <span>Contingency</span><span style="color:var(--green);">7.1%</span>
-          </div>
-          <div class="progress-bar"><div class="fill" style="width:7.1%;background:#9CA3AF;"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px;">
-            <span>Design + Content + Community</span><span style="color:var(--green);">10.6%</span>
-          </div>
-          <div class="progress-bar"><div class="fill" style="width:10.6%;background:#EC4899;"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px;">
-            <span>Other (Cloud, QA, Tools, Legal, Store)</span><span style="color:var(--green);">13.1%</span>
-          </div>
-          <div class="progress-bar"><div class="fill" style="width:13.1%;background:#6366F1;"></div></div>
         </div>
       </div>
 
-      <div class="callout" style="margin-top:24px;">
-        <h4 style="font-size:16px;margin-bottom:6px;">Why Marketing Gets 25%</h4>
-        <p style="font-size:13px;">Product fixes (Q1-Q2) mean marketing spend ramps in Q3+. Early months = $5K/mo. Post-PMF months = $18K/mo. Blended avg = $12K/mo. We fix the funnel first, then pour fuel.</p>
+      <div class="callout callout-purple" style="margin-top:16px;">
+        <h4 style="font-size:15px;margin-bottom:6px;">Partner Agreement Terms</h4>
+        <p style="font-size:13px;">Partners provide services <strong>until investment or revenue reaches a stage</strong> where it is feasible to onboard an in-house team. Partners then continue as <strong>leads</strong> (e.g., Ambeego serves as CTO leading the dev team). This is <strong>not</strong> a fixed 4-year vesting schedule &mdash; it is a service agreement tied to business milestones.</p>
       </div>
 
       <div class="callout callout-green" style="margin-top:12px;">
-        <h4 style="font-size:16px;margin-bottom:6px;">Pakistan Cost Advantage</h4>
-        <p style="font-size:13px;">Full engineering team (3 devs + 1 QA + 1 designer) costs ~$12K/mo in Pakistan vs ~$60K/mo for equivalent US team. <strong>5x cost efficiency</strong> extends runway significantly.</p>
+        <h4 style="font-size:15px;margin-bottom:6px;">Total Cash Contributed by Founders</h4>
+        <p style="font-size:13px;"><strong>AED 120,787 (~$32,900 USD)</strong> covering all 2026 operating expenses. Proportional to shareholding. This is the capital keeping the company alive pre-funding.</p>
       </div>
     </div>
   </div>
 
-  <div class="slide-number">03 / 12</div>
+  <div class="slide-number">03 / 14</div>
 </section>
 
 <!-- ============================================================ -->
-<!-- SLIDE 4: TEAM BUILD — PAKISTAN-BASED -->
+<!-- SLIDE 4: BUDGET — PRE-FUNDING OPERATING COSTS -->
 <!-- ============================================================ -->
 <section class="slide">
   <span class="confidential">Confidential</span>
-  <span class="tag">Team</span>
-  <h2 style="margin-bottom:8px;">Team Build Plan: <span class="accent">Pakistan-Based Operations</span></h2>
-  <p style="margin-bottom:30px;">Lean, high-output team leveraging Pakistan's deep tech talent pool at 70-80% cost savings vs Western markets.</p>
+  <span class="tag">Budget</span>
+  <h2 style="margin-bottom:8px;">Pre-Funding Budget: <span class="accent">Capital We Need</span></h2>
+  <p style="margin-bottom:24px;">No external funding yet. Everything runs on founder contributions + partner sweat equity. Here is our actual cost base and what additional capital is needed.</p>
 
-  <div class="grid-2" style="gap:50px;">
+  <div class="grid-2" style="gap:40px;">
     <div>
-      <h4 style="margin-bottom:16px;">Hiring Plan — Salaries (PKR-based, shown in USD)</h4>
+      <h4 style="margin-bottom:12px;">Actual 2026 Operating Expenses (from Expense Sheet)</h4>
       <table class="data-table">
         <thead>
           <tr>
-            <th>Role</th>
-            <th style="text-align:center;">Phase</th>
-            <th style="text-align:right;">Monthly USD</th>
-            <th style="text-align:center;">FTE</th>
+            <th>Expense Category</th>
+            <th style="text-align:right;">Monthly (AED)</th>
+            <th style="text-align:right;">Annual (AED)</th>
+            <th style="text-align:right;">Annual (USD)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Sr. React Native Developer</td>
-            <td style="text-align:center;"><span class="pill pill-green" style="font-size:10px;">Q1</span></td>
-            <td style="text-align:right;">$1,800–2,200</td>
-            <td style="text-align:center;">1</td>
+            <td><strong>Accounting &amp; Consulting</strong></td>
+            <td style="text-align:right;">458</td>
+            <td style="text-align:right;">5,496</td>
+            <td style="text-align:right;">$1,497</td>
           </tr>
           <tr>
-            <td>Mid React Native Developer</td>
-            <td style="text-align:center;"><span class="pill pill-green" style="font-size:10px;">Q1</span></td>
-            <td style="text-align:right;">$1,200–1,500</td>
-            <td style="text-align:center;">1</td>
+            <td><strong>Bank Charges</strong></td>
+            <td style="text-align:right;">210</td>
+            <td style="text-align:right;">2,520</td>
+            <td style="text-align:right;">$687</td>
           </tr>
           <tr>
-            <td>Backend / API Developer</td>
-            <td style="text-align:center;"><span class="pill pill-blue" style="font-size:10px;">Q2</span></td>
-            <td style="text-align:right;">$1,500–2,000</td>
-            <td style="text-align:center;">1</td>
+            <td><strong>License Renewal</strong> <span style="font-size:11px;color:var(--gray);">(Feb)</span></td>
+            <td style="text-align:right;">&mdash;</td>
+            <td style="text-align:right;">14,720</td>
+            <td style="text-align:right;">$4,010</td>
           </tr>
           <tr>
-            <td>AI/ML Engineer (NLP focus)</td>
-            <td style="text-align:center;"><span class="pill pill-blue" style="font-size:10px;">Q2</span></td>
-            <td style="text-align:right;">$2,000–2,800</td>
-            <td style="text-align:center;">1</td>
+            <td><strong>Subscriptions &amp; Tools</strong></td>
+            <td style="text-align:right;">200&ndash;1,468</td>
+            <td style="text-align:right;">3,668</td>
+            <td style="text-align:right;">$999</td>
           </tr>
           <tr>
-            <td>QA / Test Engineer</td>
-            <td style="text-align:center;"><span class="pill pill-green" style="font-size:10px;">Q1</span></td>
-            <td style="text-align:right;">$800–1,200</td>
-            <td style="text-align:center;">1</td>
-          </tr>
-          <tr>
-            <td>UI/UX Designer (Mid)</td>
-            <td style="text-align:center;"><span class="pill pill-purple" style="font-size:10px;">Q3</span></td>
-            <td style="text-align:right;">$1,000–1,500</td>
-            <td style="text-align:center;">1</td>
-          </tr>
-          <tr>
-            <td>Content Writer / Social Media</td>
-            <td style="text-align:center;"><span class="pill pill-blue" style="font-size:10px;">Q2</span></td>
-            <td style="text-align:right;">$600–900</td>
-            <td style="text-align:center;">1</td>
-          </tr>
-          <tr>
-            <td>Community Manager</td>
-            <td style="text-align:center;"><span class="pill pill-purple" style="font-size:10px;">Q3</span></td>
-            <td style="text-align:right;">$500–800</td>
-            <td style="text-align:center;">1</td>
-          </tr>
-          <tr>
-            <td>Data Analyst (Part-time)</td>
-            <td style="text-align:center;"><span class="pill pill-purple" style="font-size:10px;">Q3</span></td>
-            <td style="text-align:right;">$800–1,200</td>
-            <td style="text-align:center;">0.5</td>
+            <td><strong>Staff Salaries</strong> <span style="font-size:11px;color:var(--gray);">(ramping)</span></td>
+            <td style="text-align:right;">5,895&ndash;9,834</td>
+            <td style="text-align:right;">94,383</td>
+            <td style="text-align:right;">$25,712</td>
           </tr>
           <tr class="total">
-            <td><strong>TOTAL TEAM</strong></td>
+            <td><strong>TOTAL 2026</strong></td>
             <td></td>
-            <td style="text-align:right;"><strong>$10.2–14.1K/mo</strong></td>
-            <td style="text-align:center;"><strong>8.5</strong></td>
+            <td style="text-align:right;"><strong>120,787</strong></td>
+            <td style="text-align:right;"><strong>$32,905</strong></td>
           </tr>
         </tbody>
       </table>
-      <p class="footnote">Salaries based on Glassdoor PK, Rozee.pk, and LinkedIn PK market data 2025-2026. Ranges reflect experience bands.</p>
+
+      <div class="callout callout-green" style="margin-top:14px;">
+        <h4 style="font-size:14px;margin-bottom:4px;">How This Is Funded</h4>
+        <p style="font-size:13px;">100% funded by co-founder cash contributions proportional to shareholding. No external investors yet. See Slide 03 for each founder's contribution amount.</p>
+      </div>
+
+      <h4 style="margin-top:20px;margin-bottom:12px;">Additional Capital Required (Beyond Current Expenses)</h4>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Need</th>
+            <th style="text-align:right;">Est. Annual (USD)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Marketing &amp; UA Budget</strong></td>
+            <td style="text-align:right;">$36,000&ndash;60,000</td>
+            <td>$3K-5K/mo for paid acquisition</td>
+          </tr>
+          <tr>
+            <td><strong>Cloud &amp; AI Infrastructure</strong></td>
+            <td style="text-align:right;">$6,000&ndash;12,000</td>
+            <td>API costs, hosting, analytics</td>
+          </tr>
+          <tr>
+            <td><strong>Ambeego Cash Invoices (50%)</strong></td>
+            <td style="text-align:right;">$12,000&ndash;18,000</td>
+            <td>50% of dev work billed as cash</td>
+          </tr>
+          <tr>
+            <td><strong>Legal / IP / Compliance</strong></td>
+            <td style="text-align:right;">$3,000&ndash;5,000</td>
+            <td>Shareholder agreement, HIPAA prep</td>
+          </tr>
+          <tr>
+            <td><strong>Contingency Reserve</strong></td>
+            <td style="text-align:right;">$5,000&ndash;10,000</td>
+            <td>Unforeseen costs buffer</td>
+          </tr>
+          <tr class="total">
+            <td><strong>ADDITIONAL CAPITAL NEEDED</strong></td>
+            <td style="text-align:right;"><strong>$62K&ndash;$105K</strong></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <div>
-      <h4 style="margin-bottom:16px;">Phased Hiring Timeline</h4>
-
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="card" style="border-left:4px solid var(--green);">
-          <h4 style="font-size:16px;color:var(--green);margin-bottom:6px;">Phase 1: Q1-Q2 2026 (Foundation)</h4>
-          <p style="font-size:13px;">Hire: Sr. RN Dev, Mid RN Dev, QA, Content Writer<br>
-          <strong>Team cost: ~$4.5K-5.5K/mo</strong><br>
-          Focus: Fix onboarding, paywall, Mood 2.0, instrumentation</p>
-        </div>
-
-        <div class="card" style="border-left:4px solid var(--blue);">
-          <h4 style="font-size:16px;color:var(--blue);margin-bottom:6px;">Phase 2: Q3 2026 (Growth)</h4>
-          <p style="font-size:13px;">Hire: Backend Dev, AI/ML Engineer<br>
-          <strong>Team cost: ~$8K-10K/mo</strong><br>
-          Focus: AI personality system, analytics, performance optimization</p>
-        </div>
-
-        <div class="card" style="border-left:4px solid var(--purple);">
-          <h4 style="font-size:16px;color:var(--purple);margin-bottom:6px;">Phase 3: Q4 2026+ (Scale)</h4>
-          <p style="font-size:13px;">Hire: UI/UX Designer, Community Manager, Data Analyst (PT)<br>
-          <strong>Full team cost: ~$12K-14K/mo</strong><br>
-          Focus: Paid growth, community building, premium analytics</p>
+      <h4 style="margin-bottom:12px;">Total 12-Month Capital Requirement</h4>
+      <div class="card" style="background:white;border:2px solid var(--green);padding:24px;text-align:center;margin-bottom:16px;">
+        <div style="font-size:14px;color:var(--gray);margin-bottom:4px;">Current Operating (Covered)</div>
+        <div style="font-size:28px;font-weight:800;color:var(--green);">$33K</div>
+        <div style="font-size:12px;color:var(--gray);margin-top:2px;">Funded by co-founders</div>
+        <div style="margin:12px 0;font-size:24px;color:var(--gray);">+</div>
+        <div style="font-size:14px;color:var(--gray);margin-bottom:4px;">Additional Capital Needed</div>
+        <div style="font-size:28px;font-weight:800;color:var(--orange);">$62K&ndash;$105K</div>
+        <div style="font-size:12px;color:var(--gray);margin-top:2px;">To be raised / bootstrapped</div>
+        <div style="margin:12px 0;border-top:2px solid var(--green);padding-top:12px;">
+          <div style="font-size:14px;color:var(--gray);margin-bottom:4px;">Total Year 1 Budget</div>
+          <div style="font-size:34px;font-weight:800;color:var(--dark);">$95K&ndash;$138K</div>
         </div>
       </div>
 
-      <div class="callout callout-blue" style="margin-top:16px;">
-        <h4 style="font-size:16px;margin-bottom:6px;">Cost Comparison: Pakistan vs USA</h4>
-        <table style="width:100%;font-size:13px;margin-top:8px;">
-          <tr style="border-bottom:1px solid #E5E7EB;">
-            <td style="padding:6px 0;"><strong>Role</strong></td>
-            <td style="text-align:right;padding:6px 0;"><strong>Pakistan</strong></td>
-            <td style="text-align:right;padding:6px 0;"><strong>USA</strong></td>
-            <td style="text-align:right;padding:6px 0;"><strong>Saving</strong></td>
-          </tr>
-          <tr><td style="padding:4px 0;">Sr. RN Dev</td><td style="text-align:right;">$2,000</td><td style="text-align:right;">$12,000</td><td style="text-align:right;color:var(--green);font-weight:700;">83%</td></tr>
-          <tr><td style="padding:4px 0;">AI/ML Engineer</td><td style="text-align:right;">$2,500</td><td style="text-align:right;">$15,000</td><td style="text-align:right;color:var(--green);font-weight:700;">83%</td></tr>
-          <tr><td style="padding:4px 0;">QA Engineer</td><td style="text-align:right;">$1,000</td><td style="text-align:right;">$7,000</td><td style="text-align:right;color:var(--green);font-weight:700;">86%</td></tr>
-          <tr><td style="padding:4px 0;">Content Writer</td><td style="text-align:right;">$750</td><td style="text-align:right;">$5,500</td><td style="text-align:right;color:var(--green);font-weight:700;">86%</td></tr>
-          <tr style="border-top:2px solid var(--green);font-weight:700;">
-            <td style="padding:6px 0;">Full Team (8.5 FTE)</td>
-            <td style="text-align:right;">~$12K/mo</td>
-            <td style="text-align:right;">~$65K/mo</td>
-            <td style="text-align:right;color:var(--green);">82%</td>
-          </tr>
-        </table>
+      <h4 style="margin-bottom:10px;">Funding Sources Strategy</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="card" style="border-left:4px solid var(--green);background:white;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong style="font-size:14px;">Additional Founder Contributions</strong>
+            <span class="pill pill-green" style="font-size:10px;">Primary</span>
+          </div>
+          <p style="font-size:12px;margin-top:4px;">Pro-rata top-up based on shareholding to cover the gap. Most reliable source.</p>
+        </div>
+        <div class="card" style="border-left:4px solid var(--blue);background:white;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong style="font-size:14px;">Revenue (Subscriptions + Ads)</strong>
+            <span class="pill pill-blue" style="font-size:10px;">Growing</span>
+          </div>
+          <p style="font-size:12px;margin-top:4px;">Premium subscriptions + flow-based ads. Targeting $500&ndash;$2K MRR by H2 2026.</p>
+        </div>
+        <div class="card" style="border-left:4px solid var(--orange);background:white;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong style="font-size:14px;">Grants &amp; Competitions</strong>
+            <span class="pill pill-orange" style="font-size:10px;">Optional</span>
+          </div>
+          <p style="font-size:12px;margin-top:4px;">Mental health / social impact grants (e.g., Google.org, Expo 2030 innovation, UAE social enterprise grants). Worth pursuing but <strong>not guaranteed &mdash; cannot depend on this.</strong></p>
+        </div>
+        <div class="card" style="border-left:4px solid var(--purple);background:white;padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong style="font-size:14px;">Angel / Pre-Seed Round</strong>
+            <span class="pill pill-purple" style="font-size:10px;">Target H2</span>
+          </div>
+          <p style="font-size:12px;margin-top:4px;">If PMF metrics hit 40%+ by Q3, raise $100K&ndash;$250K angel round. This is the stretch goal, not the baseline plan.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-red" style="margin-top:14px;">
+        <h4 style="font-size:14px;margin-bottom:4px;">Reality Check</h4>
+        <p style="font-size:12px;">Grants are nice-to-have but nothing is promised. The plan must work on founder capital alone. Everything below assumes zero external funding.</p>
       </div>
     </div>
   </div>
 
-  <div class="slide-number">04 / 12</div>
+  <div class="slide-number">04 / 14</div>
 </section>
 
 <!-- ============================================================ -->
-<!-- SLIDE 5: MARKETING & UA PLAN -->
+<!-- SLIDE 5: TEAM — PARTNERS vs IN-HOUSE COMPARISON -->
+<!-- ============================================================ -->
+<section class="slide" style="background:var(--dark);color:white;">
+  <span style="position:absolute;top:24px;right:50px;font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;opacity:0.6;">Confidential</span>
+  <span class="tag" style="background:var(--blue);">Team</span>
+  <h2 style="color:white;margin-bottom:8px;">Team Plan: <span style="color:var(--green);">Partners vs In-House</span></h2>
+  <p style="color:rgba(255,255,255,0.55);margin-bottom:24px;">We need the team NOW, not when funding arrives. Here is a side-by-side comparison of our current partner model vs going fully in-house.</p>
+
+  <div class="grid-2" style="gap:36px;">
+    <div>
+      <h4 style="color:var(--green);margin-bottom:14px;">Option A: Continue with Partners (Current Model)</h4>
+      <div style="background:rgba(255,255,255,0.05);border:2px solid var(--green);border-radius:14px;padding:20px;">
+        <table style="width:100%;font-size:13px;color:rgba(255,255,255,0.85);">
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>Design (Design Peeps)</strong></td>
+            <td style="text-align:right;color:var(--green);font-weight:600;">$0/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">100% equity</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>Development (Ambeego)</strong></td>
+            <td style="text-align:right;color:var(--orange);font-weight:600;">~$1,000&ndash;1,500/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">50% cash + 50% equity</td>
+          </tr>
+          <tr style="border-top:2px solid var(--green);font-weight:700;">
+            <td style="padding:8px 0;">Total Cash Cost</td>
+            <td style="text-align:right;color:var(--green);">~$1,000&ndash;1,500/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">+ equity allocation</td>
+          </tr>
+        </tbody></table>
+
+        <div style="margin-top:16px;padding:14px;background:rgba(255,255,255,0.05);border-radius:10px;border:1px solid rgba(255,255,255,0.08);">
+          <h4 style="font-size:14px;color:var(--green);margin-bottom:8px;">What's Required from Partners</h4>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.8;">
+            &#8226; <strong>Dedicated resource allocation</strong> &mdash; not side-project effort<br>
+            &#8226; <strong>Committed weekly hours</strong> &mdash; agreed deliverable cadence<br>
+            &#8226; <strong>Responsive turnaround</strong> &mdash; max 48hr on critical items<br>
+            &#8226; <strong>Direct communication</strong> &mdash; on team Slack/standups<br>
+            &#8226; <strong>Transition plan</strong> &mdash; when in-house team joins, partners lead them (Ambeego as CTO, Design Peeps as Design Lead)
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;background:rgba(14,171,140,0.1);border-radius:10px;padding:14px;border:1px solid rgba(14,171,140,0.2);">
+        <div style="display:flex;gap:16px;">
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--green);">$12K&ndash;$18K</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);">Annual Cash Cost</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--purple);">15%</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);">Equity Allocated</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--orange);">$0 upfront</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);">No Hiring Cost</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="color:var(--orange);margin-bottom:14px;">Option B: Fully In-House Team (No Partners)</h4>
+      <div style="background:rgba(255,255,255,0.05);border:2px solid var(--orange);border-radius:14px;padding:20px;">
+        <table style="width:100%;font-size:13px;color:rgba(255,255,255,0.85);">
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>Sr. UI/UX Designer (PK)</strong></td>
+            <td style="text-align:right;color:var(--orange);font-weight:600;">$1,200&ndash;1,800/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">Full-time</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>Mid UI/UX Designer (PK)</strong></td>
+            <td style="text-align:right;color:var(--orange);font-weight:600;">$800&ndash;1,200/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">Full-time</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>Sr. React Native Dev (PK)</strong></td>
+            <td style="text-align:right;color:var(--orange);font-weight:600;">$1,800&ndash;2,200/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">Full-time</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>Mid React Native Dev (PK)</strong></td>
+            <td style="text-align:right;color:var(--orange);font-weight:600;">$1,200&ndash;1,500/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">Full-time</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>Backend / API Dev (PK)</strong></td>
+            <td style="text-align:right;color:var(--orange);font-weight:600;">$1,500&ndash;2,000/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">Full-time</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:8px 0;"><strong>QA Engineer (PK)</strong></td>
+            <td style="text-align:right;color:var(--orange);font-weight:600;">$800&ndash;1,200/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">Full-time</td>
+          </tr>
+          <tr style="border-top:2px solid var(--orange);font-weight:700;">
+            <td style="padding:8px 0;">Total Cash Cost</td>
+            <td style="text-align:right;color:var(--orange);">$7,300&ndash;$9,900/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.45);">6 FTEs</td>
+          </tr>
+        </tbody></table>
+      </div>
+
+      <div style="margin-top:12px;background:rgba(245,158,11,0.1);border-radius:10px;padding:14px;border:1px solid rgba(245,158,11,0.2);">
+        <div style="display:flex;gap:16px;">
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--orange);">$88K&ndash;$119K</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);">Annual Cash Cost</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--green);">0%</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);">No Equity Given</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--red);">6&ndash;8 wks</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.45);">Hiring Lead Time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;display:flex;gap:20px;">
+    <div style="flex:1;background:rgba(14,171,140,0.08);border:2px solid var(--green);border-radius:14px;padding:18px;text-align:center;">
+      <h4 style="color:var(--green);font-size:15px;margin-bottom:6px;">Recommendation: Partners + Targeted Hires</h4>
+      <p style="font-size:12px;color:rgba(255,255,255,0.6);">Keep Design Peeps &amp; Ambeego as leads. Add 1&ndash;2 in-house developers as workload grows. This gives us the <strong style="color:white;">lowest cash burn</strong> (~$1.5K/mo vs $9K/mo) while maintaining output quality. Partners transition to leadership roles when we scale.</p>
+    </div>
+    <div style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px;">
+      <h4 style="color:rgba(255,255,255,0.7);font-size:15px;margin-bottom:6px;">Cost Savings: Partner Model</h4>
+      <div style="display:flex;gap:16px;margin-top:8px;">
+        <div style="flex:1;text-align:center;">
+          <div style="font-size:24px;font-weight:800;color:var(--green);">$76K&ndash;$101K</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.4);">Annual savings vs in-house</div>
+        </div>
+        <div style="flex:1;text-align:center;">
+          <div style="font-size:24px;font-weight:800;color:var(--green);">85%+</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.4);">Cost reduction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number" style="color:rgba(255,255,255,0.25);">05 / 14</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6: EQUITY RESOLUTION -->
+<!-- ============================================================ -->
+<section class="slide" style="background:#FFFBEB;">
+  <span class="confidential">Confidential</span>
+  <span class="tag" style="background:var(--orange);">Equity</span>
+  <h2 style="margin-bottom:8px;">Equity Structure: <span class="accent">Honoring Agreements Fairly</span></h2>
+  <p style="margin-bottom:20px;max-width:850px;">Two service partners hold equity for work contributions. Equity should be honored at the agreed valuation when contracts were signed &mdash; calculated proportionally to actual work delivered, not necessarily the full allocated percentage.</p>
+
+  <div class="grid-2" style="gap:36px;">
+    <div>
+      <h4 style="margin-bottom:12px;">Current Equity Positions</h4>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Stakeholder</th>
+            <th style="text-align:center;">%</th>
+            <th>Type</th>
+            <th>Contribution Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Sear</strong> (Aplomb)</td>
+            <td style="text-align:center;">46.0%</td>
+            <td><span class="pill pill-green" style="font-size:10px;">Cash + Sweat</span></td>
+            <td>Ops, partners, fundraising + cash</td>
+          </tr>
+          <tr>
+            <td><strong>Saima Salman</strong></td>
+            <td style="text-align:center;">25.3%</td>
+            <td><span class="pill pill-green" style="font-size:10px;">Cash + Sweat</span></td>
+            <td>Product, R&amp;D, domain (psych) + cash</td>
+          </tr>
+          <tr>
+            <td><strong>Doruk Sardag</strong></td>
+            <td style="text-align:center;">14.0%</td>
+            <td><span class="pill pill-blue" style="font-size:10px;">Cash Only</span></td>
+            <td>Financial investment</td>
+          </tr>
+          <tr>
+            <td><strong>Shean</strong></td>
+            <td style="text-align:center;">4.7%</td>
+            <td><span class="pill pill-blue" style="font-size:10px;">Cash Only</span></td>
+            <td>Financial investment</td>
+          </tr>
+          <tr>
+            <td><strong>Design Peeps</strong></td>
+            <td style="text-align:center;">10.0%</td>
+            <td><span class="pill pill-purple" style="font-size:10px;">Sweat Only</span></td>
+            <td>All design &mdash; 100% in-kind vs equity</td>
+          </tr>
+          <tr>
+            <td><strong>Ambeego</strong></td>
+            <td style="text-align:center;">5.0%*</td>
+            <td><span class="pill pill-purple" style="font-size:10px;">Sweat (Hybrid)</span></td>
+            <td>Dev work &mdash; 50% cash + 50% vs equity</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnote">*Ambeego's 5% is against the equity portion only (they also receive 50% cash payment for invoices)</p>
+
+      <h4 style="margin-top:20px;margin-bottom:10px;">Equity Calculation Principle</h4>
+      <div class="card" style="background:white;border:2px solid var(--green);padding:18px;">
+        <p style="font-size:14px;font-weight:600;color:var(--dark);margin-bottom:8px;">Honor at Agreed Valuation, Proportional to Work Done</p>
+        <div style="font-size:13px;color:var(--gray);line-height:1.8;">
+          <strong>Step 1:</strong> Take the valuation at the time the contract was signed<br>
+          <strong>Step 2:</strong> Calculate the total scope of work agreed upon<br>
+          <strong>Step 3:</strong> Calculate the actual work delivered to date<br>
+          <strong>Step 4:</strong> Equity earned = (Work Delivered / Total Agreed Scope) &times; Allocated %<br><br>
+          <strong>Example:</strong> If Design Peeps was allocated 10% for a defined scope, and 70% of that scope has been delivered, earned equity = <strong style="color:var(--green);">7%</strong> (not automatically 10%).
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="margin-bottom:12px;">Key Differences from Previous Version</h4>
+
+      <div class="callout callout-red" style="margin-top:0;">
+        <h4 style="font-size:14px;margin-bottom:6px;">This is NOT a 4-Year Vesting Schedule</h4>
+        <p style="font-size:13px;">The partner agreements state that services will be provided <strong>until investment or revenue reaches a stage where it is feasible to onboard an in-house team.</strong> Partners then continue as leads &mdash; Ambeego as CTO leading dev, Design Peeps as Design Lead. This is milestone-based, not time-based.</p>
+      </div>
+
+      <div class="callout callout-blue">
+        <h4 style="font-size:14px;margin-bottom:6px;">Different Models for Each Partner</h4>
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>Design Peeps:</strong> 100% work delivered in-kind against equity. All design work is unpaid &mdash; compensated entirely through equity allocation.<br><br>
+          <strong>Ambeego:</strong> Hybrid model. Charges 50% of invoice as cash (paid), and the remaining 50% is accumulated against equity. Both cash and equity components are real and tracked.
+        </div>
+      </div>
+
+      <h4 style="margin-top:18px;margin-bottom:10px;">Recommended Resolution Framework</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="card" style="border:2px solid var(--green);background:white;padding:16px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="background:var(--green);color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;">1</span>
+            <strong style="font-size:14px;color:var(--green);">Audit Work Delivered</strong>
+          </div>
+          <p style="font-size:12px;">Document all deliverables from both partners. Match against original scope agreement. Calculate % of scope completed.</p>
+        </div>
+        <div class="card" style="border:2px solid #E5E7EB;background:white;padding:16px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="background:var(--gray);color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;">2</span>
+            <strong style="font-size:14px;">Calculate Earned Equity</strong>
+          </div>
+          <p style="font-size:12px;">Proportional to work done at the valuation agreed when the contract was signed. Not necessarily the full 10% or 5%.</p>
+        </div>
+        <div class="card" style="border:2px solid #E5E7EB;background:white;padding:16px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="background:var(--gray);color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;">3</span>
+            <strong style="font-size:14px;">Define Ongoing Terms</strong>
+          </div>
+          <p style="font-size:12px;">Future work continues under the same agreement until transition milestone is reached. Remaining equity vests as additional work is delivered.</p>
+        </div>
+        <div class="card" style="border:2px solid #E5E7EB;background:white;padding:16px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="background:var(--gray);color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;">4</span>
+            <strong style="font-size:14px;">Formalize in Shareholders' Agreement</strong>
+          </div>
+          <p style="font-size:12px;">Document earned equity, ongoing terms, transition milestone, and leadership roles post-transition. Legal cost: ~$2K&ndash;$3K.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">06 / 14</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7: DESIGN WORK — FULL SCOPE (NOT JUST SCREENS) -->
+<!-- ============================================================ -->
+<section class="slide" style="background:linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);">
+  <span class="confidential">Confidential</span>
+  <span class="tag" style="background:var(--purple);">Design</span>
+  <h2 style="margin-bottom:8px;">Design Work: <span class="accent">The Full Picture</span></h2>
+  <p style="margin-bottom:24px;max-width:850px;">Design is far more than "35 screens." It encompasses deep research, extensive iteration cycles, A/B variant creation, marketing/brand support, ongoing bug fixes, and continuous product evolution. Here is the true scope.</p>
+
+  <div class="grid-2" style="gap:36px;">
+    <div>
+      <h4 style="margin-bottom:14px;">What Design Actually Involves</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="card" style="background:white;border-left:4px solid var(--purple);padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:start;">
+            <div>
+              <strong style="font-size:14px;">UX Research &amp; Discovery</strong>
+              <p style="font-size:12px;margin-top:4px;">User interviews, competitor analysis, persona refinement, journey mapping, information architecture. Foundation for every design decision.</p>
+            </div>
+            <span class="pill pill-purple" style="font-size:10px;white-space:nowrap;">Ongoing</span>
+          </div>
+        </div>
+        <div class="card" style="background:white;border-left:4px solid var(--purple);padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:start;">
+            <div>
+              <strong style="font-size:14px;">UI Screen Design &amp; Iterations</strong>
+              <p style="font-size:12px;margin-top:4px;">Not one-and-done. Each screen goes through 3&ndash;5 iteration rounds based on feedback, testing, and stakeholder input. 35 screens &times; 4 avg iterations = <strong>140+ design versions.</strong></p>
+            </div>
+            <span class="pill pill-red" style="font-size:10px;white-space:nowrap;">High Effort</span>
+          </div>
+        </div>
+        <div class="card" style="background:white;border-left:4px solid var(--purple);padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:start;">
+            <div>
+              <strong style="font-size:14px;">A/B Test Variants &amp; Prototyping</strong>
+              <p style="font-size:12px;margin-top:4px;">Each experiment needs 2&ndash;3 design variants. 6 planned A/B tests = 12&ndash;18 additional variant designs, each with its own flow logic and prototyping.</p>
+            </div>
+            <span class="pill pill-orange" style="font-size:10px;white-space:nowrap;">Per Experiment</span>
+          </div>
+        </div>
+        <div class="card" style="background:white;border-left:4px solid var(--purple);padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:start;">
+            <div>
+              <strong style="font-size:14px;">Marketing &amp; Brand Design</strong>
+              <p style="font-size:12px;margin-top:4px;">App store screenshots, social media creatives, ad assets (TikTok, Instagram, Snapchat), pitch deck visuals, website updates, email templates, launch assets.</p>
+            </div>
+            <span class="pill pill-blue" style="font-size:10px;white-space:nowrap;">Continuous</span>
+          </div>
+        </div>
+        <div class="card" style="background:white;border-left:4px solid var(--purple);padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:start;">
+            <div>
+              <strong style="font-size:14px;">Bug Fixes &amp; Design QA</strong>
+              <p style="font-size:12px;margin-top:4px;">Regular fixes for visual bugs, responsive issues, dark mode problems, accessibility gaps, animation polish, and platform-specific (iOS vs Android) adjustments.</p>
+            </div>
+            <span class="pill pill-red" style="font-size:10px;white-space:nowrap;">Weekly</span>
+          </div>
+        </div>
+        <div class="card" style="background:white;border-left:4px solid var(--purple);padding:16px 18px;">
+          <div style="display:flex;justify-content:space-between;align-items:start;">
+            <div>
+              <strong style="font-size:14px;">Design System Maintenance</strong>
+              <p style="font-size:12px;margin-top:4px;">Component library, style guide, token management, icon system, illustration system. Keeps everything consistent as the product grows.</p>
+            </div>
+            <span class="pill pill-green" style="font-size:10px;white-space:nowrap;">Foundation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="margin-bottom:14px;">True Design Effort Breakdown</h4>
+      <div class="card" style="background:white;border:2px solid var(--purple);padding:20px;margin-bottom:16px;">
+        <table style="width:100%;font-size:13px;">
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:8px 0;"><strong>Category</strong></td>
+            <td style="text-align:right;"><strong>Deliverables</strong></td>
+            <td style="text-align:right;"><strong>Est. Effort</strong></td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">Core UI Screens (new + redesign)</td>
+            <td style="text-align:right;">35&ndash;40 screens</td>
+            <td style="text-align:right;">12 weeks</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">Iterations &amp; Revisions (3&ndash;5x per screen)</td>
+            <td style="text-align:right;">140+ versions</td>
+            <td style="text-align:right;">8&ndash;10 weeks</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">A/B Test Variants</td>
+            <td style="text-align:right;">12&ndash;18 variants</td>
+            <td style="text-align:right;">3&ndash;4 weeks</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">UX Research &amp; User Flows</td>
+            <td style="text-align:right;">6+ research rounds</td>
+            <td style="text-align:right;">4&ndash;5 weeks</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">Marketing / Brand Assets</td>
+            <td style="text-align:right;">50+ creatives</td>
+            <td style="text-align:right;">4&ndash;6 weeks</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">Bug Fixes &amp; Design QA</td>
+            <td style="text-align:right;">Ongoing weekly</td>
+            <td style="text-align:right;">4&ndash;6 weeks</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">Design System &amp; Components</td>
+            <td style="text-align:right;">Full library</td>
+            <td style="text-align:right;">2&ndash;3 weeks</td>
+          </tr>
+          <tr style="border-bottom:1px solid #E5E7EB;">
+            <td style="padding:6px 0;">Prototyping &amp; Interactive Demos</td>
+            <td style="text-align:right;">8&ndash;10 prototypes</td>
+            <td style="text-align:right;">2&ndash;3 weeks</td>
+          </tr>
+          <tr style="border-top:2px solid var(--purple);font-weight:700;">
+            <td style="padding:8px 0;">TOTAL DESIGN EFFORT</td>
+            <td style="text-align:right;">250+ deliverables</td>
+            <td style="text-align:right;color:var(--purple);">39&ndash;48 weeks</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-bottom:14px;">
+        <div class="card" style="flex:1;background:white;border:2px solid var(--purple);text-align:center;padding:16px;">
+          <div style="font-size:28px;font-weight:800;color:var(--purple);">250+</div>
+          <div style="font-size:12px;color:var(--gray);">Total Design Deliverables</div>
+          <div style="font-size:11px;color:var(--gray);margin-top:2px;">Not just "35 screens"</div>
+        </div>
+        <div class="card" style="flex:1;background:white;border:2px solid var(--orange);text-align:center;padding:16px;">
+          <div style="font-size:28px;font-weight:800;color:var(--orange);">~10 mo</div>
+          <div style="font-size:12px;color:var(--gray);">Full-Time Equivalent</div>
+          <div style="font-size:11px;color:var(--gray);margin-top:2px;">Of continuous design work</div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:0;">
+        <h4 style="font-size:14px;margin-bottom:4px;">Market Rate Value of This Work</h4>
+        <p style="font-size:12px;">At US freelance rates ($75&ndash;$125/hr), this scope = <strong>$120K&ndash;$200K</strong>. At Pakistan agency rates ($25&ndash;$45/hr) = <strong>$40K&ndash;$72K</strong>. Design Peeps is delivering this entirely against equity &mdash; a significant contribution that should not be undervalued.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">07 / 14</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8: PRODUCT & DEV WORK REQUIRED -->
+<!-- ============================================================ -->
+<section class="slide">
+  <span class="confidential">Confidential</span>
+  <span class="tag" style="background:var(--teal);">Product</span>
+  <h2 style="margin-bottom:8px;">Product &amp; Dev Work: <span class="accent">What Needs Building</span></h2>
+  <p style="margin-bottom:20px;">Mapped against pitch deck targets. Every item ties to a specific KPI. Design scope reflects full effort including research, iterations, and variants.</p>
+
+  <table class="data-table" style="font-size:12px;">
+    <thead>
+      <tr>
+        <th style="width:20%;">Work Item</th>
+        <th style="width:7%;">Type</th>
+        <th style="width:6%;">Priority</th>
+        <th style="width:8%;">Dev Effort</th>
+        <th style="width:18%;">KPI Impact</th>
+        <th style="width:6%;">Quarter</th>
+        <th style="width:35%;">Design Scope (Full)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Analytics instrumentation fix</strong></td>
+        <td><span class="pill pill-blue" style="font-size:10px;">Dev</span></td>
+        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
+        <td>2&ndash;3 weeks</td>
+        <td>Accurate data for all experiments</td>
+        <td>Q1</td>
+        <td>Dashboard mockups for internal analytics review + reporting templates</td>
+      </tr>
+      <tr>
+        <td><strong>Single-step sign-in + guest mode</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
+        <td>3&ndash;4 weeks</td>
+        <td>Onboarding drop 70% &rarr; &lt;20%</td>
+        <td>Q1</td>
+        <td>3&ndash;4 screen designs + 2&ndash;3 A/B variants + user flow mapping + 3 iteration rounds + UX research on friction points</td>
+      </tr>
+      <tr>
+        <td><strong>Direct-to-Home + mood prompt</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
+        <td>2&ndash;3 weeks</td>
+        <td>First mood log rate &rarr; 50%+</td>
+        <td>Q1</td>
+        <td>Home V2 redesign + mood prompt overlay + first-use onboarding + 3 iteration rounds + micro-interaction design</td>
+      </tr>
+      <tr>
+        <td><strong>Paywall repositioning</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
+        <td>2 weeks</td>
+        <td>Trial&rarr;paid conversion, churn reduction</td>
+        <td>Q1&ndash;Q2</td>
+        <td>New paywall screen + 2&ndash;3 A/B variants + contextual upgrade prompts + pricing table design + conversion funnel analysis</td>
+      </tr>
+      <tr>
+        <td><strong>Mood Tracker 2.0</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-orange" style="font-size:10px;">P1</span></td>
+        <td>4&ndash;5 weeks</td>
+        <td>Context tags 40%+, session +20%</td>
+        <td>Q2</td>
+        <td>Tag selector UI + mini-journal + reflection prompts + mood history redesign + data viz + 4 iteration rounds + user testing</td>
+      </tr>
+      <tr>
+        <td><strong>AI personality system</strong></td>
+        <td><span class="pill pill-blue" style="font-size:10px;">Dev</span></td>
+        <td><span class="pill pill-orange" style="font-size:10px;">P1</span></td>
+        <td>5&ndash;6 weeks</td>
+        <td>AI usage 1.45% &rarr; 10%+</td>
+        <td>Q2&ndash;Q3</td>
+        <td>Personality selector + chat UI refinement + avatar/illustration design + onboarding for AI + typing indicators + research on persona UX</td>
+      </tr>
+      <tr>
+        <td><strong>Home simplification</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-orange" style="font-size:10px;">P1</span></td>
+        <td>3 weeks</td>
+        <td>Activation rate, reduced cognitive load</td>
+        <td>Q2</td>
+        <td>Full Home redesign + card system + bottom nav simplification + information architecture rework + 3 iteration rounds</td>
+      </tr>
+      <tr>
+        <td><strong>Performance fixes</strong></td>
+        <td><span class="pill pill-blue" style="font-size:10px;">Dev</span></td>
+        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
+        <td>3&ndash;4 weeks</td>
+        <td>Tier-1 churn reduction</td>
+        <td>Q1&ndash;Q2</td>
+        <td>Loading state designs + skeleton screens + error state redesign</td>
+      </tr>
+      <tr>
+        <td><strong>Echo revamp</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-blue" style="font-size:10px;">P2</span></td>
+        <td>4 weeks</td>
+        <td>Echo engagement 0% &rarr; 5%+</td>
+        <td>Q3</td>
+        <td>New Echo feed + response UI + notification system + onboarding flow + 3 iteration rounds + UX research</td>
+      </tr>
+      <tr>
+        <td><strong>Premium features</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-blue" style="font-size:10px;">P2</span></td>
+        <td>6&ndash;8 weeks</td>
+        <td>Premium differentiation</td>
+        <td>Q3&ndash;Q4</td>
+        <td>Voice recording UI + analytics dashboard + export views + data visualization + 4 iteration rounds + usability testing</td>
+      </tr>
+      <tr>
+        <td><strong>Widgets + Flow ads</strong></td>
+        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
+        <td><span class="pill pill-blue" style="font-size:10px;">P2</span></td>
+        <td>4&ndash;5 weeks</td>
+        <td>DAU, revenue diversification</td>
+        <td>Q4</td>
+        <td>Widget design (iOS + Android) + ad placement design + skip/dismiss patterns + 2 iteration rounds</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:16px;display:flex;gap:16px;">
+    <div class="card" style="flex:1;background:white;border:2px solid var(--green);text-align:center;padding:14px;">
+      <div style="font-size:28px;font-weight:800;color:var(--green);">~40 weeks</div>
+      <div style="font-size:12px;color:var(--gray);">Total Dev Effort</div>
+      <div style="font-size:11px;color:var(--gray);margin-top:2px;">~25 weeks with 2 devs parallel</div>
+    </div>
+    <div class="card" style="flex:1;background:white;border:2px solid var(--purple);text-align:center;padding:14px;">
+      <div style="font-size:28px;font-weight:800;color:var(--purple);">~40&ndash;48 wks</div>
+      <div style="font-size:12px;color:var(--gray);">Total Design Effort</div>
+      <div style="font-size:11px;color:var(--gray);margin-top:2px;">Research + iterations + marketing + fixes</div>
+    </div>
+    <div class="card" style="flex:1;background:white;border:2px solid var(--orange);text-align:center;padding:14px;">
+      <div style="font-size:28px;font-weight:800;color:var(--orange);">6 A/B tests</div>
+      <div style="font-size:12px;color:var(--gray);">Required Experiments</div>
+      <div style="font-size:11px;color:var(--gray);margin-top:2px;">12&ndash;18 design variants needed</div>
+    </div>
+    <div class="card" style="flex:1;background:white;border:2px solid var(--blue);text-align:center;padding:14px;">
+      <div style="font-size:28px;font-weight:800;color:var(--blue);">250+</div>
+      <div style="font-size:12px;color:var(--gray);">Total Design Deliverables</div>
+      <div style="font-size:11px;color:var(--gray);margin-top:2px;">Screens + variants + assets + fixes</div>
+    </div>
+  </div>
+
+  <div class="slide-number">08 / 14</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9: MARKETING & UA PLAN -->
 <!-- ============================================================ -->
 <section class="slide" style="background:var(--dark);color:white;">
   <span style="position:absolute;top:24px;right:50px;font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;opacity:0.6;">Confidential</span>
   <span class="tag" style="background:var(--blue);">Marketing</span>
-  <h2 style="color:white;margin-bottom:8px;">Marketing &amp; User Acquisition: <span style="color:var(--green);">$216K / 18 Months</span></h2>
-  <p style="color:rgba(255,255,255,0.6);margin-bottom:30px;">Fix the funnel first (Q1-Q2), then scale spend. Marketing ramps from $5K/mo to $18K/mo post-PMF validation.</p>
+  <h2 style="color:white;margin-bottom:8px;">Marketing &amp; UA: <span style="color:var(--green);">Bootstrap Budget</span></h2>
+  <p style="color:rgba(255,255,255,0.55);margin-bottom:24px;">Pre-funding marketing. Fix the funnel first (Q1&ndash;Q2), then scale with whatever capital is available. Heavy lean on organic and low-cost channels.</p>
 
-  <div class="grid-2" style="gap:50px;">
+  <div class="grid-2" style="gap:36px;">
     <div>
-      <h4 style="color:var(--green);margin-bottom:16px;">CPI Benchmarks by Channel &amp; Region</h4>
-      <table class="data-table" style="font-size:13px;">
+      <h4 style="color:var(--green);margin-bottom:14px;">CPI Benchmarks by Channel &amp; Region</h4>
+      <table class="data-table" style="font-size:12px;">
         <thead>
           <tr>
             <th>Channel</th>
@@ -509,619 +1069,123 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
         <tbody>
           <tr>
             <td><strong>TikTok Ads</strong></td>
-            <td style="text-align:right;">$1.50–3.00</td>
-            <td style="text-align:right;">$1.20–2.50</td>
-            <td style="text-align:right;">$0.80–1.50</td>
-            <td style="text-align:right;">$0.15–0.40</td>
+            <td style="text-align:right;">$1.50&ndash;3.00</td>
+            <td style="text-align:right;">$1.20&ndash;2.50</td>
+            <td style="text-align:right;">$0.80&ndash;1.50</td>
+            <td style="text-align:right;">$0.15&ndash;0.40</td>
           </tr>
           <tr>
             <td><strong>Instagram/Meta</strong></td>
-            <td style="text-align:right;">$2.50–5.00</td>
-            <td style="text-align:right;">$2.00–4.00</td>
-            <td style="text-align:right;">$1.00–2.50</td>
-            <td style="text-align:right;">$0.20–0.60</td>
-          </tr>
-          <tr>
-            <td><strong>Snapchat</strong></td>
-            <td style="text-align:right;">$1.80–3.50</td>
-            <td style="text-align:right;">$1.50–3.00</td>
-            <td style="text-align:right;">$0.70–1.50</td>
-            <td style="text-align:right;">$0.10–0.30</td>
+            <td style="text-align:right;">$2.50&ndash;5.00</td>
+            <td style="text-align:right;">$2.00&ndash;4.00</td>
+            <td style="text-align:right;">$1.00&ndash;2.50</td>
+            <td style="text-align:right;">$0.20&ndash;0.60</td>
           </tr>
           <tr>
             <td><strong>Google UAC</strong></td>
-            <td style="text-align:right;">$2.00–4.50</td>
-            <td style="text-align:right;">$1.80–3.50</td>
-            <td style="text-align:right;">$0.90–2.00</td>
-            <td style="text-align:right;">$0.15–0.50</td>
+            <td style="text-align:right;">$2.00&ndash;4.50</td>
+            <td style="text-align:right;">$1.80&ndash;3.50</td>
+            <td style="text-align:right;">$0.90&ndash;2.00</td>
+            <td style="text-align:right;">$0.15&ndash;0.50</td>
           </tr>
           <tr>
-            <td><strong>Apple Search Ads</strong></td>
-            <td style="text-align:right;">$2.50–5.50</td>
-            <td style="text-align:right;">$2.00–4.50</td>
-            <td style="text-align:right;">$1.20–3.00</td>
-            <td style="text-align:right;">$0.30–0.80</td>
+            <td><strong>Organic / Influencer</strong></td>
+            <td style="text-align:right;" colspan="4" style="text-align:center;color:var(--green);">$0 &mdash; time investment only</td>
           </tr>
         </tbody>
       </table>
-      <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:8px;">Sources: Liftoff 2025, Data.ai 2025, AppsFlyer Performance Index 2025. Health & wellness category averages.</p>
+      <p style="font-size:10px;color:rgba(255,255,255,0.3);margin-top:6px;">Sources: Liftoff 2025, Data.ai 2025. Health &amp; wellness category.</p>
 
-      <div style="margin-top:20px;background:rgba(255,255,255,0.05);border-radius:16px;padding:20px;border:1px solid rgba(255,255,255,0.1);">
-        <h4 style="color:var(--green);margin-bottom:8px;font-size:16px;">Our Blended CPI Target</h4>
-        <div style="display:flex;gap:20px;">
-          <div style="flex:1;text-align:center;">
-            <div style="font-size:28px;font-weight:800;color:var(--green);">$1.80</div>
-            <div style="font-size:11px;color:rgba(255,255,255,0.5);">Tier-1 Blended (USA, UK, MENA)</div>
-          </div>
-          <div style="flex:1;text-align:center;">
-            <div style="font-size:28px;font-weight:800;color:var(--blue);">$0.30</div>
-            <div style="font-size:11px;color:rgba(255,255,255,0.5);">Tier-2 Blended (S. Asia, N. Africa)</div>
-          </div>
-          <div style="flex:1;text-align:center;">
-            <div style="font-size:28px;font-weight:800;color:var(--orange);">$1.10</div>
-            <div style="font-size:11px;color:rgba(255,255,255,0.5);">Overall Blended Target</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <h4 style="color:var(--green);margin-bottom:16px;">Channel Allocation Plan</h4>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.1);">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-            <strong style="color:white;">TikTok Ads (Primary)</strong>
-            <span style="color:var(--green);font-weight:700;">35%</span>
-          </div>
-          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:35%;background:var(--blue);"></div></div>
-          <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:4px;">Lowest CPI for 17-28 demo. Video-first. Proven for wellness apps. ~$75K over 18mo.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.1);">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-            <strong style="color:white;">Instagram/Meta Ads</strong>
-            <span style="color:var(--green);font-weight:700;">25%</span>
-          </div>
-          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:25%;background:var(--purple);"></div></div>
-          <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:4px;">Reels + Stories targeting. Strong MENA reach. Retargeting funnel. ~$54K over 18mo.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.1);">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-            <strong style="color:white;">Influencer / Creator Partnerships</strong>
-            <span style="color:var(--green);font-weight:700;">20%</span>
-          </div>
-          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:20%;background:var(--orange);"></div></div>
-          <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:4px;">Micro-influencers (10K-100K followers) in wellness/Gen Z space. $200-$1K per creator. ~$43K over 18mo.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.1);">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-            <strong style="color:white;">ASO + Google UAC + Apple Search</strong>
-            <span style="color:var(--green);font-weight:700;">15%</span>
-          </div>
-          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:15%;background:#10B981;"></div></div>
-          <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:4px;">App Store Optimization + high-intent search ads. ~$32K over 18mo.</p>
-        </div>
-        <div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.1);">
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-            <strong style="color:white;">Community / Organic / PR</strong>
-            <span style="color:var(--green);font-weight:700;">5%</span>
-          </div>
-          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:5%;background:#EC4899;"></div></div>
-          <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:4px;">Reddit, university outreach, mental health awareness partnerships. ~$11K over 18mo.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-number" style="color:rgba(255,255,255,0.3);">05 / 12</div>
-</section>
-
-<!-- ============================================================ -->
-<!-- SLIDE 6: MARKETING SPEND PHASING -->
-<!-- ============================================================ -->
-<section class="slide">
-  <span class="confidential">Confidential</span>
-  <span class="tag" style="background:var(--blue);">Marketing Phasing</span>
-  <h2 style="margin-bottom:8px;">Spend Ramp: <span class="accent">Fix First, Scale Second</span></h2>
-  <p style="margin-bottom:30px;">Marketing budget scales with product readiness. No point pouring money into a leaky funnel.</p>
-
-  <div class="grid-2" style="gap:50px;">
-    <div>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Period</th>
-            <th>Focus</th>
-            <th style="text-align:right;">Monthly Spend</th>
-            <th style="text-align:right;">CPI Target</th>
-            <th style="text-align:right;">Installs/mo</th>
+      <div style="margin-top:16px;background:rgba(255,255,255,0.04);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.08);">
+        <h4 style="color:var(--green);margin-bottom:8px;font-size:15px;">Bootstrap Marketing Spend Plan</h4>
+        <table style="width:100%;font-size:12px;color:rgba(255,255,255,0.8);">
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:6px 0;"><strong>Q1 (Mar&ndash;May)</strong></td>
+            <td style="text-align:right;">$1,000&ndash;2,000/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.4);">Test &amp; learn</td>
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Q1 2026</strong><br><span style="font-size:11px;color:var(--gray);">Mar-May</span></td>
-            <td>Test & learn. Small TikTok + Instagram tests. ASO groundwork.</td>
-            <td style="text-align:right;">$3,000</td>
-            <td style="text-align:right;">$0.80</td>
-            <td style="text-align:right;">~3,750</td>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:6px 0;"><strong>Q2 (Jun&ndash;Aug)</strong></td>
+            <td style="text-align:right;">$2,000&ndash;4,000/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.4);">Scale winners</td>
           </tr>
-          <tr>
-            <td><strong>Q2 2026</strong><br><span style="font-size:11px;color:var(--gray);">Jun-Aug</span></td>
-            <td>Ramp winners. Add influencer pilots. Launch ASA.</td>
-            <td style="text-align:right;">$8,000</td>
-            <td style="text-align:right;">$0.90</td>
-            <td style="text-align:right;">~8,900</td>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:6px 0;"><strong>Q3 (Sep&ndash;Nov)</strong></td>
+            <td style="text-align:right;">$3,000&ndash;5,000/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.4);">Post-PMF push</td>
           </tr>
-          <tr>
-            <td><strong>Q3 2026</strong><br><span style="font-size:11px;color:var(--gray);">Sep-Nov</span></td>
-            <td>Post-PMF push. Scale TikTok. University partnerships.</td>
-            <td style="text-align:right;">$15,000</td>
-            <td style="text-align:right;">$1.10</td>
-            <td style="text-align:right;">~13,600</td>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <td style="padding:6px 0;"><strong>Q4 (Dec&ndash;Feb)</strong></td>
+            <td style="text-align:right;">$4,000&ndash;5,000/mo</td>
+            <td style="text-align:right;font-size:11px;color:rgba(255,255,255,0.4);">Multi-channel</td>
           </tr>
-          <tr>
-            <td><strong>Q4 2026</strong><br><span style="font-size:11px;color:var(--gray);">Dec-Feb</span></td>
-            <td>Full scale. Multi-channel. Retargeting. Tier-1 focus.</td>
-            <td style="text-align:right;">$18,000</td>
-            <td style="text-align:right;">$1.20</td>
-            <td style="text-align:right;">~15,000</td>
-          </tr>
-          <tr>
-            <td><strong>H1 2027</strong><br><span style="font-size:11px;color:var(--gray);">Mar-Aug</span></td>
-            <td>Optimize for LTV. Reduce CPI. Series A prep.</td>
-            <td style="text-align:right;">$16,000</td>
-            <td style="text-align:right;">$1.00</td>
-            <td style="text-align:right;">~16,000</td>
-          </tr>
-          <tr class="total">
-            <td colspan="2"><strong>18-MONTH TOTAL</strong></td>
-            <td style="text-align:right;"><strong>$216,000</strong></td>
-            <td style="text-align:right;"><strong>$1.10 avg</strong></td>
-            <td style="text-align:right;"><strong>~57,250</strong></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="callout callout-green" style="margin-top:16px;">
-        <p style="font-size:13px;"><strong>57K paid installs + organic growth (currently ~500/mo) = ~66K total new users over 18 months.</strong> Combined with existing 9.2K base = ~75K total users. Exceeds 50K Y1 target in pitch deck.</p>
-      </div>
-    </div>
-
-    <div>
-      <h4 style="margin-bottom:16px;">Market Prioritization</h4>
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="border-left:4px solid var(--green);">
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <h4 style="font-size:16px;">Tier 1: USA, UK, Canada</h4>
-              <p style="font-size:13px;">Highest LTV ($8-15/user/yr). 40% of ad budget.</p>
-            </div>
-            <div style="font-size:24px;font-weight:800;color:var(--green);">40%</div>
-          </div>
-        </div>
-        <div class="card" style="border-left:4px solid var(--blue);">
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <h4 style="font-size:16px;">Tier 1B: UAE, Saudi, Qatar</h4>
-              <p style="font-size:13px;">High willingness to pay. English-speaking. 25% of ad budget.</p>
-            </div>
-            <div style="font-size:24px;font-weight:800;color:var(--blue);">25%</div>
-          </div>
-        </div>
-        <div class="card" style="border-left:4px solid var(--purple);">
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <h4 style="font-size:16px;">Tier 2: Pakistan, India, Bangladesh</h4>
-              <p style="font-size:13px;">Ultra-low CPI. Volume for community/Echo. 20% of ad budget.</p>
-            </div>
-            <div style="font-size:24px;font-weight:800;color:var(--purple);">20%</div>
-          </div>
-        </div>
-        <div class="card" style="border-left:4px solid var(--orange);">
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <h4 style="font-size:16px;">Tier 2B: EU, Australia, N. Africa</h4>
-              <p style="font-size:13px;">Test markets. Expand if CPI is favorable. 15% of ad budget.</p>
-            </div>
-            <div style="font-size:24px;font-weight:800;color:var(--orange);">15%</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="callout" style="margin-top:16px;">
-        <h4 style="font-size:16px;margin-bottom:6px;">Key Metric: LTV:CAC Ratio</h4>
-        <p style="font-size:13px;">Target LTV:CAC &gt; 3:1 for Tier-1 markets. At $1.80 CPI and $10 ARPU, we need &gt;54% of paid installs to convert to premium within 12 months. Currently unproven — this is what Q1-Q2 product fixes unlock.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-number">06 / 12</div>
-</section>
-
-
-<!-- ============================================================ -->
-<!-- SLIDE 7: EQUITY RESOLUTION FRAMEWORK -->
-<!-- ============================================================ -->
-<section class="slide" style="background:#FFFBEB;">
-  <span class="confidential">Confidential</span>
-  <span class="tag" style="background:var(--orange);">Equity</span>
-  <h2 style="margin-bottom:8px;">Equity Structure: <span class="accent">Resolving Sweat vs Cash</span></h2>
-  <p style="margin-bottom:24px;max-width:800px;">Two partners (Design Peeps at 10% and Ambeego at 5%) hold equity for work contributions. As cash-contributing co-founders invest, we need a fair framework to balance sweat equity vs cash equity.</p>
-
-  <div class="grid-2" style="gap:50px;">
-    <div>
-      <h4 style="margin-bottom:16px;">The Core Problem</h4>
-      <div class="callout callout-red">
-        <p style="font-size:14px;"><strong>Double-counting risk:</strong> If a partner contributes both work (sweat) AND cash, they receive value twice for overlapping effort. Cash-only founders may feel shortchanged. Work-only partners may feel devalued if their equity dilutes with cash rounds.</p>
-      </div>
-
-      <h4 style="margin-top:24px;margin-bottom:12px;">Current Equity Positions</h4>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Partner</th>
-            <th style="text-align:center;">Equity %</th>
-            <th>Type</th>
-            <th>Contribution</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Co-Founders (5)</strong></td>
-            <td style="text-align:center;">85%</td>
-            <td><span class="pill pill-green" style="font-size:10px;">Cash + Sweat</span></td>
-            <td>Strategy, ops, clinical, design, tech + cash investment</td>
-          </tr>
-          <tr>
-            <td><strong>Design Peeps</strong></td>
-            <td style="text-align:center;">10%</td>
-            <td><span class="pill pill-purple" style="font-size:10px;">Sweat Only</span></td>
-            <td>UI/UX design work (completed)</td>
-          </tr>
-          <tr>
-            <td><strong>Ambeego</strong></td>
-            <td style="text-align:center;">5%</td>
-            <td><span class="pill pill-blue" style="font-size:10px;">Sweat Only</span></td>
-            <td>Development work (completed)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h4 style="margin-top:24px;margin-bottom:12px;">Industry Standard: Slicing Pie Model</h4>
-      <div class="card" style="background:white;border:2px solid #E5E7EB;">
-        <p style="font-size:13px;margin-bottom:8px;">Mike Moyer's <strong>Slicing Pie</strong> is the most widely-used framework for resolving this exact scenario in early-stage startups:</p>
-        <ul style="font-size:13px;color:var(--gray);padding-left:20px;line-height:1.8;">
-          <li><strong>All contributions are converted to a single unit:</strong> "slices"</li>
-          <li><strong>Cash contributions</strong> are valued at 2-4x multiplier (cash is riskier and more scarce)</li>
-          <li><strong>Sweat contributions</strong> are valued at fair market rate x time spent</li>
-          <li><strong>Each person's equity = their slices / total slices</strong></li>
-          <li><strong>Dynamic:</strong> Equity adjusts as new contributions are made</li>
-        </ul>
-      </div>
-    </div>
-
-    <div>
-      <h4 style="margin-bottom:16px;">Recommended Resolution Options</h4>
-
-      <div style="display:flex;flex-direction:column;gap:16px;">
-        <div class="card" style="border:2px solid var(--green);background:white;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-            <span style="background:var(--green);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">A</span>
-            <h4 style="font-size:16px;color:var(--green);">Fixed Equity + Vesting (Recommended)</h4>
-          </div>
-          <p style="font-size:13px;">Honor the agreed 10% and 5% but subject to <strong>4-year vesting with 1-year cliff</strong>. Work already done counts toward cliff. If they stop contributing, unvested shares return to pool.</p>
-          <div style="margin-top:8px;padding:8px 12px;background:var(--light-bg);border-radius:8px;font-size:12px;">
-            <strong>If they also invest cash:</strong> Cash buys additional shares from a new option pool at the current valuation — separate from sweat equity. No double-counting because sweat = past work, cash = new capital.
-          </div>
-        </div>
-
-        <div class="card" style="border:2px solid #E5E7EB;background:white;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-            <span style="background:var(--gray);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">B</span>
-            <h4 style="font-size:16px;">Convert to Contractor + Reduced Equity</h4>
-          </div>
-          <p style="font-size:13px;">Retrospectively value their work at market rate (e.g., design work = $15K, dev work = $8K). Convert to: <strong>reduced equity (e.g., 6% + 3%) + cash payment for remainder</strong>. Clean break if they're not ongoing contributors.</p>
-        </div>
-
-        <div class="card" style="border:2px solid #E5E7EB;background:white;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-            <span style="background:var(--gray);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;">C</span>
-            <h4 style="font-size:16px;">Slicing Pie Full Recalculation</h4>
-          </div>
-          <p style="font-size:13px;">Recalculate all equity from scratch using fair market rates for all contributions (time, cash, IP, assets). Most fair but most complex. Requires agreement from all parties on rates.</p>
-        </div>
-      </div>
-
-      <div class="callout" style="margin-top:16px;">
-        <h4 style="font-size:16px;margin-bottom:8px;">Key Principles (Any Option)</h4>
-        <ul style="font-size:13px;padding-left:20px;line-height:1.8;color:var(--gray);">
-          <li><strong>Cash gets a premium:</strong> Industry standard is 2-4x multiplier on cash vs sweat (cash carries more risk and opportunity cost)</li>
-          <li><strong>Vesting protects everyone:</strong> Nobody walks away with equity for uncommitted future work</li>
-          <li><strong>Ongoing work ≠ free:</strong> Future design/dev work should be compensated separately (salary or additional equity grants), not assumed under original equity deal</li>
-          <li><strong>Get it in writing:</strong> Any resolution must be documented in a formal shareholders' agreement before the seed round closes</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide-number">07 / 12</div>
-</section>
-
-<!-- ============================================================ -->
-<!-- SLIDE 8: FOUNDER CASH CONTRIBUTIONS -->
-<!-- ============================================================ -->
-<section class="slide">
-  <span class="confidential">Confidential</span>
-  <span class="tag" style="background:var(--orange);">Founder Capital</span>
-  <h2 style="margin-bottom:8px;">Founder Cash Contributions: <span class="accent">Pro-Rata Model</span></h2>
-  <p style="margin-bottom:24px;">Co-founders contributing cash in proportion to their equity share. This maintains fairness and prevents dilution disputes.</p>
-
-  <div class="grid-2" style="gap:50px;">
-    <div>
-      <h4 style="margin-bottom:16px;">How Pro-Rata Founder Investment Works</h4>
-      <div class="card" style="background:white;border:2px solid #E5E7EB;">
-        <p style="font-size:14px;margin-bottom:16px;">If total founder pool is 85% equity shared among 5 co-founders, and the group agrees to collectively invest (e.g., $100K pre-seed):</p>
-
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th>Founder</th>
-              <th style="text-align:center;">Equity Share*</th>
-              <th style="text-align:right;">Pro-Rata Cash</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Founder A (if 25%)</td>
-              <td style="text-align:center;">25%</td>
-              <td style="text-align:right;">$29,400</td>
-            </tr>
-            <tr>
-              <td>Founder B (if 20%)</td>
-              <td style="text-align:center;">20%</td>
-              <td style="text-align:right;">$23,500</td>
-            </tr>
-            <tr>
-              <td>Founder C (if 15%)</td>
-              <td style="text-align:center;">15%</td>
-              <td style="text-align:right;">$17,600</td>
-            </tr>
-            <tr>
-              <td>Founder D (if 15%)</td>
-              <td style="text-align:center;">15%</td>
-              <td style="text-align:right;">$17,600</td>
-            </tr>
-            <tr>
-              <td>Founder E (if 10%)</td>
-              <td style="text-align:center;">10%</td>
-              <td style="text-align:right;">$11,800</td>
-            </tr>
-            <tr class="total">
-              <td><strong>Total</strong></td>
-              <td style="text-align:center;"><strong>85%</strong></td>
-              <td style="text-align:right;"><strong>$100,000</strong></td>
-            </tr>
-          </tbody>
-        </table>
-        <p style="font-size:11px;color:var(--gray);margin-top:8px;">*Illustrative equity splits. Actual splits to be agreed by co-founders.</p>
-      </div>
-
-      <div class="callout callout-blue" style="margin-top:16px;">
-        <h4 style="font-size:16px;margin-bottom:6px;">What If a Founder Can't Pay Pro-Rata?</h4>
-        <p style="font-size:13px;">Options: (1) Other founders cover the shortfall → they gain proportional equity from the shortfall founder's share. (2) Convert the gap to a promissory note. (3) Accept dilution for that founder. Standard practice is Option 1 with a defined window (e.g., 60 days to cure).</p>
-      </div>
-    </div>
-
-    <div>
-      <h4 style="margin-bottom:16px;">Design Peeps &amp; Ambeego: If They Also Invest Cash</h4>
-
-      <div class="card" style="border:2px solid var(--green);background:white;margin-bottom:16px;">
-        <h4 style="color:var(--green);margin-bottom:8px;">The "Double-Dipping" Question</h4>
-        <p style="font-size:14px;margin-bottom:12px;">If Design Peeps (10% sweat equity) also invests, say, $20K cash — do they get <em>additional</em> equity on top of their 10%?</p>
-        <p style="font-size:14px;"><strong>Yes — and this is fair.</strong> Here's why:</p>
-        <ul style="font-size:13px;padding-left:20px;line-height:1.8;color:var(--gray);">
-          <li>The 10% compensates <strong>past work</strong> (design deliverables already completed)</li>
-          <li>The cash investment compensates <strong>new capital</strong> at current valuation</li>
-          <li>These are two separate transactions — just like a CTO with equity who also invests in a round</li>
-          <li>The key protection is <strong>vesting</strong> on the sweat equity — if they stop working, unvested shares return</li>
-        </ul>
-      </div>
-
-      <div class="card" style="background:white;border:2px solid #E5E7EB;">
-        <h4 style="margin-bottom:8px;">Example Math</h4>
-        <table style="width:100%;font-size:13px;">
-          <tr style="border-bottom:1px solid #E5E7EB;">
-            <td style="padding:8px 0;"><strong>Pre-money valuation</strong></td>
-            <td style="text-align:right;">$2M (illustrative)</td>
-          </tr>
-          <tr style="border-bottom:1px solid #E5E7EB;">
-            <td style="padding:8px 0;">Design Peeps sweat equity</td>
-            <td style="text-align:right;">10% (=$200K implied value)</td>
-          </tr>
-          <tr style="border-bottom:1px solid #E5E7EB;">
-            <td style="padding:8px 0;">Design Peeps cash investment</td>
-            <td style="text-align:right;">$20K (=1% at $2M valuation)</td>
-          </tr>
-          <tr style="border-bottom:1px solid #E5E7EB;font-weight:700;">
-            <td style="padding:8px 0;">Design Peeps total post-investment</td>
-            <td style="text-align:right;color:var(--green);">~11% (10% sweat + 1% cash)</td>
-          </tr>
-          <tr style="border-bottom:1px solid #E5E7EB;">
-            <td style="padding:8px 0;">Ambeego sweat equity</td>
-            <td style="text-align:right;">5% (=$100K implied value)</td>
-          </tr>
-          <tr style="border-bottom:1px solid #E5E7EB;">
-            <td style="padding:8px 0;">Ambeego cash investment</td>
-            <td style="text-align:right;">$10K (=0.5% at $2M valuation)</td>
-          </tr>
-          <tr style="font-weight:700;">
-            <td style="padding:8px 0;">Ambeego total post-investment</td>
-            <td style="text-align:right;color:var(--green);">~5.5% (5% sweat + 0.5% cash)</td>
+          <tr style="border-top:2px solid var(--green);font-weight:700;">
+            <td style="padding:6px 0;">12-Month Total</td>
+            <td style="text-align:right;color:var(--green);">$30K&ndash;$48K</td>
+            <td></td>
           </tr>
         </table>
       </div>
+    </div>
 
-      <div class="callout" style="margin-top:16px;">
-        <p style="font-size:13px;"><strong>Bottom line:</strong> Sweat equity = compensation for past work. Cash equity = new investment. They're separate instruments. Vesting on sweat equity + standard investment terms for cash = no double-dipping.</p>
+    <div>
+      <h4 style="color:var(--green);margin-bottom:14px;">Channel Allocation (Bootstrap)</h4>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.08);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <strong style="color:white;font-size:13px;">Organic / Content / SEO</strong>
+            <span style="color:var(--green);font-weight:700;font-size:13px;">35%</span>
+          </div>
+          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:35%;background:var(--green);"></div></div>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">Blog, social media, App Store Optimization. Design Peeps creates assets. Zero cost channel &mdash; maximize this.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.08);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <strong style="color:white;font-size:13px;">TikTok Ads (Primary Paid)</strong>
+            <span style="color:var(--green);font-weight:700;font-size:13px;">30%</span>
+          </div>
+          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:30%;background:var(--blue);"></div></div>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">Lowest CPI for 17&ndash;28 demo. Video-first format. Proven for wellness apps.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.08);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <strong style="color:white;font-size:13px;">Instagram / Meta</strong>
+            <span style="color:var(--green);font-weight:700;font-size:13px;">20%</span>
+          </div>
+          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:20%;background:var(--purple);"></div></div>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">Reels + Stories. Strong MENA reach. Retargeting funnel.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.08);">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <strong style="color:white;font-size:13px;">Influencer / Community / PR</strong>
+            <span style="color:var(--green);font-weight:700;font-size:13px;">15%</span>
+          </div>
+          <div class="progress-bar" style="background:rgba(255,255,255,0.1);"><div class="fill" style="width:15%;background:var(--orange);"></div></div>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">Micro-influencers ($100&ndash;$500 per), university outreach, mental health awareness.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;background:rgba(14,171,140,0.08);border-radius:12px;padding:16px;border:1px solid rgba(14,171,140,0.15);">
+        <h4 style="color:var(--green);font-size:14px;margin-bottom:6px;">Projected Installs (Bootstrap Budget)</h4>
+        <div style="display:flex;gap:12px;">
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--green);">$0.90</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.4);">Blended CPI Target</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--blue);">33K&ndash;53K</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.4);">Paid Installs (12mo)</div>
+          </div>
+          <div style="flex:1;text-align:center;">
+            <div style="font-size:22px;font-weight:800;color:var(--orange);">~6K</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.4);">Organic Installs (12mo)</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="slide-number">08 / 12</div>
-</section>
-
-
-<!-- ============================================================ -->
-<!-- SLIDE 9: PRODUCT WORK REQUIRED -->
-<!-- ============================================================ -->
-<section class="slide" style="background:var(--light-bg);">
-  <span class="confidential">Confidential</span>
-  <span class="tag" style="background:var(--purple);">Product</span>
-  <h2 style="margin-bottom:8px;">Design &amp; Dev Work: <span class="accent">What's Required</span></h2>
-  <p style="margin-bottom:24px;">Mapped against the pitch deck targets. Every item ties to a specific KPI we promised investors.</p>
-
-  <table class="data-table" style="font-size:13px;">
-    <thead>
-      <tr>
-        <th style="width:22%;">Work Item</th>
-        <th style="width:8%;">Type</th>
-        <th style="width:8%;">Priority</th>
-        <th style="width:10%;">Est. Effort</th>
-        <th style="width:20%;">KPI Impact</th>
-        <th style="width:8%;">Quarter</th>
-        <th style="width:24%;">Design Scope</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Analytics instrumentation fix</strong><br><span style="color:var(--gray);">Resolve GA vs verified user gap</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">Dev</span></td>
-        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
-        <td>2-3 weeks</td>
-        <td>Accurate data for all experiments</td>
-        <td>Q1</td>
-        <td>None — pure backend</td>
-      </tr>
-      <tr>
-        <td><strong>Single-step sign-in + guest mode</strong><br><span style="color:var(--gray);">Reduce 44% pre-Home drop</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
-        <td>3-4 weeks</td>
-        <td>Onboarding drop 70% → &lt;20%</td>
-        <td>Q1</td>
-        <td>New sign-in screen, guest flow, progressive signup nudges (3-4 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>Direct-to-Home + immediate mood prompt</strong><br><span style="color:var(--gray);">First mood log as "Aha" moment</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
-        <td>2-3 weeks</td>
-        <td>First mood log rate → 50%+</td>
-        <td>Q1</td>
-        <td>Simplified Home V2, mood prompt overlay, first-use onboarding (2-3 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>Paywall repositioning</strong><br><span style="color:var(--gray);">Move behind "meaningful session"</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
-        <td>2 weeks</td>
-        <td>Trial→paid conversion, churn reduction</td>
-        <td>Q1-Q2</td>
-        <td>New paywall screen, contextual upgrade prompts (2-3 variants for A/B)</td>
-      </tr>
-      <tr>
-        <td><strong>Mood Tracker 2.0</strong><br><span style="color:var(--gray);">Context tags + mini-journal</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-orange" style="font-size:10px;">P1</span></td>
-        <td>4-5 weeks</td>
-        <td>% logs with context → 40%+, session duration +20%</td>
-        <td>Q2</td>
-        <td>Tag selector UI, mini-journal input, reflection prompts, mood history redesign (5-6 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>AI personality system</strong><br><span style="color:var(--gray);">Sage, Blaze, Leo, Grace</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">Dev</span></td>
-        <td><span class="pill pill-orange" style="font-size:10px;">P1</span></td>
-        <td>5-6 weeks</td>
-        <td>AI usage 1.45% → 10%+, PMF 25% → 40%</td>
-        <td>Q2-Q3</td>
-        <td>Personality selector, chat UI refinement, typing indicators (3-4 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>Home simplification</strong><br><span style="color:var(--gray);">Remove Goals, progressive disclosure</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-orange" style="font-size:10px;">P1</span></td>
-        <td>3 weeks</td>
-        <td>Activation rate, reduced cognitive load</td>
-        <td>Q2</td>
-        <td>Full Home screen redesign, card system, bottom nav simplification (3-4 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>Performance fixes</strong><br><span style="color:var(--gray);">Blog 20s → &lt;3s, AI latency</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">Dev</span></td>
-        <td><span class="pill pill-red" style="font-size:10px;">P0</span></td>
-        <td>3-4 weeks</td>
-        <td>Tier-1 churn reduction</td>
-        <td>Q1-Q2</td>
-        <td>None — backend optimization</td>
-      </tr>
-      <tr>
-        <td><strong>Echo revamp</strong><br><span style="color:var(--gray);">Engagement redesign</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">P2</span></td>
-        <td>4 weeks</td>
-        <td>Echo engagement 0% → 5%+</td>
-        <td>Q3</td>
-        <td>New Echo feed, response UI, notification system (4-5 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>Premium features build</strong><br><span style="color:var(--gray);">Voice journals, export, analytics</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">P2</span></td>
-        <td>6-8 weeks</td>
-        <td>Premium differentiation, conversion</td>
-        <td>Q3-Q4</td>
-        <td>Voice recording UI, analytics dashboard, export views (6-8 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>Flow-based ads integration</strong><br><span style="color:var(--gray);">Post-session monetization</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">Dev</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">P2</span></td>
-        <td>2 weeks</td>
-        <td>Revenue diversification</td>
-        <td>Q3</td>
-        <td>Ad placement design, skip/dismiss patterns (1-2 screens)</td>
-      </tr>
-      <tr>
-        <td><strong>Widgets (Home screen)</strong><br><span style="color:var(--gray);">Mood log + streak widget</span></td>
-        <td><span class="pill pill-purple" style="font-size:10px;">Both</span></td>
-        <td><span class="pill pill-blue" style="font-size:10px;">P2</span></td>
-        <td>2-3 weeks</td>
-        <td>DAU, habit formation</td>
-        <td>Q4</td>
-        <td>Widget design for iOS + Android (2-3 variants)</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div style="margin-top:20px;display:flex;gap:24px;">
-    <div class="card" style="flex:1;background:white;border:2px solid var(--green);text-align:center;">
-      <div style="font-size:32px;font-weight:800;color:var(--green);">~40 weeks</div>
-      <div style="font-size:13px;color:var(--gray);">Total dev effort (sequential)</div>
-      <div style="font-size:11px;color:var(--gray);margin-top:4px;">~25 weeks with 2 devs parallel</div>
-    </div>
-    <div class="card" style="flex:1;background:white;border:2px solid var(--purple);text-align:center;">
-      <div style="font-size:32px;font-weight:800;color:var(--purple);">~35 screens</div>
-      <div style="font-size:13px;color:var(--gray);">Total design deliverables</div>
-      <div style="font-size:11px;color:var(--gray);margin-top:4px;">~12 weeks design work (inc. iterations)</div>
-    </div>
-    <div class="card" style="flex:1;background:white;border:2px solid var(--orange);text-align:center;">
-      <div style="font-size:32px;font-weight:800;color:var(--orange);">6 A/B tests</div>
-      <div style="font-size:13px;color:var(--gray);">Required experiments</div>
-      <div style="font-size:11px;color:var(--gray);margin-top:4px;">Onboarding, paywall, mood 2.0, home, AI, Echo</div>
-    </div>
-  </div>
-
-  <div class="slide-number">09 / 12</div>
+  <div class="slide-number" style="color:rgba(255,255,255,0.25);">09 / 14</div>
 </section>
 
 <!-- ============================================================ -->
@@ -1130,219 +1194,432 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
 <section class="slide">
   <span class="confidential">Confidential</span>
   <span class="tag">Execution</span>
-  <h2 style="margin-bottom:24px;">Quarterly Execution: <span class="accent">18-Month Plan</span></h2>
+  <h2 style="margin-bottom:20px;">Quarterly Execution: <span class="accent">12-Month Plan</span></h2>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
-    <div class="card" style="border-top:4px solid var(--red);background:white;">
-      <h4 style="color:var(--red);margin-bottom:4px;">Q1 2026 (Mar-May)</h4>
-      <p style="font-size:12px;font-weight:600;margin-bottom:12px;">FIX THE FOUNDATION</p>
-      <div style="font-size:13px;line-height:1.8;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div class="card" style="border-top:4px solid var(--red);background:white;padding:20px;">
+      <h4 style="color:var(--red);margin-bottom:4px;font-size:16px;">Q1 2026 (Mar&ndash;May)</h4>
+      <p style="font-size:11px;font-weight:700;color:var(--gray);margin-bottom:10px;">FIX THE FOUNDATION</p>
+      <div style="font-size:12px;line-height:1.8;">
         <strong>Product:</strong><br>
         &#8226; Analytics instrumentation fix<br>
         &#8226; Single-step sign-in + guest mode<br>
         &#8226; Direct-to-Home + mood prompt<br>
         &#8226; Performance fixes (blog, AI)<br><br>
-        <strong>Marketing:</strong> $3K/mo test budget<br>
-        <strong>Hires:</strong> Sr. RN Dev, Mid RN Dev, QA<br>
-        <strong>Equity:</strong> Finalize shareholders' agreement<br><br>
-        <span style="color:var(--green);font-weight:600;">Target: Onboarding &lt;30%</span>
+        <strong>Design:</strong> Onboarding research, Home V2, sign-in flow, paywall variants, loading states<br>
+        <strong>Marketing:</strong> $1&ndash;2K/mo test budget, ASO groundwork, organic content<br>
+        <strong>Equity:</strong> Finalize shareholders' agreement, audit partner work<br><br>
+        <span style="color:var(--green);font-weight:600;">Target: Onboarding &lt;30%, data accuracy fixed</span>
       </div>
     </div>
 
-    <div class="card" style="border-top:4px solid var(--orange);background:white;">
-      <h4 style="color:var(--orange);margin-bottom:4px;">Q2 2026 (Jun-Aug)</h4>
-      <p style="font-size:12px;font-weight:600;margin-bottom:12px;">ACHIEVE PRODUCT-MARKET FIT</p>
-      <div style="font-size:13px;line-height:1.8;">
+    <div class="card" style="border-top:4px solid var(--orange);background:white;padding:20px;">
+      <h4 style="color:var(--orange);margin-bottom:4px;font-size:16px;">Q2 2026 (Jun&ndash;Aug)</h4>
+      <p style="font-size:11px;font-weight:700;color:var(--gray);margin-bottom:10px;">ACHIEVE PRODUCT-MARKET FIT</p>
+      <div style="font-size:12px;line-height:1.8;">
         <strong>Product:</strong><br>
         &#8226; Paywall repositioning + A/B test<br>
         &#8226; Mood Tracker 2.0 launch<br>
         &#8226; Home simplification<br>
         &#8226; AI personality system (begin)<br><br>
-        <strong>Marketing:</strong> $8K/mo ramp-up<br>
-        <strong>Hires:</strong> Backend Dev, AI/ML Eng, Content<br>
-        <strong>Revenue:</strong> 20-30 active paid users<br><br>
+        <strong>Design:</strong> Mood 2.0 full design, Home redesign, AI persona visuals, A/B variants, user testing<br>
+        <strong>Marketing:</strong> $2&ndash;4K/mo ramp, influencer pilots<br>
+        <strong>Revenue:</strong> 20&ndash;30 active paid users<br><br>
         <span style="color:var(--green);font-weight:600;">Target: PMF 35%+, D7 4%+</span>
       </div>
     </div>
 
-    <div class="card" style="border-top:4px solid var(--green);background:white;">
-      <h4 style="color:var(--green);margin-bottom:4px;">Q3 2026 (Sep-Nov)</h4>
-      <p style="font-size:12px;font-weight:600;margin-bottom:12px;">SCALE GROWTH ENGINE</p>
-      <div style="font-size:13px;line-height:1.8;">
+    <div class="card" style="border-top:4px solid var(--green);background:white;padding:20px;">
+      <h4 style="color:var(--green);margin-bottom:4px;font-size:16px;">Q3 2026 (Sep&ndash;Nov)</h4>
+      <p style="font-size:11px;font-weight:700;color:var(--gray);margin-bottom:10px;">SCALE GROWTH ENGINE</p>
+      <div style="font-size:12px;line-height:1.8;">
         <strong>Product:</strong><br>
         &#8226; AI personalities live<br>
         &#8226; Echo revamp<br>
         &#8226; Flow-based ads<br>
         &#8226; Premium features (begin)<br><br>
-        <strong>Marketing:</strong> $15K/mo full push<br>
-        <strong>Hires:</strong> UI/UX Designer, Community Mgr<br>
-        <strong>Revenue:</strong> 50+ active paid users<br><br>
-        <span style="color:var(--green);font-weight:600;">Target: PMF 40%+, 25K users</span>
+        <strong>Design:</strong> Echo redesign, premium feature UX, ad integration design, marketing creatives for paid push<br>
+        <strong>Marketing:</strong> $3&ndash;5K/mo multi-channel<br>
+        <strong>Revenue:</strong> 50+ active paid, first MRR<br><br>
+        <span style="color:var(--green);font-weight:600;">Target: PMF 40%+, 25K users, angel round if metrics hit</span>
       </div>
     </div>
-  </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:20px;">
-    <div class="card" style="border-top:4px solid var(--blue);background:white;">
-      <h4 style="color:var(--blue);margin-bottom:4px;">Q4 2026 (Dec-Feb)</h4>
-      <p style="font-size:12px;font-weight:600;margin-bottom:12px;">MONETIZATION + RETENTION</p>
-      <div style="font-size:13px;line-height:1.8;">
+    <div class="card" style="border-top:4px solid var(--blue);background:white;padding:20px;">
+      <h4 style="color:var(--blue);margin-bottom:4px;font-size:16px;">Q4 2026 (Dec&ndash;Feb 2027)</h4>
+      <p style="font-size:11px;font-weight:700;color:var(--gray);margin-bottom:10px;">MONETIZATION + FUNDRAISE PREP</p>
+      <div style="font-size:12px;line-height:1.8;">
         <strong>Product:</strong><br>
         &#8226; Premium analytics dashboard<br>
         &#8226; Voice journals + transcription<br>
         &#8226; Widget ecosystem<br>
         &#8226; Data export (CSV/PDF)<br><br>
-        <strong>Marketing:</strong> $18K/mo multi-channel<br>
-        <strong>Revenue:</strong> 100+ paid, first MRR milestone<br><br>
-        <span style="color:var(--green);font-weight:600;">Target: 40K users, $2K+ MRR</span>
-      </div>
-    </div>
-
-    <div class="card" style="border-top:4px solid var(--purple);background:white;">
-      <h4 style="color:var(--purple);margin-bottom:4px;">H1 2027 (Mar-Aug)</h4>
-      <p style="font-size:12px;font-weight:600;margin-bottom:12px;">SERIES A PREPARATION</p>
-      <div style="font-size:13px;line-height:1.8;">
-        <strong>Product:</strong><br>
-        &#8226; University partnership integrations<br>
-        &#8226; Multi-language (Arabic, Urdu)<br>
-        &#8226; Wearable integrations<br>
-        &#8226; Advanced AI recommendations<br><br>
-        <strong>Marketing:</strong> $16K/mo optimized<br>
-        <strong>Revenue:</strong> 300+ paid, $5K+ MRR<br><br>
-        <span style="color:var(--green);font-weight:600;">Target: 50K+ users, Series A ready</span>
-      </div>
-    </div>
-
-    <div class="card" style="border-top:4px solid #EC4899;background:var(--light-bg);border:2px solid var(--green);">
-      <h4 style="color:var(--green);margin-bottom:4px;">18-Month Milestones</h4>
-      <p style="font-size:12px;font-weight:600;margin-bottom:12px;">WHAT WE TELL SERIES A INVESTORS</p>
-      <div style="font-size:13px;line-height:1.8;">
-        &#8226; <strong>50K+</strong> total users<br>
-        &#8226; <strong>300+</strong> active paid subscribers<br>
-        &#8226; <strong>$5K+</strong> MRR ($60K+ ARR)<br>
-        &#8226; <strong>40%+</strong> PMF score<br>
-        &#8226; <strong>&lt;20%</strong> onboarding drop<br>
-        &#8226; <strong>5-6%</strong> D7 retention<br>
-        &#8226; <strong>LTV:CAC &gt; 3:1</strong> in Tier-1<br>
-        &#8226; <strong>4 AI personalities</strong> live<br>
-        &#8226; <strong>2+ university</strong> partnerships<br><br>
-        <span style="color:var(--green);font-weight:600;">= Series A at $5-8M valuation</span>
+        <strong>Design:</strong> Widgets (iOS + Android), analytics dashboards, voice UI, export views, marketing refresh<br>
+        <strong>Marketing:</strong> $4&ndash;5K/mo optimized<br>
+        <strong>Revenue:</strong> 100+ paid, $2K+ MRR<br><br>
+        <span style="color:var(--green);font-weight:600;">Target: 40K+ users, fundraise-ready metrics</span>
       </div>
     </div>
   </div>
 
-  <div class="slide-number">10 / 12</div>
+  <div style="margin-top:16px;">
+    <div class="card" style="border:2px solid var(--green);background:var(--light-bg);padding:18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <h4 style="color:var(--green);font-size:16px;margin-bottom:4px;">12-Month Milestones (What We Show Investors)</h4>
+        </div>
+      </div>
+      <div style="display:flex;gap:20px;margin-top:10px;font-size:13px;">
+        <div>&#8226; <strong>40K+</strong> total users</div>
+        <div>&#8226; <strong>100+</strong> paid subscribers</div>
+        <div>&#8226; <strong>$2K+</strong> MRR</div>
+        <div>&#8226; <strong>40%+</strong> PMF score</div>
+        <div>&#8226; <strong>&lt;20%</strong> onboarding drop</div>
+        <div>&#8226; <strong>5%+</strong> D7 retention</div>
+        <div>&#8226; <strong>4 AI personalities</strong></div>
+        <div>&#8226; <strong>LTV:CAC &gt; 3:1</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">10 / 14</div>
 </section>
 
 <!-- ============================================================ -->
-<!-- SLIDE 11: RISK REGISTER -->
+<!-- SLIDE 11: OPERATING EXPENSES DETAIL -->
+<!-- ============================================================ -->
+<section class="slide" style="background:var(--light-bg);">
+  <span class="confidential">Confidential</span>
+  <span class="tag" style="background:var(--teal);">Expenses</span>
+  <h2 style="margin-bottom:8px;">Operating Expenses: <span class="accent">Full Breakdown</span></h2>
+  <p style="margin-bottom:20px;">All amounts in AED. From the official Simpli Human LLC FZ expense sheet. Staff salaries ramp throughout the year.</p>
+
+  <div class="grid-2" style="gap:36px;">
+    <div>
+      <h4 style="margin-bottom:12px;">Monthly Expense Breakdown (AED)</h4>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th style="text-align:right;">Q1 Avg/mo</th>
+            <th style="text-align:right;">Q2 Avg/mo</th>
+            <th style="text-align:right;">Q3 Avg/mo</th>
+            <th style="text-align:right;">Q4 Avg/mo</th>
+            <th style="text-align:right;">Annual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Accounting &amp; Consulting</strong></td>
+            <td style="text-align:right;">458</td>
+            <td style="text-align:right;">458</td>
+            <td style="text-align:right;">458</td>
+            <td style="text-align:right;">458</td>
+            <td style="text-align:right;"><strong>5,496</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Bank Charges</strong></td>
+            <td style="text-align:right;">210</td>
+            <td style="text-align:right;">210</td>
+            <td style="text-align:right;">210</td>
+            <td style="text-align:right;">210</td>
+            <td style="text-align:right;"><strong>2,520</strong></td>
+          </tr>
+          <tr>
+            <td><strong>License Renewal</strong></td>
+            <td style="text-align:right;">4,907</td>
+            <td style="text-align:right;">&mdash;</td>
+            <td style="text-align:right;">&mdash;</td>
+            <td style="text-align:right;">&mdash;</td>
+            <td style="text-align:right;"><strong>14,720</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Subscriptions &amp; Tools</strong></td>
+            <td style="text-align:right;">623</td>
+            <td style="text-align:right;">200</td>
+            <td style="text-align:right;">200</td>
+            <td style="text-align:right;">200</td>
+            <td style="text-align:right;"><strong>3,668</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Staff Salaries</strong></td>
+            <td style="text-align:right;">5,895</td>
+            <td style="text-align:right;">7,210</td>
+            <td style="text-align:right;">8,522</td>
+            <td style="text-align:right;">9,834</td>
+            <td style="text-align:right;"><strong>94,383</strong></td>
+          </tr>
+          <tr class="total">
+            <td><strong>TOTAL</strong></td>
+            <td style="text-align:right;"><strong>~12,093</strong></td>
+            <td style="text-align:right;"><strong>~7,878</strong></td>
+            <td style="text-align:right;"><strong>~9,190</strong></td>
+            <td style="text-align:right;"><strong>~10,502</strong></td>
+            <td style="text-align:right;"><strong>120,787</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-green" style="margin-top:14px;">
+        <h4 style="font-size:14px;margin-bottom:4px;">Salary Ramp Explanation</h4>
+        <p style="font-size:12px;">Staff salaries increase quarterly as new hires join: AED 5,895/mo (Q1) &rarr; 7,210 (Q2) &rarr; 8,522 (Q3) &rarr; 9,834 (Q4). This is the in-house staff complement only &mdash; separate from partner costs.</p>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="margin-bottom:12px;">Shareholder Funding Contributions (AED)</h4>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Shareholder</th>
+            <th style="text-align:center;">Holding %</th>
+            <th style="text-align:right;">Contribution</th>
+            <th style="text-align:right;">USD Equiv.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Aplomb Consulting</strong> (Sear)</td>
+            <td style="text-align:center;">46.0%</td>
+            <td style="text-align:right;">55,562</td>
+            <td style="text-align:right;">$15,130</td>
+          </tr>
+          <tr>
+            <td><strong>Saima Salman</strong></td>
+            <td style="text-align:center;">25.3%</td>
+            <td style="text-align:right;">30,599</td>
+            <td style="text-align:right;">$8,333</td>
+          </tr>
+          <tr>
+            <td><strong>Doruk Sardag</strong></td>
+            <td style="text-align:center;">14.0%</td>
+            <td style="text-align:right;">16,910</td>
+            <td style="text-align:right;">$4,607</td>
+          </tr>
+          <tr>
+            <td><strong>Shahzada Salman E M.</strong> (Shean)</td>
+            <td style="text-align:center;">4.7%</td>
+            <td style="text-align:right;">5,637</td>
+            <td style="text-align:right;">$1,536</td>
+          </tr>
+          <tr>
+            <td><strong>Muhammad Usman Fiaz</strong></td>
+            <td style="text-align:center;">10.0%</td>
+            <td style="text-align:right;">12,079</td>
+            <td style="text-align:right;">$3,290</td>
+          </tr>
+          <tr class="total">
+            <td><strong>Total</strong></td>
+            <td style="text-align:center;"><strong>100%</strong></td>
+            <td style="text-align:right;"><strong>120,787</strong></td>
+            <td style="text-align:right;"><strong>$32,905</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout" style="margin-top:14px;">
+        <h4 style="font-size:14px;margin-bottom:4px;">Key Non-Obvious Costs</h4>
+        <div style="font-size:12px;line-height:1.8;">
+          &#8226; <strong>License renewal (AED 14,720 / ~$4K):</strong> Annual FZ LLC renewal. Non-negotiable. Due February.<br>
+          &#8226; <strong>Subscriptions spike in Jan:</strong> AED 1,468 (annual tool renewals) vs AED 200/mo rest of year.<br>
+          &#8226; <strong>Bank charges:</strong> AED 210/mo is standard for UAE business banking.<br>
+          &#8226; <strong>Accounting:</strong> AED 458/mo for mandatory UAE compliance &amp; bookkeeping.
+        </div>
+      </div>
+
+      <div class="callout callout-red" style="margin-top:12px;">
+        <h4 style="font-size:14px;margin-bottom:4px;">Additional Capital Gap</h4>
+        <p style="font-size:12px;">The AED 120,787 covers operating overhead only. Marketing spend ($30K&ndash;$48K), Ambeego cash invoices ($12K&ndash;$18K), cloud/AI costs ($6K&ndash;$12K), and legal ($3K&ndash;$5K) require <strong>additional capital of $62K&ndash;$105K</strong> (see Slide 04).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-number">11 / 14</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12: RISK REGISTER -->
 <!-- ============================================================ -->
 <section class="slide" style="background:var(--dark);color:white;">
   <span style="position:absolute;top:24px;right:50px;font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;opacity:0.6;">Confidential</span>
   <span class="tag" style="background:var(--red);">Risks</span>
-  <h2 style="color:white;margin-bottom:24px;">Risk Register &amp; <span style="color:var(--green);">Mitigations</span></h2>
+  <h2 style="color:white;margin-bottom:20px;">Risk Register &amp; <span style="color:var(--green);">Mitigations</span></h2>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-    <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div style="background:rgba(255,255,255,0.04);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
         <span class="pill pill-red" style="font-size:10px;">HIGH</span>
-        <strong style="color:white;">Product fixes don't move PMF</strong>
+        <strong style="color:white;font-size:13px;">Capital runs out before traction</strong>
       </div>
-      <p style="font-size:13px;color:rgba(255,255,255,0.6);">We fix onboarding + paywall but PMF stays &lt;40%. Users still see app as "nice-to-have."</p>
-      <p style="font-size:13px;color:var(--green);margin-top:8px;"><strong>Mitigation:</strong> Run rapid A/B tests with 2-week cohort windows. If PMF doesn't move by Q3, pivot feature priority to AI chat depth over breadth.</p>
+      <p style="font-size:12px;color:rgba(255,255,255,0.5);">Founder contributions cover 2026 operating costs but additional capital gap ($62K&ndash;$105K) isn't fully funded.</p>
+      <p style="font-size:12px;color:var(--green);margin-top:6px;"><strong>Mitigation:</strong> Phase spending strictly. Marketing only scales with proven metrics. Apply for grants. Lean on partner model (85% cheaper than in-house). Prioritize revenue-generating features.</p>
     </div>
 
-    <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <div style="background:rgba(255,255,255,0.04);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
         <span class="pill pill-red" style="font-size:10px;">HIGH</span>
-        <strong style="color:white;">Seed round doesn't close at $850K</strong>
+        <strong style="color:white;font-size:13px;">Product fixes don't move PMF</strong>
       </div>
-      <p style="font-size:13px;color:rgba(255,255,255,0.6);">Investor appetite lower than expected. We raise less or take longer.</p>
-      <p style="font-size:13px;color:var(--green);margin-top:8px;"><strong>Mitigation:</strong> Founder bridge funding ($50-100K) to cover Q1-Q2. Lean hiring plan activates only with confirmed capital. $60K contingency reserve in budget.</p>
+      <p style="font-size:12px;color:rgba(255,255,255,0.5);">We fix onboarding + paywall but PMF stays &lt;40%. Users still see app as "nice-to-have."</p>
+      <p style="font-size:12px;color:var(--green);margin-top:6px;"><strong>Mitigation:</strong> Rapid A/B tests with 2-week cohort windows. If PMF doesn't move by Q3, pivot to AI chat depth over breadth. Saima leads domain-specific research pivots.</p>
     </div>
 
-    <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <div style="background:rgba(255,255,255,0.04);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
         <span class="pill pill-orange" style="font-size:10px;">MED</span>
-        <strong style="color:white;">CPI inflation in Tier-1 markets</strong>
+        <strong style="color:white;font-size:13px;">Partner capacity / dedication risk</strong>
       </div>
-      <p style="font-size:13px;color:rgba(255,255,255,0.6);">CPIs rising as more wellness apps enter market. Our $1.80 Tier-1 target may be too optimistic.</p>
-      <p style="font-size:13px;color:var(--green);margin-top:8px;"><strong>Mitigation:</strong> Heavy organic/influencer investment (20% of budget). Shift spend to MENA where CPIs are 60% lower. University partnerships as zero-CPI channel.</p>
+      <p style="font-size:12px;color:rgba(255,255,255,0.5);">Design Peeps or Ambeego can't dedicate enough hours. Delays cascade across the roadmap.</p>
+      <p style="font-size:12px;color:var(--green);margin-top:6px;"><strong>Mitigation:</strong> Formalize weekly hour commitments in updated agreements. Set clear sprint goals. Have backup freelancer pipeline identified. Equity earned is proportional to output delivered.</p>
     </div>
 
-    <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <div style="background:rgba(255,255,255,0.04);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
         <span class="pill pill-orange" style="font-size:10px;">MED</span>
-        <strong style="color:white;">Equity disagreement stalls progress</strong>
+        <strong style="color:white;font-size:13px;">Equity disagreement stalls progress</strong>
       </div>
-      <p style="font-size:13px;color:rgba(255,255,255,0.6);">Design Peeps / Ambeego dispute resolution takes too long or creates founder conflict.</p>
-      <p style="font-size:13px;color:var(--green);margin-top:8px;"><strong>Mitigation:</strong> Resolve before seed round closes (hard deadline). Use Option A (vesting) as default. Bring in neutral advisor/lawyer if needed. Budget $18K for legal.</p>
+      <p style="font-size:12px;color:rgba(255,255,255,0.5);">Resolution of sweat equity takes too long or creates founder conflict.</p>
+      <p style="font-size:12px;color:var(--green);margin-top:6px;"><strong>Mitigation:</strong> Resolve in Q1 (hard deadline). Use work-delivered calculation as the basis. Honor agreed valuation. Bring in neutral advisor if needed. Budget $2&ndash;3K for legal.</p>
     </div>
 
-    <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <div style="background:rgba(255,255,255,0.04);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
         <span class="pill pill-orange" style="font-size:10px;">MED</span>
-        <strong style="color:white;">Pakistan hiring quality / retention</strong>
+        <strong style="color:white;font-size:13px;">CPI inflation in Tier-1 markets</strong>
       </div>
-      <p style="font-size:13px;color:rgba(255,255,255,0.6);">Top PK devs get poached by Gulf or remote US companies paying 3-5x.</p>
-      <p style="font-size:13px;color:var(--green);margin-top:8px;"><strong>Mitigation:</strong> Offer equity grants (0.25-0.5% vesting) to key hires. Pay at 75th percentile for PK market. Emphasize mission-driven culture and career growth.</p>
+      <p style="font-size:12px;color:rgba(255,255,255,0.5);">CPIs rising as more wellness apps enter. Our $0.90 blended target may be optimistic.</p>
+      <p style="font-size:12px;color:var(--green);margin-top:6px;"><strong>Mitigation:</strong> Heavy organic investment (35% of effort). Shift spend to MENA (60% lower CPIs). University partnerships as zero-CPI channel. Design Peeps creates high-quality ad creatives to improve conversion.</p>
     </div>
 
-    <div style="background:rgba(255,255,255,0.05);border-radius:16px;padding:24px;border:1px solid rgba(255,255,255,0.1);">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+    <div style="background:rgba(255,255,255,0.04);border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
         <span class="pill pill-blue" style="font-size:10px;">LOW</span>
-        <strong style="color:white;">Guest mode increases anonymous churn</strong>
+        <strong style="color:white;font-size:13px;">Guest mode increases anonymous churn</strong>
       </div>
-      <p style="font-size:13px;color:rgba(255,255,255,0.6);">Users stay anonymous, never convert, can't be re-engaged.</p>
-      <p style="font-size:13px;color:var(--green);margin-top:8px;"><strong>Mitigation:</strong> Progressive signup nudges after 2 sessions. Gate premium + Echo behind account creation. Track guest→registered conversion rate.</p>
+      <p style="font-size:12px;color:rgba(255,255,255,0.5);">Users stay anonymous, never convert, can't be re-engaged.</p>
+      <p style="font-size:12px;color:var(--green);margin-top:6px;"><strong>Mitigation:</strong> Progressive signup nudges after 2 sessions. Gate premium + Echo behind account creation. Track guest&rarr;registered conversion rate as key metric.</p>
     </div>
   </div>
 
-  <div class="slide-number" style="color:rgba(255,255,255,0.3);">11 / 12</div>
+  <div class="slide-number" style="color:rgba(255,255,255,0.25);">12 / 14</div>
 </section>
 
 <!-- ============================================================ -->
-<!-- SLIDE 12: CLOSING — NEXT STEPS -->
+<!-- SLIDE 13: GRANTS & OPTIONAL FUNDING -->
 <!-- ============================================================ -->
-<section class="slide" style="background:linear-gradient(135deg, var(--green), var(--green-dark));color:white;text-align:center;align-items:center;">
-  <div style="font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:3px;opacity:0.5;margin-bottom:30px;">SimpliHuman Internal</div>
-  <h1 style="color:white;font-size:52px;margin-bottom:24px;">Immediate Next Steps</h1>
+<section class="slide">
+  <span class="confidential">Confidential</span>
+  <span class="tag" style="background:var(--orange);">Grants</span>
+  <h2 style="margin-bottom:8px;">Grant &amp; Competition Opportunities: <span class="accent">Optional Upside</span></h2>
+  <p style="margin-bottom:24px;max-width:800px;">These are worth pursuing in parallel but <strong>nothing is guaranteed.</strong> The operating plan does NOT depend on any of these. They are pure upside if we land them.</p>
 
-  <div style="display:flex;gap:24px;justify-content:center;margin-bottom:40px;text-align:left;">
-    <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.2);width:280px;">
-      <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,0.5);margin-bottom:8px;">WEEK 1-2</div>
-      <div style="font-size:15px;line-height:1.7;">
-        &#8226; Finalize equity resolution<br>
-        &#8226; Sign shareholders' agreement<br>
-        &#8226; Confirm founder cash commitments<br>
-        &#8226; Post Sr. RN Dev job listing
+  <div class="grid-3" style="gap:20px;">
+    <div class="card" style="background:white;border:2px solid var(--green);padding:18px;">
+      <span class="pill pill-green" style="font-size:10px;margin-bottom:8px;">UAE-Based</span>
+      <h4 style="font-size:15px;margin-bottom:8px;">UAE Social Innovation Grants</h4>
+      <div style="font-size:12px;color:var(--gray);line-height:1.7;">
+        &#8226; Mohammed Bin Rashid Innovation Fund<br>
+        &#8226; Dubai Future Foundation programs<br>
+        &#8226; IFHC (mental health focus)<br>
+        &#8226; Sharjah Entrepreneurship Center<br><br>
+        <strong>Range:</strong> $10K&ndash;$50K<br>
+        <strong>Fit:</strong> Strong (mental health + UAE FZ company)
       </div>
     </div>
-    <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.2);width:280px;">
-      <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,0.5);margin-bottom:8px;">WEEK 3-4</div>
-      <div style="font-size:15px;line-height:1.7;">
-        &#8226; Begin analytics instrumentation<br>
-        &#8226; Start onboarding redesign<br>
-        &#8226; Set up TikTok Ads account<br>
-        &#8226; Interview dev candidates
+
+    <div class="card" style="background:white;border:2px solid var(--blue);padding:18px;">
+      <span class="pill pill-blue" style="font-size:10px;margin-bottom:8px;">Tech/Health</span>
+      <h4 style="font-size:15px;margin-bottom:8px;">Global Health-Tech Grants</h4>
+      <div style="font-size:12px;color:var(--gray);line-height:1.7;">
+        &#8226; Google.org Impact Challenge<br>
+        &#8226; Wellcome Trust (mental health)<br>
+        &#8226; WHO Digital Health grants<br>
+        &#8226; Grand Challenges (Gates Foundation)<br><br>
+        <strong>Range:</strong> $25K&ndash;$250K<br>
+        <strong>Fit:</strong> Medium (competitive, long timelines)
       </div>
     </div>
-    <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,0.2);width:280px;">
-      <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,0.5);margin-bottom:8px;">MONTH 2-3</div>
-      <div style="font-size:15px;line-height:1.7;">
-        &#8226; Ship sign-in fix + guest mode<br>
-        &#8226; First paid ad campaigns live<br>
-        &#8226; Measure onboarding improvement<br>
-        &#8226; Begin seed round outreach
+
+    <div class="card" style="background:white;border:2px solid var(--purple);padding:18px;">
+      <span class="pill pill-purple" style="font-size:10px;margin-bottom:8px;">Competitions</span>
+      <h4 style="font-size:15px;margin-bottom:8px;">Startup Competitions &amp; Accelerators</h4>
+      <div style="font-size:12px;color:var(--gray);line-height:1.7;">
+        &#8226; GITEX Future Stars (Dubai)<br>
+        &#8226; Startup Grind / Techstars MENA<br>
+        &#8226; MIT Enterprise Forum Pan Arab<br>
+        &#8226; Flat6Labs accelerator programs<br><br>
+        <strong>Range:</strong> $5K&ndash;$100K (+ mentorship)<br>
+        <strong>Fit:</strong> Strong (early-stage, mental health narrative)
       </div>
     </div>
   </div>
 
-  <div style="width:60px;height:3px;background:rgba(255,255,255,0.3);border-radius:2px;margin:0 auto 24px;"></div>
+  <div style="margin-top:20px;display:flex;gap:20px;">
+    <div class="callout callout-red" style="flex:1;margin-top:0;">
+      <h4 style="font-size:14px;margin-bottom:6px;">Important Caveat</h4>
+      <p style="font-size:12px;">Grant application takes significant time (Saima + Sear's bandwidth). Only pursue 2&ndash;3 highest-probability grants per quarter. Do not let grant-chasing distract from product execution.</p>
+    </div>
+    <div class="callout callout-green" style="flex:1;margin-top:0;">
+      <h4 style="font-size:14px;margin-bottom:6px;">Best Strategy</h4>
+      <p style="font-size:12px;">Apply to 1 UAE grant (highest probability) + 1 global grant (highest payout) per quarter. Budget 10&ndash;15 hours per application. Design Peeps can support with pitch materials. <strong>Total potential upside: $15K&ndash;$100K</strong> if even one lands.</p>
+    </div>
+  </div>
 
-  <p style="color:rgba(255,255,255,0.7);font-size:20px;max-width:700px;margin:0 auto;">We know what's broken. We have the data. We have the plan.<br><strong style="color:white;">Now we execute.</strong></p>
+  <div class="slide-number">13 / 14</div>
+</section>
 
-  <div class="slide-number" style="color:rgba(255,255,255,0.3);">12 / 12</div>
+<!-- ============================================================ -->
+<!-- SLIDE 14: CLOSING — NEXT STEPS -->
+<!-- ============================================================ -->
+<section class="slide" style="background:linear-gradient(145deg, var(--green), var(--green-dark), #065F46);color:white;text-align:center;align-items:center;">
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.08) 0%, transparent 60%);pointer-events:none;"></div>
+  <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:4px;opacity:0.4;margin-bottom:28px;">SimpliHuman Internal</div>
+  <h1 style="color:white;font-size:48px;margin-bottom:20px;">Immediate Next Steps</h1>
+
+  <div style="display:flex;gap:20px;justify-content:center;margin-bottom:32px;text-align:left;">
+    <div style="background:rgba(255,255,255,0.08);border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,0.15);width:260px;">
+      <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);margin-bottom:8px;">WEEK 1&ndash;2</div>
+      <div style="font-size:14px;line-height:1.7;">
+        &#8226; Audit partner work delivered<br>
+        &#8226; Calculate earned equity<br>
+        &#8226; Finalize shareholders' agreement<br>
+        &#8226; Confirm additional capital commitments
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,0.15);width:260px;">
+      <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);margin-bottom:8px;">WEEK 3&ndash;4</div>
+      <div style="font-size:14px;line-height:1.7;">
+        &#8226; Begin analytics instrumentation<br>
+        &#8226; Start onboarding redesign (Design Peeps)<br>
+        &#8226; Set up first paid ad tests<br>
+        &#8226; Apply to 1st grant (UAE-based)
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,0.15);width:260px;">
+      <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);margin-bottom:8px;">MONTH 2&ndash;3</div>
+      <div style="font-size:14px;line-height:1.7;">
+        &#8226; Ship sign-in fix + guest mode<br>
+        &#8226; First paid campaigns live<br>
+        &#8226; Measure onboarding improvement<br>
+        &#8226; Formalize partner weekly commitments
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border-radius:14px;padding:24px;border:1px solid rgba(255,255,255,0.15);width:260px;">
+      <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.4);margin-bottom:8px;">MONTH 3&ndash;6</div>
+      <div style="font-size:14px;line-height:1.7;">
+        &#8226; Mood 2.0 + paywall A/B live<br>
+        &#8226; PMF measurement sprint<br>
+        &#8226; Revenue generation begins<br>
+        &#8226; Evaluate angel round readiness
+      </div>
+    </div>
+  </div>
+
+  <div style="width:50px;height:3px;background:rgba(255,255,255,0.25);border-radius:2px;margin:0 auto 20px;"></div>
+
+  <p style="color:rgba(255,255,255,0.65);font-size:18px;max-width:750px;margin:0 auto;">We have no funding. We have limited capital. But we have the data, the team, and the plan.<br><strong style="color:white;font-size:20px;">Bootstrap. Build. Prove. Then raise.</strong></p>
+
+  <div class="slide-number" style="color:rgba(255,255,255,0.2);">14 / 14</div>
 </section>
 
 </body>
