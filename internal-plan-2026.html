@@ -258,35 +258,51 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
         </tbody>
       </table>
 
-      <h4 style="margin-top:20px;margin-bottom:12px;">Additional Capital Required</h4>
+      <h4 style="margin-top:20px;margin-bottom:12px;">Step 1: What&rsquo;s Required (Market Cost)</h4>
+      <p class="footnote" style="margin-bottom:6px;">All resources the company needs beyond base operating, valued at market rates. No names &mdash; just the work and what it costs.</p>
       <table class="data-table">
-        <thead><tr><th>Need</th><th style="text-align:right;">Est. Annual (USD)</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Resource / Need</th><th style="text-align:right;">Monthly (USD)</th><th style="text-align:right;">Annual (USD)</th><th>Responsibilities</th></tr></thead>
         <tbody>
-          <tr style="background:#f0fdf4;"><td><strong>Design Work</strong> <span style="font-size:11px;color:var(--gray);">(1 Sr. UX Designer FT)</span></td><td style="text-align:right;">$24,000</td><td>Product design, graphic design, campaign designs, marketing visuals &mdash; $2,000/mo salary. <em>Provided by Design Peeps.</em></td></tr>
-          <tr style="background:#f0fdf4;"><td><strong>Engineering Work</strong> <span style="font-size:11px;color:var(--gray);">(Fullstack + AI Expert)</span></td><td style="text-align:right;">$31,200</td><td>1 Fullstack Dev FT ($2,000/mo) + 1 AI Dev Expert 1d/wk ($600/mo). <em>Provided by Ambeego.</em></td></tr>
-          <tr style="background:#fffbeb;"><td><strong>R&amp;D Work</strong> <span style="font-size:11px;color:var(--gray);">(Wellbeing + Content R&amp;D)</span></td><td style="text-align:right;">$10,000</td><td>1 Emotional Wellbeing Expert 1d/wk (~$500/mo) + training content, product analysis. <em>Provided by Saima.</em></td></tr>
-          <tr><td><strong>Marketing &amp; UA Budget</strong></td><td style="text-align:right;">$36,000&ndash;60,000</td><td>$3K-5K/mo for paid acquisition</td></tr>
-          <tr><td><strong>Cloud &amp; AI Infrastructure</strong></td><td style="text-align:right;">$6,000</td><td>API costs, hosting, analytics</td></tr>
-          <tr><td><strong>Legal / IP / Compliance</strong></td><td style="text-align:right;">$3,000&ndash;5,000</td><td>Shareholder agreement, compliance</td></tr>
-          <tr><td><strong>Contingency Reserve</strong></td><td style="text-align:right;">$5,000&ndash;10,000</td><td>Unforeseen costs buffer</td></tr>
-          <tr class="total"><td><strong>ADDITIONAL CAPITAL NEEDED</strong></td><td style="text-align:right;"><strong>$115K&ndash;$146K</strong></td><td><span style="font-size:11px;">Of which $65.2K is service-for-equity (no cash outflow)</span></td></tr>
+          <tr><td><strong>Sr. UX Designer</strong> <span style="font-size:10px;color:var(--gray);">FT</span></td><td style="text-align:right;">$2,000</td><td style="text-align:right;">$24,000</td><td style="font-size:11px;">Product design, graphic design, campaign visuals, marketing creatives, design systems</td></tr>
+          <tr><td><strong>Fullstack Developer</strong> <span style="font-size:10px;color:var(--gray);">FT</span></td><td style="text-align:right;">$2,000</td><td style="text-align:right;">$24,000</td><td style="font-size:11px;">React Native, backend APIs, database, full product dev</td></tr>
+          <tr><td><strong>AI Dev Expert</strong> <span style="font-size:10px;color:var(--gray);">1 day/wk</span></td><td style="text-align:right;">$400</td><td style="text-align:right;">$4,800</td><td style="font-size:11px;">ML models, AI features, recommendation engine, sentiment analysis</td></tr>
+          <tr><td><strong>Emotional Wellbeing Expert</strong> <span style="font-size:10px;color:var(--gray);">1 day/wk</span></td><td style="text-align:right;">$500</td><td style="text-align:right;">$6,000</td><td style="font-size:11px;">Training exercises, therapeutic frameworks, product usage analysis, R&amp;D</td></tr>
+          <tr style="border-top:1px solid #E5E7EB;"><td><strong>Marketing &amp; UA Budget</strong></td><td style="text-align:right;">$3K&ndash;5K</td><td style="text-align:right;">$36,000&ndash;60,000</td><td style="font-size:11px;">Paid acquisition, campaigns, influencer</td></tr>
+          <tr><td><strong>Cloud &amp; AI Infrastructure</strong></td><td style="text-align:right;">$500</td><td style="text-align:right;">$6,000</td><td style="font-size:11px;">API costs, hosting, analytics</td></tr>
+          <tr><td><strong>Legal / IP / Compliance</strong></td><td style="text-align:right;">&mdash;</td><td style="text-align:right;">$3,000&ndash;5,000</td><td style="font-size:11px;">SHA, compliance, IP registration</td></tr>
+          <tr><td><strong>Contingency Reserve</strong></td><td style="text-align:right;">&mdash;</td><td style="text-align:right;">$5,000&ndash;10,000</td><td style="font-size:11px;">Unforeseen costs buffer</td></tr>
+          <tr class="total"><td><strong>TOTAL ADDITIONAL NEEDED</strong></td><td></td><td style="text-align:right;"><strong>$113K&ndash;$144K</strong></td><td></td></tr>
         </tbody>
       </table>
 
-      <h4 style="margin-top:16px;margin-bottom:12px;">Equity Holder Contributions &mdash; Who Puts In What</h4>
-      <p class="footnote" style="margin-bottom:8px;">Total Year 1 budget ($148K&ndash;$179K) divided pro-rata by equity %. Service partners contribute resources (salary cost = contribution value); cash partners contribute cash. Below uses <strong>$148K (low estimate)</strong> for illustration.</p>
+      <h4 style="margin-top:16px;margin-bottom:12px;">Step 2: Who Puts In What (Resource &rarr; Partner Mapping)</h4>
+      <p class="footnote" style="margin-bottom:6px;">Now we map each resource to the equity holder who will deliver it. Their contribution value = salary they pay for that resource.</p>
+      <table class="data-table" style="font-size:12px;">
+        <thead><tr><th>Resource</th><th>Provided By</th><th style="text-align:center;">Their Equity</th><th style="text-align:right;">Annual Value</th></tr></thead>
+        <tbody>
+          <tr style="background:#f0fdf4;"><td>Sr. UX Designer FT</td><td><strong>Design Peeps</strong> (Usman)</td><td style="text-align:center;">10.0%</td><td style="text-align:right;">$24,000</td></tr>
+          <tr style="background:#f0fdf4;"><td>Fullstack Developer FT</td><td><strong>Ambeego</strong> (Salman)</td><td style="text-align:center;" rowspan="2">5.0%</td><td style="text-align:right;">$24,000</td></tr>
+          <tr style="background:#f0fdf4;"><td>AI Dev Expert 1d/wk</td><td><strong>Ambeego</strong> (Salman)</td><td style="text-align:right;">$4,800</td></tr>
+          <tr style="background:#fffbeb;"><td>Emotional Wellbeing Expert + R&amp;D</td><td><strong>Saima Salman</strong></td><td style="text-align:center;">25.3%</td><td style="text-align:right;">$10,000</td></tr>
+          <tr><td>Marketing, Cloud, Legal, Contingency</td><td><strong>Cash Partners</strong> (Aplomb, Saima, Doruk)</td><td style="text-align:center;">85.3%</td><td style="text-align:right;">$50K&ndash;$81K</td></tr>
+          <tr class="total"><td colspan="3"><strong>Total Contributions</strong></td><td style="text-align:right;"><strong>$113K&ndash;$144K</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h4 style="margin-top:16px;margin-bottom:12px;">Step 3: Pro-Rata Equity Comparison</h4>
+      <p class="footnote" style="margin-bottom:6px;">Total Y1 budget ($146K low) divided by equity %. Each partner&rsquo;s actual contribution vs what their equity share would require.</p>
       <table class="data-table" style="font-size:12px;">
         <thead><tr><th>Shareholder</th><th style="text-align:center;">Equity %</th><th style="text-align:right;">Pro-Rata Share</th><th>Contribution</th><th style="text-align:right;">Value</th><th style="text-align:center;">vs Share</th></tr></thead>
         <tbody>
-          <tr style="background:#f0fdf4;"><td><strong>Design Peeps</strong> (Usman)</td><td style="text-align:center;">10.0%</td><td style="text-align:right;">$14,800</td><td>1 Sr. UX Designer FT ($2K/mo)</td><td style="text-align:right;">$24,000</td><td style="text-align:center;color:var(--green);font-weight:700;">+62% over</td></tr>
-          <tr style="background:#f0fdf4;"><td><strong>Ambeego</strong> (Salman)</td><td style="text-align:center;">5.0%</td><td style="text-align:right;">$7,400</td><td>1 Fullstack Dev ($2K) + AI Expert ($600)</td><td style="text-align:right;">$31,200</td><td style="text-align:center;color:var(--green);font-weight:700;">+322% over</td></tr>
-          <tr style="background:#fffbeb;"><td><strong>Saima Salman</strong></td><td style="text-align:center;">25.3%</td><td style="text-align:right;">$37,444</td><td>R&amp;D / Wellbeing Expert ($10K) + Cash</td><td style="text-align:right;">$10,000 + $24,560 cash</td><td style="text-align:center;font-weight:600;">93% &cong; par</td></tr>
-          <tr><td><strong>Aplomb Consulting</strong> (Sear)</td><td style="text-align:center;">46.0%</td><td style="text-align:right;">$68,080</td><td>Cash</td><td style="text-align:right;">$44,660</td><td style="text-align:center;color:var(--green);font-weight:600;">66%*</td></tr>
-          <tr><td><strong>Doruk Sardag</strong></td><td style="text-align:center;">14.0%</td><td style="text-align:right;">$20,720</td><td>Cash</td><td style="text-align:right;">$13,590</td><td style="text-align:center;color:var(--green);font-weight:600;">66%*</td></tr>
-          <tr class="total"><td colspan="2"><strong>Total</strong></td><td style="text-align:right;"><strong>$148,444</strong></td><td></td><td style="text-align:right;"><strong>$148,010</strong></td><td></td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>Design Peeps</strong> (Usman)</td><td style="text-align:center;">10.0%</td><td style="text-align:right;">$14,600</td><td>1 Sr. UX Designer ($2K/mo)</td><td style="text-align:right;">$24,000</td><td style="text-align:center;color:var(--green);font-weight:700;">+64% over</td></tr>
+          <tr style="background:#f0fdf4;"><td><strong>Ambeego</strong> (Salman)</td><td style="text-align:center;">5.0%</td><td style="text-align:right;">$7,300</td><td>Fullstack Dev ($2K) + AI Expert ($400)</td><td style="text-align:right;">$28,800</td><td style="text-align:center;color:var(--green);font-weight:700;">+295% over</td></tr>
+          <tr style="background:#fffbeb;"><td><strong>Saima Salman</strong></td><td style="text-align:center;">25.3%</td><td style="text-align:right;">$36,938</td><td>R&amp;D ($10K service) + Cash</td><td style="text-align:right;">$10,000 + $24,680 cash</td><td style="text-align:center;font-weight:600;">94% &cong; par</td></tr>
+          <tr><td><strong>Aplomb Consulting</strong> (Sear)</td><td style="text-align:center;">46.0%</td><td style="text-align:right;">$67,160</td><td>Cash</td><td style="text-align:right;">$44,876</td><td style="text-align:center;color:var(--green);font-weight:600;">67%*</td></tr>
+          <tr><td><strong>Doruk Sardag</strong></td><td style="text-align:center;">14.0%</td><td style="text-align:right;">$20,440</td><td>Cash</td><td style="text-align:right;">$13,657</td><td style="text-align:center;color:var(--green);font-weight:600;">67%*</td></tr>
+          <tr class="total"><td colspan="2"><strong>Total</strong></td><td style="text-align:right;"><strong>$146,438</strong></td><td></td><td style="text-align:right;"><strong>$146,013</strong></td><td></td></tr>
         </tbody>
       </table>
-      <p class="footnote" style="margin-top:6px;">*Cash partners pay 66% of their pure pro-rata share because service partners over-contribute &mdash; <strong>Design Peeps delivers $9.2K more</strong> than their equity share and <strong>Ambeego delivers $23.8K more</strong>. This $33K surplus reduces cash required from all cash contributors. <strong>Total cash from partners: $82.8K</strong> (Aplomb $44.7K + Saima $24.6K + Doruk $13.6K). If contributions fall short, see <em>Dilution Framework</em> on the equity slide.</p>
+      <p class="footnote" style="margin-top:6px;">*Cash partners pay ~67% of their pure pro-rata share because service partners over-contribute &mdash; <strong>Design Peeps delivers $9.4K more</strong> and <strong>Ambeego delivers $21.5K more</strong> than their equity share. This $30.9K surplus reduces cash required from all cash contributors. <strong>Total cash: $83.2K</strong> (Aplomb $44.9K + Saima $24.7K + Doruk $13.7K). If contributions fall short, see <em>Dilution Framework</em>.</p>
     </div>
 
     <div>
@@ -296,11 +312,11 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
         <div style="font-size:28px;font-weight:800;color:var(--green);">$33K <span style="font-size:14px;color:var(--gray);font-weight:400;">(AED 120,787)</span></div>
         <div style="margin:12px 0;font-size:24px;color:var(--gray);">+</div>
         <div style="font-size:14px;color:var(--gray);margin-bottom:4px;">Additional Capital Needed</div>
-        <div style="font-size:28px;font-weight:800;color:var(--orange);">$115K&ndash;$146K</div>
-        <div style="font-size:11px;color:var(--gray);margin-top:2px;">Of which <strong style="color:var(--green);">$65.2K is service (no cash)</strong></div>
+        <div style="font-size:28px;font-weight:800;color:var(--orange);">$113K&ndash;$144K</div>
+        <div style="font-size:11px;color:var(--gray);margin-top:2px;">Of which <strong style="color:var(--green);">$62.8K is service (no cash)</strong></div>
         <div style="margin:12px 0;border-top:2px solid var(--green);padding-top:12px;">
           <div style="font-size:14px;color:var(--gray);margin-bottom:4px;">Total Year 1 Budget Required</div>
-          <div style="font-size:34px;font-weight:800;color:var(--dark);">$148K&ndash;$179K</div>
+          <div style="font-size:34px;font-weight:800;color:var(--dark);">$146K&ndash;$177K</div>
         </div>
       </div>
 
@@ -308,13 +324,13 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
       <table class="data-table">
         <thead><tr><th>Cash Partner</th><th style="text-align:center;">Equity %</th><th style="text-align:right;">Cash Required (USD)</th><th style="text-align:right;">AED</th></tr></thead>
         <tbody>
-          <tr><td><strong>Aplomb Consulting</strong> (Sear)</td><td style="text-align:center;">46.0%</td><td style="text-align:right;">$44,660</td><td style="text-align:right;">163,964</td></tr>
-          <tr><td><strong>Saima Salman</strong></td><td style="text-align:center;">25.3%</td><td style="text-align:right;">$24,560</td><td style="text-align:right;">90,176</td></tr>
-          <tr><td><strong>Doruk Sardag</strong></td><td style="text-align:center;">14.0%</td><td style="text-align:right;">$13,590</td><td style="text-align:right;">49,886</td></tr>
-          <tr class="total"><td><strong>Total Cash</strong></td><td style="text-align:center;"><strong>85.3%</strong></td><td style="text-align:right;"><strong>$82,810</strong></td><td style="text-align:right;"><strong>304,026</strong></td></tr>
+          <tr><td><strong>Aplomb Consulting</strong> (Sear)</td><td style="text-align:center;">46.0%</td><td style="text-align:right;">$44,876</td><td style="text-align:right;">164,757</td></tr>
+          <tr><td><strong>Saima Salman</strong></td><td style="text-align:center;">25.3%</td><td style="text-align:right;">$24,680</td><td style="text-align:right;">90,617</td></tr>
+          <tr><td><strong>Doruk Sardag</strong></td><td style="text-align:center;">14.0%</td><td style="text-align:right;">$13,657</td><td style="text-align:right;">50,132</td></tr>
+          <tr class="total"><td><strong>Total Cash</strong></td><td style="text-align:center;"><strong>85.3%</strong></td><td style="text-align:right;"><strong>$83,213</strong></td><td style="text-align:right;"><strong>305,506</strong></td></tr>
         </tbody>
       </table>
-      <p class="footnote">Cash amounts are lower than pure pro-rata because service partners (Design Peeps + Ambeego) contribute $33K more in work value than their equity share requires. Saima&rsquo;s R&amp;D ($10K) offsets part of her cash obligation. If any partner fails to contribute, their equity dilutes &mdash; see Dilution Framework on the equity slide.</p>
+      <p class="footnote">Cash partners pay ~67% of pure pro-rata because service partners over-contribute $30.9K in work value. Saima&rsquo;s $10K R&amp;D offsets part of her obligation. Dilution Framework applies if any partner falls short.</p>
 
       <h4 style="margin-top:16px;margin-bottom:10px;">Funding Sources Strategy</h4>
       <div style="display:flex;flex-direction:column;gap:8px;">
@@ -323,8 +339,12 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
           <p style="font-size:11px;margin-top:2px;">Pro-rata based on shareholding to cover the gap.</p>
         </div>
         <div class="card" style="border-left:4px solid var(--blue);background:white;padding:14px 16px;">
-          <strong style="font-size:13px;">Revenue (Subscriptions + Ads)</strong> <span class="pill pill-blue" style="font-size:10px;">Growing</span>
-          <p style="font-size:11px;margin-top:2px;">Targeting $500&ndash;$2K MRR by H2 2026.</p>
+          <strong style="font-size:13px;">B2C Revenue (Subscriptions + Ads)</strong> <span class="pill pill-blue" style="font-size:10px;">Growing</span>
+          <p style="font-size:11px;margin-top:2px;">Targeting $500&ndash;$2K MRR by H2 2026 from premium subscriptions and in-app ads.</p>
+        </div>
+        <div class="card" style="border-left:4px solid var(--purple);background:white;padding:14px 16px;">
+          <strong style="font-size:13px;">B2B Revenue (Partnerships)</strong> <span class="pill pill-purple" style="font-size:10px;">H2 2026</span>
+          <p style="font-size:11px;margin-top:2px;">Corporate wellness programs, therapy clinics, schools. License model or per-seat pricing. Target: $1&ndash;3K/mo by Q4.</p>
         </div>
         <div class="card" style="border-left:4px solid var(--orange);background:white;padding:14px 16px;">
           <strong style="font-size:13px;">Grants &amp; Competitions</strong> <span class="pill pill-orange" style="font-size:10px;">Optional</span>
@@ -336,86 +356,97 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
   <div class="slide-number">04 / 14</div>
 </section>
 
-<!-- SLIDE 5: TEAM — FULL ROSTER WITH PARTNER RESOURCE MAPPING -->
+<!-- SLIDE 5: TEAM — ALL RESOURCES FIRST, THEN RESPONSIBILITY MAPPING -->
 <section class="slide" style="background:var(--dark);color:white;">
   <span style="position:absolute;top:24px;right:50px;font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:2px;opacity:0.6;">Confidential</span>
   <span class="tag" style="background:var(--blue);">Team</span>
-  <h2 style="color:white;margin-bottom:8px;">Team Roster: <span style="color:var(--green);">Who We Need &amp; Who Provides</span></h2>
-  <p style="color:rgba(255,255,255,0.55);margin-bottom:20px;">Full team required to execute Year 1. Some roles paid directly by SimpliHuman (cash); others provided by service partners (against equity). Each resource mapped to cost and responsibility.</p>
+  <h2 style="color:white;margin-bottom:8px;">Team Required: <span style="color:var(--green);">All Resources &amp; Responsibilities</span></h2>
+  <p style="color:rgba(255,255,255,0.55);margin-bottom:20px;">First: every resource the company needs to execute Year 1, with market-rate costs and responsibilities. Then: who is responsible for providing each one.</p>
 
   <div class="grid-2" style="gap:30px;">
     <div>
-      <h4 style="color:var(--green);margin-bottom:10px;">Provided by Service Partners <span style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:400;">(against equity &mdash; no cash outflow from SimpliHuman)</span></h4>
-      <div style="background:rgba(255,255,255,0.05);border:2px solid var(--green);border-radius:14px;padding:16px;">
+      <h4 style="color:white;margin-bottom:10px;">All Resources Needed <span style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:400;">(what the company requires)</span></h4>
+      <div style="background:rgba(255,255,255,0.05);border:2px solid rgba(255,255,255,0.15);border-radius:14px;padding:16px;">
         <table style="width:100%;font-size:11.5px;color:rgba(255,255,255,0.85);">
-          <tr style="border-bottom:1px solid rgba(14,171,140,0.3);"><td colspan="3" style="padding:6px 0;font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;">Design Peeps (Usman) &mdash; 10% Equity</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>Sr. UX Designer</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">FT</span></td><td style="text-align:right;color:var(--green);font-weight:600;">$2,000/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$24,000/yr</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">Product design, graphic design, campaign visuals, marketing creatives, design systems</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td colspan="3" style="padding:4px 0;font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;">Design &amp; Creative</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>Sr. UX Designer</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">FT</span></td><td style="text-align:right;font-weight:600;">$2,000/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$24,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">Product design, graphic design, campaign visuals, marketing creatives, design systems</td></tr>
 
-          <tr style="border-bottom:1px solid rgba(14,171,140,0.3);"><td colspan="3" style="padding:10px 0 6px 0;font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;">Ambeego (Salman) &mdash; 5% Equity</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>Fullstack Developer</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">FT</span></td><td style="text-align:right;color:var(--green);font-weight:600;">$2,000/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$24,000/yr</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">React Native frontend, backend APIs, database, full product development</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>AI Dev Expert</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">1 day/wk</span></td><td style="text-align:right;color:var(--green);font-weight:600;">$600/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$7,200/yr</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">ML models, AI features, recommendation engine, sentiment analysis</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td colspan="3" style="padding:8px 0 4px 0;font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;">Engineering &amp; AI</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>Fullstack Developer</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">FT</span></td><td style="text-align:right;font-weight:600;">$2,000/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$24,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">React Native frontend, backend APIs, database, full product development</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>AI Dev Expert</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">1 day/wk</span></td><td style="text-align:right;font-weight:600;">$400/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$4,800/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">ML models, AI features, recommendation engine, sentiment analysis</td></tr>
 
-          <tr style="border-bottom:1px solid rgba(245,158,11,0.3);"><td colspan="3" style="padding:10px 0 6px 0;font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:1px;">Saima Salman &mdash; 25.3% Equity (R&amp;D portion)</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>Emotional Wellbeing Expert</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">1 day/wk</span></td><td style="text-align:right;color:var(--orange);font-weight:600;">$500/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$6,000/yr</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">Training exercises content, therapeutic frameworks, product usage analysis, wellbeing R&amp;D</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td colspan="3" style="padding:8px 0 4px 0;font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;">R&amp;D &amp; Wellbeing</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>Emotional Wellbeing Expert</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">1 day/wk</span></td><td style="text-align:right;font-weight:600;">$500/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$6,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">Training exercises, therapeutic frameworks, product usage analysis, wellbeing R&amp;D</td></tr>
 
-          <tr style="border-top:2px solid var(--green);font-weight:700;"><td style="padding:7px 0;">Total Service Resources</td><td style="text-align:right;color:var(--green);">$5,100/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$65,200/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);"><td colspan="3" style="padding:8px 0 4px 0;font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;">Operations &amp; Content</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>Product / Marketing / Project Manager</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">FT Combined</span></td><td style="text-align:right;font-weight:600;">$1,500/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$18,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">Product roadmap, marketing strategy, sprint planning, stakeholder coordination</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>Product Analyst / QA Engineer</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">PT &bull; Abdul Qudus</span></td><td style="text-align:right;font-weight:600;">25K PKR</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">~$90/mo</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">Bug testing, QA cycles, regression testing, product usage analysis</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>Content Person</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">FT</span></td><td style="text-align:right;font-weight:600;">$800/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$9,600/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">Social media, blog writing, content calendar, SEO, community engagement</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:4px 0;"><strong>Content Intern</strong> <span style="font-size:10px;color:rgba(255,255,255,0.3);">PT</span></td><td style="text-align:right;font-weight:600;">25K PKR</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">~$90/mo</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="3" style="padding:1px 0 5px 12px;font-size:10px;color:rgba(255,255,255,0.35);">Content support, research, scheduling, asset preparation</td></tr>
+
+          <tr style="border-top:2px solid rgba(255,255,255,0.2);font-weight:700;"><td style="padding:7px 0;">Total Team Cost</td><td style="text-align:right;color:white;">$7,380/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.5);">~$92.6K/yr</td></tr>
         </table>
       </div>
 
-      <div style="margin-top:10px;background:rgba(14,171,140,0.1);border-radius:10px;padding:12px;border:1px solid rgba(14,171,140,0.2);">
-        <div style="display:flex;gap:12px;">
-          <div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:800;color:var(--green);">$65.2K/yr</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">Service Value (no cash)</div></div>
-          <div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:800;color:var(--purple);">15%</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">Combined Equity</div></div>
-          <div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:800;color:var(--green);">4.4x</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">Value vs Pro-Rata</div></div>
+      <div style="margin-top:10px;background:rgba(255,255,255,0.05);border-radius:10px;padding:12px;border:1px solid rgba(255,255,255,0.1);">
+        <div style="font-size:12px;color:rgba(255,255,255,0.6);">
+          <strong style="color:white;">8 people</strong> &mdash; 4 FT + 2 PT + 2 specialist days/wk &bull; Total market cost: <strong style="color:white;">~$93K/yr</strong>
         </div>
       </div>
     </div>
 
     <div>
-      <h4 style="color:var(--orange);margin-bottom:10px;">Paid by SimpliHuman <span style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:400;">(cash from operating budget)</span></h4>
-      <div style="background:rgba(255,255,255,0.05);border:2px solid var(--orange);border-radius:14px;padding:16px;">
+      <h4 style="color:var(--green);margin-bottom:10px;">Who Is Responsible <span style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:400;">(resource &rarr; partner mapping)</span></h4>
+      <div style="background:rgba(255,255,255,0.05);border:2px solid var(--green);border-radius:14px;padding:16px;">
         <table style="width:100%;font-size:11.5px;color:rgba(255,255,255,0.85);">
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>Product / Marketing / Project Manager</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">FT &bull; Combined</span></td><td style="text-align:right;color:var(--orange);font-weight:600;">$1,500/mo</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="2" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">Product roadmap, marketing strategy, sprint planning, stakeholder coordination. Higher salary for combined responsibilities.</td></tr>
+          <tr style="border-bottom:1px solid rgba(14,171,140,0.3);"><td colspan="3" style="padding:6px 0;font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;">Design Peeps (Usman) &mdash; 10% Equity</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">Sr. UX Designer FT</td><td style="text-align:right;color:var(--green);font-weight:600;">$2,000/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$24,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);font-weight:600;"><td style="padding:4px 0;font-size:10px;">Annual contribution:</td><td colspan="2" style="text-align:right;color:var(--green);">$24,000</td></tr>
 
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>Product Analyst / QA Engineer</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">PT &bull; Abdul Qudus</span></td><td style="text-align:right;color:var(--orange);font-weight:600;">25K PKR <span style="font-size:10px;color:rgba(255,255,255,0.3);">(~$90)</span></td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="2" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">Product usage analysis, bug testing, QA cycles, regression testing, test case management</td></tr>
+          <tr style="border-bottom:1px solid rgba(14,171,140,0.3);"><td colspan="3" style="padding:10px 0 6px 0;font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px;">Ambeego (Salman) &mdash; 5% Equity</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">Fullstack Developer FT</td><td style="text-align:right;color:var(--green);font-weight:600;">$2,000/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$24,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">AI Dev Expert 1d/wk</td><td style="text-align:right;color:var(--green);font-weight:600;">$400/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$4,800/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);font-weight:600;"><td style="padding:4px 0;font-size:10px;">Annual contribution:</td><td colspan="2" style="text-align:right;color:var(--green);">$28,800</td></tr>
 
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>Content Person</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">FT</span></td><td style="text-align:right;color:var(--orange);font-weight:600;">$800/mo</td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="2" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">Social media management, blog writing, content calendar, SEO content, community engagement</td></tr>
+          <tr style="border-bottom:1px solid rgba(245,158,11,0.3);"><td colspan="3" style="padding:10px 0 6px 0;font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:1px;">Saima Salman &mdash; 25.3% Equity (R&amp;D)</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">Emotional Wellbeing Expert 1d/wk</td><td style="text-align:right;color:var(--orange);font-weight:600;">$500/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$6,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;font-size:10px;color:rgba(255,255,255,0.4);">+ Training content, product analysis R&amp;D</td><td></td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">~$4,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.1);font-weight:600;"><td style="padding:4px 0;font-size:10px;">Annual contribution (service):</td><td colspan="2" style="text-align:right;color:var(--orange);">$10,000 + cash</td></tr>
 
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;"><strong>Content Intern</strong> <span style="font-size:10px;color:rgba(255,255,255,0.35);">PT</span></td><td style="text-align:right;color:var(--orange);font-weight:600;">25K PKR <span style="font-size:10px;color:rgba(255,255,255,0.3);">(~$90)</span></td></tr>
-          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td colspan="2" style="padding:2px 0 6px 12px;font-size:10px;color:rgba(255,255,255,0.4);">Content support, research, scheduling, asset preparation</td></tr>
-
-          <tr style="border-top:2px solid var(--orange);font-weight:700;"><td style="padding:7px 0;">Total Monthly Cash (In-House)</td><td style="text-align:right;color:var(--orange);">~$2,480/mo</td></tr>
+          <tr style="border-bottom:1px solid rgba(245,158,11,0.3);"><td colspan="3" style="padding:10px 0 6px 0;font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:1px;">SimpliHuman (Cash &mdash; from operating budget)</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">PM/Marketing/Project Manager</td><td style="text-align:right;color:var(--orange);font-weight:600;">$1,500/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$18,000/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">Product Analyst/QA (Abdul Qudus)</td><td style="text-align:right;color:var(--orange);font-weight:600;">25K PKR</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">~$1,080/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">Content Person FT</td><td style="text-align:right;color:var(--orange);font-weight:600;">$800/mo</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">$9,600/yr</td></tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.06);"><td style="padding:5px 0;">Content Intern PT</td><td style="text-align:right;color:var(--orange);font-weight:600;">25K PKR</td><td style="text-align:right;font-size:10px;color:rgba(255,255,255,0.4);">~$1,080/yr</td></tr>
+          <tr style="border-top:2px solid var(--orange);font-weight:600;"><td style="padding:4px 0;font-size:10px;">Annual cash (in-house):</td><td colspan="2" style="text-align:right;color:var(--orange);">~$29,760/yr</td></tr>
         </table>
       </div>
 
-      <div style="margin-top:10px;background:rgba(245,158,11,0.1);border-radius:10px;padding:12px;border:1px solid rgba(245,158,11,0.2);">
-        <div style="display:flex;gap:12px;">
-          <div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:800;color:var(--orange);">~$30K/yr</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">Annual Cash Cost</div></div>
-          <div style="flex:1;text-align:center;"><div style="font-size:18px;font-weight:800;color:white;">4 people</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">2 FT + 2 PT</div></div>
+      <div style="margin-top:10px;display:flex;gap:8px;">
+        <div style="flex:1;background:rgba(14,171,140,0.1);border-radius:8px;padding:10px;text-align:center;border:1px solid rgba(14,171,140,0.2);">
+          <div style="font-size:16px;font-weight:800;color:var(--green);">$62.8K</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.4);">Service (no cash)</div>
+        </div>
+        <div style="flex:1;background:rgba(245,158,11,0.1);border-radius:8px;padding:10px;text-align:center;border:1px solid rgba(245,158,11,0.2);">
+          <div style="font-size:16px;font-weight:800;color:var(--orange);">~$30K</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.4);">Cash (in-house)</div>
+        </div>
+        <div style="flex:1;background:rgba(255,255,255,0.05);border-radius:8px;padding:10px;text-align:center;border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:16px;font-weight:800;color:white;">~$93K</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.4);">Total Team Value</div>
         </div>
       </div>
 
-      <div style="margin-top:14px;padding:14px;background:rgba(255,255,255,0.04);border-radius:10px;border:1px solid rgba(255,255,255,0.08);">
-        <h4 style="font-size:13px;color:var(--green);margin-bottom:6px;">Full Team Summary</h4>
-        <div style="font-size:11px;color:rgba(255,255,255,0.6);line-height:1.8;">
-          &#8226; <strong>8 people total</strong> &mdash; 4 from partners (service equity) + 4 in-house (cash)<br>
-          &#8226; <strong>Cash cost: ~$30K/yr</strong> for in-house team (covered by base operating)<br>
-          &#8226; <strong>Service value: $65.2K/yr</strong> from partners (no cash outflow)<br>
-          &#8226; <strong>Total team value: ~$95K/yr</strong> &mdash; but only $30K is actual cash<br>
-          &#8226; <strong>Saving vs all in-house:</strong> ~$65K/yr in cash (partners absorb it as equity)
-        </div>
-      </div>
-
-      <div style="margin-top:10px;padding:12px;background:rgba(239,68,68,0.08);border-radius:10px;border:1px solid rgba(239,68,68,0.15);">
-        <h4 style="font-size:12px;color:var(--red);margin-bottom:4px;">If Partners Don&rsquo;t Deliver</h4>
-        <p style="font-size:11px;color:rgba(255,255,255,0.5);">Equity dilutes per the Dilution Framework. Company must then hire replacements at full cash cost (~$5.1K/mo additional). See equity slide.</p>
+      <div style="margin-top:10px;padding:10px;background:rgba(239,68,68,0.08);border-radius:8px;border:1px solid rgba(239,68,68,0.15);">
+        <p style="font-size:10px;color:rgba(255,255,255,0.5);margin:0;"><strong style="color:var(--red);">If partners don&rsquo;t deliver:</strong> Equity dilutes per Dilution Framework. Company hires replacements at full cash cost (~$5K/mo additional).</p>
       </div>
     </div>
   </div>
@@ -603,17 +634,17 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
     <div>
       <h4 style="margin-bottom:14px;">How Pro-Rata Founder Investment Works</h4>
       <div class="card" style="background:white;border:2px solid #E5E7EB;">
-        <p style="font-size:14px;margin-bottom:14px;">Total Year 1 budget is $148K&ndash;$179K. Service partners cover $65.2K in work. Remaining <strong>$82.8K in cash</strong> is split among cash partners proportionally.</p>
+        <p style="font-size:14px;margin-bottom:14px;">Total Year 1 budget is $146K&ndash;$177K. Service partners cover $62.8K in work. Remaining <strong>$83.2K in cash</strong> is split among cash partners proportionally.</p>
         <table class="data-table">
           <thead><tr><th>Founder</th><th style="text-align:center;">Equity</th><th style="text-align:right;">Cash Required (USD)</th><th style="text-align:right;">AED</th></tr></thead>
           <tbody>
-            <tr><td><strong>Sear</strong> (Aplomb)</td><td style="text-align:center;">46.0%</td><td style="text-align:right;">$44,660</td><td style="text-align:right;">163,964</td></tr>
-            <tr><td><strong>Saima Salman</strong></td><td style="text-align:center;">25.3%</td><td style="text-align:right;">$24,560</td><td style="text-align:right;">90,176</td></tr>
-            <tr><td><strong>Doruk Sardag</strong></td><td style="text-align:center;">14.0%</td><td style="text-align:right;">$13,590</td><td style="text-align:right;">49,886</td></tr>
-            <tr class="total"><td><strong>Total Cash Required</strong></td><td style="text-align:center;"><strong>85.3%</strong></td><td style="text-align:right;"><strong>$82,810</strong></td><td style="text-align:right;"><strong>304,026</strong></td></tr>
+            <tr><td><strong>Sear</strong> (Aplomb)</td><td style="text-align:center;">46.0%</td><td style="text-align:right;">$44,876</td><td style="text-align:right;">164,757</td></tr>
+            <tr><td><strong>Saima Salman</strong></td><td style="text-align:center;">25.3%</td><td style="text-align:right;">$24,680</td><td style="text-align:right;">90,617</td></tr>
+            <tr><td><strong>Doruk Sardag</strong></td><td style="text-align:center;">14.0%</td><td style="text-align:right;">$13,657</td><td style="text-align:right;">50,132</td></tr>
+            <tr class="total"><td><strong>Total Cash Required</strong></td><td style="text-align:center;"><strong>85.3%</strong></td><td style="text-align:right;"><strong>$83,213</strong></td><td style="text-align:right;"><strong>305,506</strong></td></tr>
           </tbody>
         </table>
-        <p style="font-size:11px;color:var(--gray);margin-top:8px;">Cash amounts are 66% of pure pro-rata because service partners (Design Peeps + Ambeego) contribute $33K more in work than their equity share. Saima&rsquo;s $10K R&amp;D contribution further offsets her cash. Based on $148K low estimate.</p>
+        <p style="font-size:11px;color:var(--gray);margin-top:8px;">Cash partners pay ~67% of pure pro-rata because service partners over-contribute $30.9K in work. Saima&rsquo;s $10K R&amp;D further offsets her cash. Based on $146K low estimate.</p>
       </div>
 
       <div class="callout callout-red" style="margin-top:16px;">
@@ -901,7 +932,8 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
       <div style="font-size:12px;line-height:1.8;">
         <strong>Product &amp; Design:</strong><br>&#8226; AI personalities live &#8226; Echo revamp<br>&#8226; Flow-based ads &#8226; Premium features start<br><br>
         <strong>Marketing:</strong> $3&ndash;5K/mo multi-channel<br>
-        <strong>Revenue:</strong> 50+ active paid, first MRR<br><br>
+        <strong>B2C Revenue:</strong> 50+ active paid, first MRR<br>
+        <strong>B2B Revenue:</strong> Begin corporate wellness partnership outreach (HR teams, clinics, schools)<br><br>
         <span style="color:var(--green);font-weight:600;">Target: PMF 40%+, 25K users</span>
       </div>
     </div>
@@ -911,8 +943,9 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
       <div style="font-size:12px;line-height:1.8;">
         <strong>Product &amp; Design:</strong><br>&#8226; Premium dashboard &#8226; Voice journals<br>&#8226; Widgets &#8226; Data export<br><br>
         <strong>Marketing:</strong> $4&ndash;5K/mo optimized<br>
-        <strong>Revenue:</strong> 100+ paid, $2K+ MRR<br><br>
-        <span style="color:var(--green);font-weight:600;">Target: 40K+ users, fundraise-ready</span>
+        <strong>B2C Revenue:</strong> 100+ paid subs, $2K+ MRR<br>
+        <strong>B2B Revenue:</strong> 1&ndash;3 pilot partnerships signed (corporate wellness programs, therapy clinics, educational institutions). Target: $1K&ndash;3K/mo B2B revenue<br><br>
+        <span style="color:var(--green);font-weight:600;">Target: 40K+ users, B2C+B2B revenue, fundraise-ready</span>
       </div>
     </div>
   </div>
@@ -920,11 +953,120 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
     <div class="card" style="border:2px solid var(--green);background:var(--light-bg);padding:16px;">
       <h4 style="color:var(--green);font-size:15px;margin-bottom:6px;">12-Month Milestones</h4>
       <div style="display:flex;gap:20px;font-size:13px;">
-        <div>&#8226; <strong>40K+</strong> users</div><div>&#8226; <strong>100+</strong> paid</div><div>&#8226; <strong>$2K+</strong> MRR</div><div>&#8226; <strong>40%+</strong> PMF</div><div>&#8226; <strong>&lt;20%</strong> onboarding drop</div><div>&#8226; <strong>5%+</strong> D7 retention</div><div>&#8226; <strong>LTV:CAC &gt; 3:1</strong></div>
+        <div>&#8226; <strong>40K+</strong> users</div><div>&#8226; <strong>100+</strong> B2C paid</div><div>&#8226; <strong>$2K+</strong> B2C MRR</div><div>&#8226; <strong>1&ndash;3</strong> B2B pilots</div><div>&#8226; <strong>$1&ndash;3K</strong> B2B MRR</div><div>&#8226; <strong>40%+</strong> PMF</div><div>&#8226; <strong>5%+</strong> D7 retention</div><div>&#8226; <strong>LTV:CAC &gt; 3:1</strong></div>
       </div>
     </div>
   </div>
-  <div class="slide-number">10 / 14</div>
+  <div class="slide-number">10 / 15</div>
+</section>
+
+<!-- SLIDE 10B: B2B REVENUE MODEL -->
+<section class="slide" style="background:linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);">
+  <span class="confidential">Confidential</span>
+  <span class="tag" style="background:var(--purple);">Revenue</span>
+  <h2 style="margin-bottom:8px;">B2B Revenue Model: <span style="color:var(--purple);">Partnerships &amp; Licensing</span></h2>
+  <p style="margin-bottom:24px;max-width:900px;">Beyond B2C subscriptions, SimpliHuman has strong B2B potential. Corporate wellness, therapy clinics, and educational institutions can license the platform for their users. This creates recurring, high-value revenue with lower acquisition costs than individual consumers.</p>
+
+  <div class="grid-2" style="gap:36px;">
+    <div>
+      <h4 style="margin-bottom:14px;">B2B Partner Types &amp; Revenue Potential</h4>
+      <table class="data-table">
+        <thead><tr><th>Partner Type</th><th style="text-align:right;">Deal Size (Monthly)</th><th style="text-align:right;">Annual Potential</th><th>Model</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Corporate Wellness Programs</strong><br><span style="font-size:11px;color:var(--gray);">HR depts, 50&ndash;500 employees</span></td>
+            <td style="text-align:right;">$500&ndash;2,000/mo</td>
+            <td style="text-align:right;">$6K&ndash;24K/yr</td>
+            <td style="font-size:11px;">Per-seat license ($5&ndash;10/employee/mo)</td>
+          </tr>
+          <tr>
+            <td><strong>Therapy &amp; Mental Health Clinics</strong><br><span style="font-size:11px;color:var(--gray);">Therapists prescribe to patients</span></td>
+            <td style="text-align:right;">$200&ndash;800/mo</td>
+            <td style="text-align:right;">$2.4K&ndash;9.6K/yr</td>
+            <td style="font-size:11px;">Clinic license + per-patient fee</td>
+          </tr>
+          <tr>
+            <td><strong>Educational Institutions</strong><br><span style="font-size:11px;color:var(--gray);">Schools, universities</span></td>
+            <td style="text-align:right;">$300&ndash;1,500/mo</td>
+            <td style="text-align:right;">$3.6K&ndash;18K/yr</td>
+            <td style="font-size:11px;">Institutional license, student access</td>
+          </tr>
+          <tr>
+            <td><strong>Insurance / EAP Providers</strong><br><span style="font-size:11px;color:var(--gray);">Employee assistance programs</span></td>
+            <td style="text-align:right;">$1,000&ndash;5,000/mo</td>
+            <td style="text-align:right;">$12K&ndash;60K/yr</td>
+            <td style="font-size:11px;">White-label or integration partnership</td>
+          </tr>
+          <tr>
+            <td><strong>Health &amp; Wellness Brands</strong><br><span style="font-size:11px;color:var(--gray);">Co-branded content, sponsorship</span></td>
+            <td style="text-align:right;">$500&ndash;2,000/mo</td>
+            <td style="text-align:right;">$6K&ndash;24K/yr</td>
+            <td style="font-size:11px;">Sponsorship + co-branded features</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout callout-purple" style="margin-top:14px;">
+        <h4 style="font-size:14px;margin-bottom:6px;">Why B2B Works for SimpliHuman</h4>
+        <ul style="font-size:12px;padding-left:18px;line-height:1.8;color:var(--gray);">
+          <li><strong>Lower CAC:</strong> One deal = 50&ndash;500 users vs acquiring individually</li>
+          <li><strong>Higher LTV:</strong> Contracts are annual, predictable revenue</li>
+          <li><strong>Credibility:</strong> B2B partnerships validate the product for investors</li>
+          <li><strong>Content leverage:</strong> Saima&rsquo;s R&amp;D (therapeutic exercises) is the core B2B value prop</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h4 style="margin-bottom:14px;">Revenue Projections (Conservative)</h4>
+      <div class="card" style="background:white;border:2px solid var(--purple);padding:18px;">
+        <table style="width:100%;font-size:13px;">
+          <tr style="border-bottom:1px solid #E5E7EB;"><td style="padding:8px 0;font-weight:700;color:var(--purple);">Scenario</td><td style="text-align:center;font-weight:700;">Partners</td><td style="text-align:right;font-weight:700;">Monthly</td><td style="text-align:right;font-weight:700;">Annual</td></tr>
+          <tr style="border-bottom:1px solid #E5E7EB;"><td style="padding:8px 0;"><strong>Conservative</strong><br><span style="font-size:11px;color:var(--gray);">1&ndash;2 small pilots</span></td><td style="text-align:center;">1&ndash;2</td><td style="text-align:right;">$500&ndash;1K</td><td style="text-align:right;">$6K&ndash;12K</td></tr>
+          <tr style="border-bottom:1px solid #E5E7EB;"><td style="padding:8px 0;"><strong>Moderate</strong><br><span style="font-size:11px;color:var(--gray);">3&ndash;5 partners mixed</span></td><td style="text-align:center;">3&ndash;5</td><td style="text-align:right;">$2K&ndash;5K</td><td style="text-align:right;">$24K&ndash;60K</td></tr>
+          <tr><td style="padding:8px 0;"><strong>Optimistic</strong><br><span style="font-size:11px;color:var(--gray);">5&ndash;10 partners + EAP deal</span></td><td style="text-align:center;">5&ndash;10</td><td style="text-align:right;">$5K&ndash;15K</td><td style="text-align:right;">$60K&ndash;180K</td></tr>
+        </table>
+      </div>
+
+      <h4 style="margin-top:16px;margin-bottom:10px;">Combined Revenue Target (Y1)</h4>
+      <div style="display:flex;gap:12px;">
+        <div class="card" style="flex:1;text-align:center;background:white;border:2px solid var(--blue);padding:16px;">
+          <div style="font-size:11px;color:var(--gray);margin-bottom:4px;">B2C (Subscriptions)</div>
+          <div style="font-size:22px;font-weight:800;color:var(--blue);">$2K+</div>
+          <div style="font-size:10px;color:var(--gray);">MRR by Q4</div>
+        </div>
+        <div style="font-size:20px;color:var(--gray);display:flex;align-items:center;">+</div>
+        <div class="card" style="flex:1;text-align:center;background:white;border:2px solid var(--purple);padding:16px;">
+          <div style="font-size:11px;color:var(--gray);margin-bottom:4px;">B2B (Partnerships)</div>
+          <div style="font-size:22px;font-weight:800;color:var(--purple);">$1&ndash;3K</div>
+          <div style="font-size:10px;color:var(--gray);">MRR by Q4</div>
+        </div>
+        <div style="font-size:20px;color:var(--gray);display:flex;align-items:center;">=</div>
+        <div class="card" style="flex:1;text-align:center;background:white;border:2px solid var(--green);padding:16px;">
+          <div style="font-size:11px;color:var(--gray);margin-bottom:4px;">Combined</div>
+          <div style="font-size:22px;font-weight:800;color:var(--green);">$3&ndash;5K</div>
+          <div style="font-size:10px;color:var(--gray);">MRR by Q4</div>
+        </div>
+      </div>
+
+      <h4 style="margin-top:16px;margin-bottom:10px;">B2B Go-To-Market Timeline</h4>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="card" style="background:white;padding:12px 16px;border-left:4px solid var(--orange);">
+          <strong style="font-size:12px;">Q3: Outreach &amp; Pilots</strong>
+          <p style="font-size:11px;color:var(--gray);margin-top:2px;">Build B2B landing page, case studies from beta. Reach out to 20&ndash;30 prospects. Sign 1&ndash;3 pilot partners at reduced rate.</p>
+        </div>
+        <div class="card" style="background:white;padding:12px 16px;border-left:4px solid var(--green);">
+          <strong style="font-size:12px;">Q4: Convert &amp; Scale</strong>
+          <p style="font-size:11px;color:var(--gray);margin-top:2px;">Convert pilots to paid. Build admin dashboard for B2B clients. Standardize pricing tiers. Target 3&ndash;5 paying partners.</p>
+        </div>
+        <div class="card" style="background:white;padding:12px 16px;border-left:4px solid var(--blue);">
+          <strong style="font-size:12px;">Y2: Dedicated B2B Track</strong>
+          <p style="font-size:11px;color:var(--gray);margin-top:2px;">Hire B2B sales person. Explore EAP/insurance integrations. Target 10+ partners, $5K+ B2B MRR. B2B becomes 40&ndash;60% of total revenue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-number">10b / 15</div>
 </section>
 
 <!-- SLIDE 11: OPERATING EXPENSES DETAIL -->
@@ -963,7 +1105,7 @@ table.data-table tr.total td { background: var(--light-bg); font-weight: 700; bo
           <tr class="total"><td><strong>Total Required</strong></td><td style="text-align:center;"><strong>85.3%</strong></td><td style="text-align:right;"><strong>103,071</strong></td><td style="text-align:right;"><strong>$28,070</strong></td></tr>
         </tbody>
       </table>
-      <p class="footnote">This covers base operating only. See Budget slide for full Year 1 capital requirement ($137K&ndash;$190K) including design, engineering, R&amp;D, and marketing &mdash; with detailed contribution mapping per equity holder.</p>
+      <p class="footnote">This covers base operating only. See Budget slide for full Year 1 capital requirement ($146K&ndash;$177K) including design, engineering, R&amp;D, and marketing &mdash; with detailed contribution mapping per equity holder.</p>
 
       <div class="callout" style="margin-top:16px;">
         <h4 style="font-size:14px;margin-bottom:4px;">Key Non-Obvious Costs</h4>
